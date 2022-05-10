@@ -185,8 +185,8 @@
                     <p>CMIS provide reliable communications and improve public safety areas. </p>
                   </li>
                   <li class="col-sm-6">
-                    <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED DOCTORS</h6>
-                    <p>Hopital Management System has licensed and qualified doctors! </p>
+                    <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED nurse</h6>
+                    <p>Hopital Management System has licensed and qualified nurse! </p>
                   </li>
                   <li class="col-sm-6">
                     <h6> <i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</h6>
@@ -194,7 +194,7 @@
                   </li>
                   <li class="col-sm-6">
                     <h6> <i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</h6>
-                    <p>CMIS qualified doctors offers free counseling to their patients. </p>
+                    <p>CMIS qualified nurse offers free counseling to their patients. </p>
                   </li>
                 </ul>
               </div>
@@ -274,7 +274,7 @@
               <article>
                 <div class="media-left"> <i class="flaticon-doctor icon"></i> </div>
                 <div class="media-body">
-                  <h6>Qualified Doctors</h6>
+                  <h6>Qualified nurse</h6>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </article>

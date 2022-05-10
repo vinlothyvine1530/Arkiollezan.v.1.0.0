@@ -102,7 +102,7 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
+                                class="zmdi zmdi-account-add"></i><span>nurse</span> </a>
                         <ul class="ml-menu">
                             <li><a href="doctor.php">Add Doctor</a>
                             </li>
@@ -167,7 +167,7 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
+                                class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
                            
                             <li><a href="doctortimings.php">Add Visiting Hour</a></li>

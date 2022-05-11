@@ -54,11 +54,11 @@ $tim = date("H:i:s");
     <nav class="navbar clearHeader">
         <div class="col-12">
             <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand"
-                    href="#">Clinic Management System</a> </div>
+                    href="#">Clinical Monitoring and Inventory System</a> </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Notifications -->
                 <li>
-                    <a data-placement="bottom" title="EXIT" href="logout.php"><i
+                    <a data-placement="bottom" title="Exit" href="logout.php"><i
                             class="zmdi zmdi-sign-in"></i></a>
                 </li>               
 
@@ -76,7 +76,7 @@ $tim = date("H:i:s");
             <!--Admin Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="header">Main Navigation</li>
                     <li class="active open"><a href="adminaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 

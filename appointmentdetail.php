@@ -48,7 +48,7 @@ else
 	$qsqldepartment = mysqli_query($con,$sqldepartment);
 	$rsdepartment =mysqli_fetch_array($qsqldepartment);
 	
-	$sqldoctor = "SELECT * FROM doctor where doctorid='$rsappointment[doctorid]'";
+	$sqldoctor = "SELECT * FROM nurse where doctorid='$rsappointment[doctorid]'";
 	$qsqldoctor = mysqli_query($con,$sqldoctor);
 	$rsdoctor =mysqli_fetch_array($qsqldoctor);
 ?>
@@ -60,7 +60,7 @@ else
     <td>&nbsp;<?php echo $rsdepartment[departmentname]; ?></td>
   </tr>
   <tr>
-    <td>Doctor</td>
+    <td>Nurse</td>
     <td>&nbsp;<?php echo $rsdoctor[doctorname]; ?></td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ function validateform()
 	}
 	else if(document.frmappntdetail.select5.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Nurse name should not be empty..");
 		document.frmappntdetail.select5.focus();
 		return false;
 	}

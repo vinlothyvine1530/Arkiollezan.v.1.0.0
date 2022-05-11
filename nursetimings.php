@@ -5,10 +5,10 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-			 $sql ="UPDATE doctor_timings SET doctorid='$_POST[select2]',start_time='$_POST[ftime]',end_time='$_POST[ttime]',status='$_POST[select]'  WHERE doctor_timings_id='$_GET[editid]'";
+			 $sql ="UPDATE nurse_timings SET nurseid='$_POST[select2]',start_time='$_POST[ftime]',end_time='$_POST[ttime]',status='$_POST[select]'  WHERE nurse_timings_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor Timings record updated successfully...');</script>";
+			echo "<script>alert('Nurse Timings record updated successfully...');</script>";
 		}
 		else
 		{
@@ -17,10 +17,10 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-	$sql ="INSERT INTO doctor_timings(doctorid,start_time,end_time,status) values('$_POST[select2]','$_POST[ftime]','$_POST[ttime]','$_POST[select]')";
+	$sql ="INSERT INTO nurse_timings(nurseid,start_time,end_time,status) values('$_POST[select2]','$_POST[ftime]','$_POST[ttime]','$_POST[select]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Doctor Timings record inserted successfully...');</script>";
+		echo "<script>alert('Nurse Timings record inserted successfully...');</script>";
 	}
 	else
 	{
@@ -30,7 +30,7 @@ if(isset($_POST[submit]))
 }
 if(isset($_GET[editid]))
 {
-	$sql="SELECT * FROM doctor_timings WHERE doctor_timings_id='$_GET[editid]' ";
+	$sql="SELECT * FROM nurse_timings WHERE nurse_timings_id='$_GET[editid]' ";
 	$qsql = mysqli_query($con,$sql);
 	$rsedit = mysqli_fetch_array($qsql);
 	
@@ -40,7 +40,7 @@ if(isset($_GET[editid]))
 
 <div class="container-fluid">
 	<div class="block-header">
-            <h2>Add New Doctor Timings</h2>
+            <h2>Add New Nurse Timings</h2>
             
         </div>
   <div class="card">
@@ -49,30 +49,30 @@ if(isset($_GET[editid]))
     <table class="table table-hover">
       <tbody>
         <?php
-		if(isset($_SESSION[doctorid]))
+		if(isset($_SESSION[nurseid]))
 		{
-			echo "<input class='form-control'  type='hidden' name='select2' value='$_SESSION[doctorid]' >";
+			echo "<input class='form-control'  type='hidden' name='select2' value='$_SESSION[nurseid]' >";
 		}
 		else
 		{
 		?>      
         <tr>
-          <td width="34%" height="36">Doctor</td>
+          <td width="34%" height="36">Nurse</td>
           
           <td width="66%"><select class="form-control"  name="select2" id="select2">
            <option value="">Select</option>
             <?php
-          	$sqldoctor= "SELECT * FROM doctor WHERE status='Active'";
-			$qsqldoctor = mysqli_query($con,$sqldoctor);
-			while($rsdoctor = mysqli_fetch_array($qsqldoctor))
+          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
+			$qsqlnurse = mysqli_query($con,$sqlnurse);
+			while($rsnurse = mysqli_fetch_array($qsqlnurse))
 			{
-				if($rsdoctor[doctorid] == $rsedit[doctorid])
+				if($rsnurse[nurseid] == $rsedit[nurseid])
 				{
-				echo "<option value='$rsdoctor[doctorid]' selected>$rsdoctor[doctorid] - $rsdoctor[doctorname]</option>";
+				echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nurseid] - $rsnurse[nursename]</option>";
 				}
 				else
 				{
-				echo "<option value='$rsdoctor[doctorid]'>$rsdoctor[doctorid] - $rsdoctor[doctorname]</option>";				
+				echo "<option value='$rsnurse[nurseid]'>$rsnurse[nurseid] - $rsnurse[nursename]</option>";				
 				}
 			}
 		  ?>
@@ -131,7 +131,7 @@ function validateform()
 {
 	if(document.frmdocttimings.select2.value == "")
 	{
-		alert("doctor name should not be empty..");
+		alert("Nurse name should not be empty..");
 		document.frmdocttimings.select2.focus();
 		return false;
 	}

@@ -30,21 +30,21 @@ while($rs = mysqli_fetch_array($qsql))
 	$qsqlpatient = mysqli_query($con,$sqlpatient);
 	$rspatient = mysqli_fetch_array($qsqlpatient);
 	
-	$sqldoctor = "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
-	$qsqldoctor = mysqli_query($con,$sqldoctor);
-	$rsdoctor = mysqli_fetch_array($qsqldoctor);
+	$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+	$qsqlnurse = mysqli_query($con,$sqlnurse);
+	$rsnurse = mysqli_fetch_array($qsqlnurse);
 ?>			
     <table width="200" border="3">
           <tbody>
             <tr>
-              <td><strong>Doctor</strong></td>
+              <td><strong>Nurse</strong></td>
               <td><strong>Patient</strong></td>
               <td><strong>Prescription Date</strong></td>
               <td><strong>Status</strong></td>
             </tr>
               <?php
             echo "<tr>
-              <td>&nbsp;$rsdoctor[doctorname]</td>
+              <td>&nbsp;$rsnurse[nursename]</td>
               <td>&nbsp;$rspatient[patientname]</td>
                <td>&nbsp;$rs[prescriptiondate]</td>
             <td>&nbsp;$rs[status]</td>

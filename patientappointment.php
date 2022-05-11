@@ -24,7 +24,7 @@ if(isset($_POST[submit]))
 		$lastinsid = mysqli_insert_id($con);
 	}
 	
-	$sqlappointment="SELECT * FROM appointment WHERE appointmentdate='$_POST[appointmentdate]' AND appointmenttime='$_POST[appointmenttime]' AND doctorid='$_POST[doct]' AND status='Approved'";
+	$sqlappointment="SELECT * FROM appointment WHERE appointmentdate='$_POST[appointmentdate]' AND appointmenttime='$_POST[appointmenttime]' AND nurseid='$_POST[doct]' AND status='Approved'";
 	$qsqlappointment = mysqli_query($con,$sqlappointment);
 	if(mysqli_num_rows($qsqlappointment) >= 1)
 	{
@@ -32,7 +32,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-		$sql ="INSERT INTO appointment(appointmenttype,patientid,appointmentdate,appointmenttime,app_reason,status,departmentid,doctorid) values('ONLINE','$lastinsid','$_POST[appointmentdate]','$_POST[appointmenttime]','$_POST[app_reason]','Pending','$_POST[department]','$_POST[doct]')";
+		$sql ="INSERT INTO appointment(appointmenttype,patientid,appointmentdate,appointmenttime,app_reason,status,departmentid,nurseid) values('ONLINE','$lastinsid','$_POST[appointmentdate]','$_POST[appointmenttime]','$_POST[app_reason]','Pending','$_POST[department]','$_POST[doct]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('Appointment Record Inserted Successfully...');</script>";
@@ -280,11 +280,11 @@ if(isset($_SESSION[patientid]))
                                                     >
                                                     <option value="">Select department</option>
                                                     <?php
-                        $sqldept = "SELECT * FROM doctor WHERE status='Active'";
+                        $sqldept = "SELECT * FROM nurse WHERE status='Active'";
                         $qsqldept = mysqli_query($con,$sqldept);
                         while($rsdept = mysqli_fetch_array($qsqldept))
                         {
-                            echo "<option value='$rsdept[doctorid]'>$rsdept[doctorname] (";
+                            echo "<option value='$rsdept[nurseid]'>$rsdept[nursename] (";
                             $sqldept = "SELECT * FROM department WHERE departmentid='$rsdept[departmentid]'";
                             $qsqldept = mysqli_query($con,$sqldept);
                             $rsdept = mysqli_fetch_array($qsqldept);
@@ -404,7 +404,7 @@ function validateform() {
     }
 }
 
-function loaddoctor(deptid) {
+function loadnurse(deptid) {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -417,7 +417,7 @@ function loaddoctor(deptid) {
             document.getElementById("divdoc").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET", "departmentDoctor.php?deptid=" + deptid, true);
+    xmlhttp.open("GET", "departmentnurse.php?deptid=" + deptid, true);
     xmlhttp.send();
 }
 </script>

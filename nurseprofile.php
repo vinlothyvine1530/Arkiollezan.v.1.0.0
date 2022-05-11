@@ -4,12 +4,12 @@ include("adheader.php");
 include("dbconnection.php");
 if(isset($_POST[submit]))
 {
-	if(isset($_SESSION[doctorid]))
+	if(isset($_SESSION[nurseaid]))
 	{
-		$sql ="UPDATE doctor SET doctorname='$_POST[doctorname]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE doctorid='$_SESSION[doctorid]'";
+		$sql ="UPDATE nursea SET nursename='$_POST[nursename]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE nurseid='$_SESSION[nurseid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor profile updated successfully...');</script>";
+			echo "<script>alert('Nurse profile updated successfully...');</script>";
 		}
 		else
 		{
@@ -18,10 +18,10 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-		$sql ="INSERT INTO doctor(doctorname,mobileno,departmentid,loginid,password,status,education,experience) values('$_POST[doctorname]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','$_POST[select]','$_POST[education]','$_POST[experience]')";
+		$sql ="INSERT INTO nurse(nursename,mobileno,departmentid,loginid,password,status,education,experience) values('$_POST[nursename]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','$_POST[select]','$_POST[education]','$_POST[experience]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor record inserted successfully...');</script>";
+			echo "<script>alert('Nurse record inserted successfully...');</script>";
 		}
 		else
 		{
@@ -29,9 +29,9 @@ if(isset($_POST[submit]))
 		}
 	}
 }
-if(isset($_SESSION[doctorid]))
+if(isset($_SESSION[nurseid]))
 {
-	$sql="SELECT * FROM doctor WHERE doctorid='$_SESSION[doctorid]' ";
+	$sql="SELECT * FROM nurse WHERE nurseid='$_SESSION[nurseid]' ";
 	$qsql = mysqli_query($con,$sql);
 	$rsedit = mysqli_fetch_array($qsql);
 	
@@ -39,7 +39,7 @@ if(isset($_SESSION[doctorid]))
 ?>
 <div class="container-fluid">
     <div class="block-header">
-        <h2> Doctor's Profile</h2>
+        <h2> Nurse's Profile</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -49,10 +49,10 @@ if(isset($_SESSION[doctorid]))
                     <div class="row">
                         <div class="col-sm-4 col-xs-12">
                             <div class="form-group">
-                                <label>Doctor Name</label>
+                                <label>Nurse Name</label>
                                 <div class="form-line">
-                                    <input class="form-control" type="text" name="doctorname" id="doctorname"
-                                        value="<?php echo $rsedit[doctorname]; ?>" />
+                                    <input class="form-control" type="text" name="nursename" id="nursename"
+                                        value="<?php echo $rsedit[nursename]; ?>" />
                                 </div>
                             </div>
                         </div>
@@ -153,13 +153,13 @@ var alphanumericExp = /^[0-9a-zA-Z]+$/; //Variable to validate numbers and alpha
 var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable to validate Email ID 
 
 function validateform() {
-    if (document.frmdoctprfl.doctorname.value == "") {
-        alert("Doctor name should not be empty..");
-        document.frmdoctprfl.doctorname.focus();
+    if (document.frmdoctprfl.nursename.value == "") {
+        alert("Nurse name should not be empty..");
+        document.frmdoctprfl.nursename.focus();
         return false;
-    } else if (!document.frmdoctprfl.doctorname.value.match(alphaspaceExp)) {
-        alert("Doctor name not valid..");
-        document.frmdoctprfl.doctorname.focus();
+    } else if (!document.frmdoctprfl.nursename.value.match(alphaspaceExp)) {
+        alert("Nurse name not valid..");
+        document.frmdoctprfl.nursename.focus();
         return false;
     } else if (document.frmdoctprfl.mobilenumber.value == "") {
         alert("Mobile number should not be empty..");

@@ -59,7 +59,7 @@ if(isset($_GET[editid]))
  <table class="table table-bordered table-striped">
       <tbody>
         <tr>
-          <td><strong>Doctor</strong></td>
+          <td><strong>Nurse</strong></td>
           <td><strong>Patient</strong></td>
           <td><strong>Prescription Date</strong></td>
           <td><strong>Status</strong></td>
@@ -74,12 +74,12 @@ if(isset($_GET[editid]))
 			$rspatient = mysqli_fetch_array($qsqlpatient);
 			
 			
-		$sqldoctor = "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
-			$qsqldoctor = mysqli_query($con,$sqldoctor);
-			$rsdoctor = mysqli_fetch_array($qsqldoctor);
+		$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+			$qsqlnurse = mysqli_query($con,$sqlnurse);
+			$rsnurse = mysqli_fetch_array($qsqlnurse);
 			
         echo "<tr>
-          <td>&nbsp;$rsdoctor[doctorname]</td>
+          <td>&nbsp;$rsnurse[nursename]</td>
           <td>&nbsp;$rspatient[patientname]</td>
 		   <td>&nbsp;$rs[prescriptiondate]</td>
 		<td>&nbsp;$rs[status]</td>

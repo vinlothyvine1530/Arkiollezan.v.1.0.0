@@ -4,19 +4,19 @@
 include("adheader.php");
 include 'dbconnection.php';
 
-if(!isset($_SESSION[doctorid]))
+if(!isset($_SESSION[nurseid]))
 {
-	echo "<script>window.location='doctorlogin.php';</script>";
+	echo "<script>window.location='nurselogin.php';</script>";
 }
 
 ?>
 <div class="container-fluid">
   <div class="block-header">
-    <h1>Welcome <?php  $sql="SELECT * FROM `doctor` WHERE doctorid='$_SESSION[doctorid]' ";
-    $doctortable = mysqli_query($con,$sql);
-    $doc = mysqli_fetch_array($doctortable);
+    <h1>Welcome <?php  $sql="SELECT * FROM `nurse` WHERE nurseid='$_SESSION[nurseid]' ";
+    $nursetable = mysqli_query($con,$sql);
+    $doc = mysqli_fetch_array($nursetable);
 
-    echo 'Dr. '. $doc[doctorname]; ?>
+    echo 'Nurse. '. $doc[nursename]; ?>
 
   </h1>
 </div>
@@ -33,9 +33,9 @@ if(!isset($_SESSION[doctorid]))
         <div class="info-box-4 hover-zoom-effect">
           <div class="icon"> <i class="zmdi zmdi-account col-blue"></i> </div>
           <div class="content">
-            <div class="text">New Appoiment</div>
+            <div class="text">New Appointment</div>
             <div class="number"><?php
-            $sql = "SELECT * FROM appointment WHERE `doctorid`=1 AND appointmentdate=' ".date("Y-m-d")."'";
+            $sql = "SELECT * FROM appointment WHERE `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'";
             $qsql = mysqli_query($con,$sql);
             echo mysqli_num_rows($qsql);
             ?></div>
@@ -62,7 +62,7 @@ if(!isset($_SESSION[doctorid]))
             <div class="text">Today's Appoinment</div>
             <div class="number">
               <?php
-              $sql = "SELECT * FROM appointment WHERE status='Active' AND `doctorid`=1 AND appointmentdate=' ".date("Y-m-d")."'" ;
+              $sql = "SELECT * FROM appointment WHERE status='Active' AND `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'" ;
             $qsql = mysqli_query($con,$sql);
             echo mysqli_num_rows($qsql);
             ?>

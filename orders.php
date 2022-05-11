@@ -17,7 +17,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-	$sql ="INSERT INTO orders( patientid, doctorid, orderdate, address, mobileno, note, status)  values('$_SESSION[patientid]','$_POST[docid]','$dt','$_POST[address]','$_POST[mobilenumber]','$_POST[note]','Pending')";
+	$sql ="INSERT INTO orders( patientid, nurseid, orderdate, address, mobileno, note, status)  values('$_SESSION[patientid]','$_POST[docid]','$dt','$_POST[address]','$_POST[mobilenumber]','$_POST[note]','Pending')";
 	if($qsql = mysqli_query($con,$sql))
 	{
 		echo "<script>alert('Order placed successfully...');</script>";
@@ -54,21 +54,21 @@ if(isset($_GET[editid]))
     <table width="490" border="3">
       <tbody>
         <tr>
-          <td>Select Doctor</td>
+          <td>Select Nurse</td>
           <td><select name="docid" id="docid">
             <option value="">Select</option>
             <?php
-          	$sqldoctor= "SELECT * FROM doctor WHERE status='Active'";
-			$qsqldoctor = mysqli_query($con,$sqldoctor);
-			while($rsdoctor = mysqli_fetch_array($qsqldoctor))
+          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
+			$qsqlnurse = mysqli_query($con,$sqlnurse);
+			while($rsnurse = mysqli_fetch_array($qsqlnurse))
 			{
-				if($rsdoctor[doctorid] == $rsedit[doctorid])
+				if($rsnurse[nurseid] == $rsedit[nurseid])
 				{
-				echo "<option value='$rsdoctor[doctorid]' selected>$rsdoctor[doctorid]-$rsdoctor[doctorname]</option>";
+				echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nurseid]-$rsnurse[nursename]</option>";
 				}
 				else
 				{
-				echo "<option value='$rsdoctor[doctorid]'>$rsdoctor[doctorid]-$rsdoctor[doctorname]</option>";				
+				echo "<option value='$rsnurse[nurseid]'>$rsnurse[nurseid]-$rsnurse[nursename]</option>";				
 				}
 			}
 		  ?>

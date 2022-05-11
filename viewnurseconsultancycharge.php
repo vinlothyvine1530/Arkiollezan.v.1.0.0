@@ -14,7 +14,7 @@ if(isset($_GET[delid]))
 ?>
 <div class="container-fluid">
 	<div class="block-header">
-		<h2>View Doctor consultancy charges</h2>
+		<h2>View Nurse consultancy charges</h2>
 
 	</div>
 
@@ -31,7 +31,7 @@ if(isset($_GET[delid]))
 			</thead>
 			<tbody>
 				<?php
-				$sql ="SELECT * FROM billing_records where bill_type='Consultancy Charge' AND bill_type_id='$_SESSION[doctorid]'";
+				$sql ="SELECT * FROM billing_records where bill_type='Consultancy Charge' AND bill_type_id='$_SESSION[nurseid]'";
 				$qsql = mysqli_query($con,$sql);
 				$billamt= 0;
 				while($rs = mysqli_fetch_array($qsql))
@@ -60,10 +60,10 @@ if(isset($_GET[delid]))
 					if($rs[bill_type] == "Consultancy Charge")
 					{
 	//Consultancy Charge
-						$sqldoctor = "SELECT * FROM doctor WHERE doctorid='$rs[bill_type_id]'";
-						$qsqldoctor = mysqli_query($con,$sqldoctor);
-						$rsdoctor = mysqli_fetch_array($qsqldoctor);
-						echo " - Mr.".$rsdoctor[doctorname];
+						$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[bill_type_id]'";
+						$qsqlnurse = mysqli_query($con,$sqlnurse);
+						$rsnurse = mysqli_fetch_array($qsqlnurse);
+						echo " - Mr.".$rsnurse[nursename];
 					}
 
 					if($rs[bill_type] =="Treatment Cost")

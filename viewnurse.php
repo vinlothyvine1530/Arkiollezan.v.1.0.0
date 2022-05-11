@@ -3,17 +3,17 @@ include("adformheader.php");
 include("dbconnection.php");
 if(isset($_GET[delid]))
 {
-	$sql ="DELETE FROM doctor WHERE doctorid='$_GET[delid]'";
+	$sql ="DELETE FROM nurse WHERE nurseid='$_GET[delid]'";
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('doctor record deleted successfully..');</script>";
+		echo "<script>alert('Nurse record deleted successfully.');</script>";
 	}
 }
 ?>
 <div class="container-fluid">
 	<div class="block-header">
-		<h2>View  Doctor</h2>
+		<h2>View Nurse</h2>
 
 	</div>
 
@@ -23,7 +23,7 @@ if(isset($_GET[delid]))
 		<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
 			<thead>
 				<tr>
-					<td>Doctor Name</td>
+					<td>Nurse Name</td>
 					<td>Mobile Number</td>
 					<td>Department</td>
 					<td>Login ID</td>
@@ -37,7 +37,7 @@ if(isset($_GET[delid]))
 			<tbody>
 				
 				<?php
-				$sql ="SELECT * FROM doctor";
+				$sql ="SELECT * FROM nurse";
 				$qsql = mysqli_query($con,$sql);
 				while($rs = mysqli_fetch_array($qsql))
 				{
@@ -46,7 +46,7 @@ if(isset($_GET[delid]))
 					$qsqldept = mysqli_query($con,$sqldept);
 					$rsdept = mysqli_fetch_array($qsqldept);
 					echo "<tr>
-					<td>&nbsp;$rs[doctorname]</td>
+					<td>&nbsp;$rs[nursename]</td>
 					<td>&nbsp;$rs[mobileno]</td>
 					<td>&nbsp;$rsdept[departmentname]</td>
 					<td>&nbsp;$rs[loginid]</td>
@@ -55,7 +55,7 @@ if(isset($_GET[delid]))
 					<td>&nbsp;$rs[experience] year</td>
 					<td>$rs[status]</td>
 					<td>&nbsp;
-					<a href='doctor.php?editid=$rs[doctorid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a> <a href='viewdoctor.php?delid=$rs[doctorid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>
+					<a href='nurse.php?editid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a> <a href='viewnurse.php?delid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>
 					</tr>";
 				}
 				?>      </tbody>

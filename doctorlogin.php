@@ -36,7 +36,7 @@ if(isset($_POST[submit]))
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>CMIS - Doctor Login</title>
+<title>CMIS - Nurse Login</title>
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -58,7 +58,7 @@ if(isset($_POST[submit]))
 ?></div>
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>Clinic Management System</span>Doctor Login <span class="msg">Hello, Doctor!</span></h1>
+        <h1 class="title"><span>Clinical Monitoring and Inventory System</span>Nurse Login <span class="msg">Hello, Nurse!</span></h1>
         <div class="col-md-12">
 
     <form method="post" action="" name="frmadminlogin" id="sign_in" onSubmit="return validateform()">

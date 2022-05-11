@@ -23,7 +23,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 5; font-size:50px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinic Management System</div>
+                style="z-index: 5; font-size:50px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring and Inventory System</div>
             
             <!-- LAYER NR. 2 -->
             <div class="tp-caption sfr tp-resizeme" 

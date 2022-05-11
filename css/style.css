@@ -1,13 +1,4 @@
 /*------------------------------------------------------------------
-    Main Style Stylesheet
-    Project:        SEO Factory - HTML5 Template
-    Version:        1.0
-    Author:         M_Adnan
-    Last change:    03/05/2017
-    Primary use:    Creative, Coporate, Business, Portfolio, Personal, Minimal
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
 body 
 	 + WRAP
 	 + HEADER
@@ -587,9 +578,22 @@ header .logo {
 	transition: 0.2s ease-in-out;
 }
 header .logo img {
-	z-index: 3;
+	z-index: 5;
 	position: relative;
 }
+
+header .ctu h1{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: left;
+	position:relative; 
+	top: -57px;
+	left: 55px;
+	line-height: 16px;
+	margin-bottom: -51px;
+
+}
+
 .sticky-wrapper {
 	height: auto !important;
 }
@@ -649,7 +653,7 @@ header .navbar li.active a:before {
 }
 .ownmenu .nav .dropdown-menu {
 	background: #fff;
-	padding: 0px;
+	
 }
 .ownmenu .nav .dropdown-menu li a {
 	color: #fff !important;
@@ -963,7 +967,7 @@ header .is-sticky .sticky .logo {
 	border-radius: 50%;
 	display: table-cell;
 	vertical-align: top;
-	background: #2B96CC;
+	background: #009688;
 	text-align: center;
 	line-height: 33px;
 	color: #fff;

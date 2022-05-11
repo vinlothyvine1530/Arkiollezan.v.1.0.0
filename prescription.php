@@ -5,7 +5,7 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-		$sql ="UPDATE prescription SET treatment_records_id='$_POST[treatmentid]',doctorid='$_POST[select2]',patientid='$_POST[patientid]',prescriptiondate='$_POST[date]',status='$_POST[select]' WHERE prescription_id='$_GET[editid]'";
+		$sql ="UPDATE prescription SET treatment_records_id='$_POST[treatmentid]',nurseid='$_POST[select2]',patientid='$_POST[patientid]',prescriptiondate='$_POST[date]',status='$_POST[select]' WHERE prescription_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('prescription record updated successfully...');</script>";
@@ -17,7 +17,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-		$sql ="INSERT INTO prescription(treatment_records_id,doctorid,patientid,prescriptiondate,status,appointmentid) values('$_POST[treatmentid]','$_POST[select2]','$_POST[patientid]','$_POST[date]','Active','$_GET[appid]')";
+		$sql ="INSERT INTO prescription(treatment_records_id,nurseid,patientid,prescriptiondate,status,appointmentid) values('$_POST[treatmentid]','$_POST[select2]','$_POST[patientid]','$_POST[date]','Active','$_GET[appid]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			$insid= mysqli_insert_id($con);
@@ -72,21 +72,21 @@ if(isset($_GET[editid]))
         </tr>
         
   <?php
-		if(isset($_SESSION[doctorid]))
+		if(isset($_SESSION[nurseid]))
 		{
 		?>
         <tr>
-          <td>Doctor</td>
+          <td>Nurse</td>
           <td>
     		<?php
-				$sqldoctor= "SELECT * FROM doctor INNER JOIN department ON department.departmentid=doctor.departmentid WHERE doctor.status='Active' AND doctor.doctorid='$_SESSION[doctorid]'";
-				$qsqldoctor = mysqli_query($con,$sqldoctor);
-				while($rsdoctor = mysqli_fetch_array($qsqldoctor))
+				$sqlnurse= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active' AND nurse.nurseid='$_SESSION[nurseid]'";
+				$qsqlnurse = mysqli_query($con,$sqlnurse);
+				while($rsnurse = mysqli_fetch_array($qsqlnurse))
 				{
-					echo "$rsdoctor[doctorname] ( $rsdoctor[departmentname] )";
+					echo "$rsnurse[nursename] ( $rsnurse[departmentname] )";
 				}
 				?>
-                <input type="hidden" name="select2" value="<?php echo $_SESSION[doctorid]; ?>"  />
+                <input type="hidden" name="select2" value="<?php echo $_SESSION[nurseid]; ?>"  />
           </td>
         <?php
 		}
@@ -94,21 +94,21 @@ if(isset($_GET[editid]))
 		{
 		?>        
         <tr>
-          <td width="34%">Doctor</td>
+          <td width="34%">Nurse</td>
           <td width="66%"><select class="form-control show-tick" name="select2" id="select2">
           <option value="">Select</option>
             <?php
-          	$sqldoctor= "SELECT * FROM doctor WHERE status='Active'";
-			$qsqldoctor = mysqli_query($con,$sqldoctor);
-			while($rsdoctor = mysqli_fetch_array($qsqldoctor))
+          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
+			$qsqlv = mysqli_query($con,$sqlnurse);
+			while($rsnurse = mysqli_fetch_array($qsqlnurse))
 			{
-				if($rsdoctor[doctorid] == $rsedit[doctorid])
+				if($rsnurse[nurseid] == $rsedit[nurseid])
 				{
-				echo "<option value='$rsdoctor[doctorid]' selected>$rsdoctor[doctorid]-$rsdoctor[doctorname]</option>";
+				echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nurseid]-$rsnurse[nursename]</option>";
 				}
 				else
 				{
-				echo "<option value='$rsdoctor[doctorid]'>$rsdoctor[doctorid]-$rsdoctor[doctorname]</option>";				
+				echo "<option value='$rsnurse[nurseid]'>$rsnurse[nurseid]-$rsnurse[nursename]</option>";				
 				}
 			}
 		  ?>
@@ -140,7 +140,7 @@ function validateform()
 {
 	if(document.frmpres.select2.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Nurse name should not be empty..");
 		document.frmpres.select2.focus();
 		return false;
 	}

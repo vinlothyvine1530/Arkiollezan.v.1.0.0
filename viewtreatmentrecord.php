@@ -26,7 +26,7 @@ if(isset($_GET[delid]))
      		 <tr>
             <td width="71"	scope="col">Treatment type</td>
             <td width="52"	scope="col">Patient</td>
-            <td width="78"	scope="col">Doctor</td>
+            <td width="78"	scope="col">Nurse</td>
             <td width="82"	scope="col">Treatment Description</td>
             <td width="43"	scope="col">Treatment date</td>
             <td width="43"	scope="col">Treatment time</td>
@@ -41,9 +41,9 @@ if(isset($_GET[delid]))
 		{
 			$sql = $sql . " AND patientid='$_SESSION[patientid]'"; 
 		}
-		if(isset($_SESSION[doctorid]))
+		if(isset($_SESSION[nurseid]))
 		{
-			$sql = $sql . " AND doctorid='$_SESSION[doctorid]'";
+			$sql = $sql . " AND nurseid='$_SESSION[nurseid]'";
 		}
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
@@ -52,7 +52,7 @@ if(isset($_GET[delid]))
 			$qsqlpat = mysqli_query($con,$sqlpat);
 			$rspat = mysqli_fetch_array($qsqlpat);
 			
-			$sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
+			$sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
 			$qsqldoc = mysqli_query($con,$sqldoc);
 			$rsdoc = mysqli_fetch_array($qsqldoc);
 			
@@ -63,7 +63,7 @@ if(isset($_GET[delid]))
         echo "<tr>
           <td>&nbsp;$rstreatment[treatmenttype]</td>
 		   <td>&nbsp;$rspat[patientname]</td>
-		    <td>&nbsp;$rsdoc[doctorname]</td>
+		    <td>&nbsp;$rsdoc[nursename]</td>
 			<td>&nbsp;$rs[treatment_description]</td>
 			 <td>&nbsp;$rs[treatment_date]</td>
 			  <td>&nbsp;$rs[treatment_time]</td>";  

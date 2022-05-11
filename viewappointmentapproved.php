@@ -35,7 +35,7 @@ if(isset($_GET[approveid]))
 					<td>Patient detail</td>
 					<td>Registration Date &  Time</td>
 					<td>Department</td>
-					<td>Doctor</td>
+					<td>Nurse</td>
 					<td>Appointment Reason</td>
 					<td>Status</td>
 					<td><div align="center">Action</div></td>
@@ -48,9 +48,9 @@ if(isset($_GET[approveid]))
 				{
 					$sql  = $sql . " AND patientid='$_SESSION[patientid]'";
 				}
-				if(isset($_SESSION[doctorid]))
+				if(isset($_SESSION[nurseid]))
 				{
-					$sql  = $sql . " AND doctorid='$_SESSION[doctorid]'";			
+					$sql  = $sql . " AND nurseid='$_SESSION[nurseid]'";			
 				}
 				$qsql = mysqli_query($con,$sql);
 				while($rs = mysqli_fetch_array($qsql))
@@ -64,7 +64,7 @@ if(isset($_GET[approveid]))
 					$qsqldept = mysqli_query($con,$sqldept);
 					$rsdept = mysqli_fetch_array($qsqldept);
 
-					$sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
+					$sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
 					$qsqldoc = mysqli_query($con,$sqldoc);
 					$rsdoc = mysqli_fetch_array($qsqldoc);
 					echo "<tr>
@@ -72,7 +72,7 @@ if(isset($_GET[approveid]))
 					<td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>		 
 					<td>&nbsp;$rs[appointmentdate]&nbsp;$rs[appointmenttime]</td> 
 					<td>&nbsp;$rsdept[departmentname]</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
+					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[app_reason]</td>
 					<td>&nbsp;$rs[status]</td>
 					<td><div align='center'>";

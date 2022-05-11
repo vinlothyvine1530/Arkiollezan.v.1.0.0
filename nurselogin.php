@@ -6,20 +6,20 @@ $dt = date("Y-m-d");
 $tim = date("H:i:s");
 
 include("dbconnection.php");
-if(isset($_SESSION[doctorid]))
+if(isset($_SESSION[nurseid]))
 {
-	echo "<script>window.location='doctoraccount.php';</script>";
+	echo "<script>window.location='nurseaccount.php';</script>";
 }
 $err='';
 if(isset($_POST[submit]))
 {
-	$sql = "SELECT * FROM doctor WHERE loginid='$_POST[loginid]' AND password='$_POST[password]' AND status='Active'";
+	$sql = "SELECT * FROM nurse WHERE loginid='$_POST[loginid]' AND password='$_POST[password]' AND status='Active'";
 	$qsql = mysqli_query($con,$sql);
 	if(mysqli_num_rows($qsql) == 1)
 	{
 		$rslogin = mysqli_fetch_array($qsql);
-		$_SESSION[doctorid]= $rslogin[doctorid] ;
-		echo "<script>window.location='doctoraccount.php';</script>";
+		$_SESSION[nurseid]= $rslogin[nurseid] ;
+		echo "<script>window.location='nurseaccount.php';</script>";
 	}
 	else
 	{

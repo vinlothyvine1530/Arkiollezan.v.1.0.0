@@ -102,11 +102,11 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-add"></i><span>nurse</span> </a>
+                                class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="doctor.php">Add Doctor</a>
+                            <li><a href="nurse.php">Add Nurse</a>
                             </li>
-                            <li><a href="viewdoctor.php">View Doctor</a></li>
+                            <li><a href="nurse.php">View Nurse</a></li>
                            
                         </ul>
                     </li>
@@ -137,23 +137,23 @@ $tim = date("H:i:s");
             <?php }?>
 
 
-            <!-- doctor Menu -->
+            <!-- nurse Menu -->
             <?php
-            if(isset($_SESSION[doctorid]))
+            if(isset($_SESSION[nurseid]))
             {
             ?>
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li class="active open"><a href="doctoraccount.php"><i
+                    <li class="active open"><a href="nurseaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 
 
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-calendar-check"></i><span>Profile</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="doctorprofile.php">Profile</a></li>
-                            <li><a href="doctorchangepassword.php">Change Password</a></li>
+                            <li><a href="nurseprofile.php">Profile</a></li>
+                            <li><a href="nursechangepassword.php">Change Password</a></li>
                         </ul>
                     </li>
 
@@ -170,8 +170,8 @@ $tim = date("H:i:s");
                                 class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
                            
-                            <li><a href="doctortimings.php">Add Visiting Hour</a></li>
-                            <li><a href="viewdoctortimings.php">View Visiting Hour</a></li>
+                            <li><a href="nursetimings.php">Add Visiting Hour</a></li>
+                            <li><a href="viewnursetimings.php">View Visiting Hour</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
@@ -182,7 +182,7 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
 
-                    <li> <a href="viewdoctorconsultancycharge.php"><i class="zmdi zmdi-copy"></i><span>Income
+                    <li> <a href="viewnurseconsultancycharge.php"><i class="zmdi zmdi-copy"></i><span>Income
                                 Report</span> </a></li>
 
 
@@ -198,7 +198,7 @@ $tim = date("H:i:s");
             </div>
 
             <?php }; ?>
-            <!-- doctor Menu -->
+            <!-- nurse Menu -->
 
 
 
@@ -210,7 +210,7 @@ $tim = date("H:i:s");
             ?>
             <div class="menu">
                 <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="header">Main Navigation</li>
                     <li class="active open"><a href="patientaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 

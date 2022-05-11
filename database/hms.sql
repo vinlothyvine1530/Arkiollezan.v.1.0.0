@@ -58,7 +58,7 @@ CREATE TABLE `appointment` (
   `departmentid` int(10) NOT NULL,
   `appointmentdate` date NOT NULL,
   `appointmenttime` time NOT NULL,
-  `doctorid` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
   `status` varchar(10) NOT NULL,
   `app_reason` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -121,12 +121,12 @@ INSERT INTO `department` (`departmentid`, `departmentname`, `description`, `stat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctor`
+-- Table structure for table `nurse`
 --
 
-CREATE TABLE `doctor` (
-  `doctorid` int(10) NOT NULL,
-  `doctorname` varchar(50) NOT NULL,
+CREATE TABLE `nurse` (
+  `nurseid` int(10) NOT NULL,
+  `nursename` varchar(50) NOT NULL,
   `mobileno` varchar(15) NOT NULL,
   `departmentid` int(10) NOT NULL,
   `loginid` varchar(25) NOT NULL,
@@ -138,21 +138,21 @@ CREATE TABLE `doctor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `doctor`
+-- Dumping data for table `nurse`
 --
 
-INSERT INTO `doctor` (`doctorid`, `doctorname`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`, `consultancy_charge`) VALUES
+INSERT INTO `nurse` (`nurseid`, `nursename`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`, `consultancy_charge`) VALUES
 (1, 'Tamayo', '2125798361', 1, 'tamayo', '123456789', 'Active', 'MBBS', 7.0, 800.00);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctor_timings`
+-- Table structure for table `nurse_timings`
 --
 
-CREATE TABLE `doctor_timings` (
-  `doctor_timings_id` int(10) NOT NULL,
-  `doctorid` int(10) NOT NULL,
+CREATE TABLE `nurse_timings` (
+  `nurse_timings_id` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
   `start_time` time NOT NULL,
   `end_time` time NOT NULL,
   `available_day` varchar(15) NOT NULL,
@@ -189,7 +189,7 @@ INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinecost`, `descripti
 CREATE TABLE `orders` (
   `orderid` int(10) NOT NULL,
   `patientid` int(10) NOT NULL,
-  `doctorid` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
   `prescriptionid` int(10) NOT NULL,
   `orderdate` date NOT NULL,
   `deliverydate` date NOT NULL,
@@ -256,7 +256,7 @@ CREATE TABLE `payment` (
 CREATE TABLE `prescription` (
   `prescriptionid` int(10) NOT NULL,
   `treatment_records_id` int(10) NOT NULL,
-  `doctorid` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
   `patientid` int(10) NOT NULL,
   `delivery_type` varchar(10) NOT NULL COMMENT 'Delivered through appointment or online order',
   `delivery_id` int(10) NOT NULL COMMENT 'appointmentid or orderid',
@@ -364,7 +364,7 @@ CREATE TABLE `treatment_records` (
   `treatmentid` int(10) NOT NULL,
   `appointmentid` int(10) NOT NULL,
   `patientid` int(10) NOT NULL,
-  `doctorid` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
   `treatment_description` text NOT NULL,
   `uploads` varchar(100) NOT NULL,
   `treatment_date` date NOT NULL,
@@ -431,16 +431,16 @@ ALTER TABLE `department`
   ADD PRIMARY KEY (`departmentid`);
 
 --
--- Indexes for table `doctor`
+-- Indexes for table `nurse`
 --
-ALTER TABLE `doctor`
-  ADD PRIMARY KEY (`doctorid`);
+ALTER TABLE `nurse`
+  ADD PRIMARY KEY (`nurseid`);
 
 --
--- Indexes for table `doctor_timings`
+-- Indexes for table `nurse_timings`
 --
-ALTER TABLE `doctor_timings`
-  ADD PRIMARY KEY (`doctor_timings_id`);
+ALTER TABLE `nurse_timings`
+  ADD PRIMARY KEY (`nurse_timings_id`);
 
 --
 -- Indexes for table `medicine`
@@ -544,16 +544,16 @@ ALTER TABLE `department`
   MODIFY `departmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `doctor`
+-- AUTO_INCREMENT for table `nurse`
 --
-ALTER TABLE `doctor`
-  MODIFY `doctorid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `nurse`
+  MODIFY `nurseid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `doctor_timings`
+-- AUTO_INCREMENT for table `nurse_timings`
 --
-ALTER TABLE `doctor_timings`
-  MODIFY `doctor_timings_id` int(10) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `nurse_timings`
+  MODIFY `nurse_timings_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `medicine`

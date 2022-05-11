@@ -5,10 +5,10 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-			$sql ="UPDATE doctor SET doctorname='$_POST[doctorname]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE doctorid='$_GET[editid]'";
+			$sql ="UPDATE nurse SET nursename='$_POST[nursename]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE nurseid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('doctor record updated successfully...');</script>";
+			echo "<script>alert('Nurse record updated successfully...');</script>";
 		}
 		else
 		{
@@ -17,10 +17,10 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-	$sql ="INSERT INTO doctor(doctorname,mobileno,departmentid,loginid,password,status,education,experience,consultancy_charge) values('$_POST[doctorname]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]','$_POST[consultancy_charge]')";
+	$sql ="INSERT INTO nurse(nursename,mobileno,departmentid,loginid,password,status,education,experience,consultancy_charge) values('$_POST[nursename]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]','$_POST[consultancy_charge]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Doctor record inserted successfully...');</script>";
+		echo "<script>alert('Nurse record inserted successfully...');</script>";
 	}
 	else
 	{
@@ -30,7 +30,7 @@ if(isset($_POST[submit]))
 }
 if(isset($_GET[editid]))
 {
-	$sql="SELECT * FROM doctor WHERE doctorid='$_GET[editid]' ";
+	$sql="SELECT * FROM nurse WHERE nurseid='$_GET[editid]' ";
 	$qsql = mysqli_query($con,$sql);
 	$rsedit = mysqli_fetch_array($qsql);
 	
@@ -39,7 +39,7 @@ if(isset($_GET[editid]))
 
 <div class="container-fluid">
 	<div class="block-header">
-		<h2> Add New Doctor </h2>
+		<h2> Add New Nurse </h2>
 	</div>
 	<div class="row clearfix">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -50,9 +50,9 @@ if(isset($_GET[editid]))
 
 
 					
-					<div class="form-group"><label>Doctor Name</label> 
+					<div class="form-group"><label>Nurse Name</label> 
 					<div class="form-line">
-					<input class="form-control" type="text" name="doctorname" id="doctorname" value="<?php echo $rsedit[doctorname]; ?>" />
+					<input class="form-control" type="text" name="nursename" id="nursename" value="<?php echo $rsedit[nursename]; ?>" />
 				</div>
 				</div>
 
@@ -175,16 +175,16 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 
 function validateform()
 {
-	if(document.frmdoct.doctorname.value == "")
+	if(document.frmdoct.nursename.value == "")
 	{
-		alert("Doctor name should not be empty..");
-		document.frmdoct.doctorname.focus();
+		alert("Nurse name should not be empty..");
+		document.frmdoct.nursename.focus();
 		return false;
 	}
-	else if(!document.frmdoct.doctorname.value.match(alphaspaceExp))
+	else if(!document.frmdoct.nursename.value.match(alphaspaceExp))
 	{
-		alert("Doctor name not valid..");
-		document.frmdoct.doctorname.focus();
+		alert("Nurse name not valid..");
+		document.frmdoct.nursename.focus();
 		return false;
 	}
 	else if(document.frmdoct.mobilenumber.value == "")

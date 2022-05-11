@@ -41,7 +41,7 @@ if(isset($_GET[approveid]))
 					<th>Patient detail</th>
 					<th>Appointment Date &  Time</th>
 					<th>Department</th>
-					<th>Doctor</th>
+					<th>Nurse</th>
 					<th>Appointment Reason</th>
 					<th>Status</th>
 					<th width="15%">Action</th>
@@ -66,7 +66,7 @@ if(isset($_GET[approveid]))
 					$qsqldept = mysqli_query($con,$sqldept);
 					$rsdept = mysqli_fetch_array($qsqldept);
 
-					$sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
+					$sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
 					$qsqldoc = mysqli_query($con,$sqldoc);
 					$rsdoc = mysqli_fetch_array($qsqldoc);
 					echo "<tr>
@@ -74,7 +74,7 @@ if(isset($_GET[approveid]))
 					<td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>		 
 					<td>&nbsp;" . date("d-M-Y",strtotime($rs[appointmentdate])) . " &nbsp; " . date("H:i A",strtotime($rs[appointmenttime])) . "</td> 
 					<td>&nbsp;$rsdept[departmentname]</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
+					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[app_reason]</td>
 					<td>&nbsp;$rs[status]</td>
 					<td>";

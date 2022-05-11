@@ -222,7 +222,7 @@
   
 
     
-    <!-- DOCTOR LIST -->
+    <!-- Nurse LIST -->
     <section class="p-t-b-150">
       <div class="container"> 
         
@@ -272,7 +272,7 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-doctor icon"></i> </div>
+                <div class="media-left"> <i class="flaticon-nurse icon"></i> </div>
                 <div class="media-body">
                   <h6>Qualified nurse</h6>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

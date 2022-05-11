@@ -199,12 +199,12 @@ if(isset($_SESSION[adminid]))
 </li>
 <li><a href="viewtreatmentrecord.php">Treatment</a></li>
 <li>
-<a href=" ######### ">Doctor</a>
+<a href=" ######### ">Nurse</a>
     <ul>
-    <li><a href="doctor.php">Add Doctor</a></li>
-    <li><a href="Viewdoctor.php">View Doctor</a></li>
-     <li><a href="doctortimings.php">Add Doctor Timings</a></li>
-    <li><a href="viewdoctortimings.php">View Doctor Timings</a></li>
+    <li><a href="nurse.php">Add Nurse</a></li>
+    <li><a href="Viewnurse.php">View Nurse</a></li>
+     <li><a href="nursetimings.php">Add Nurse Timings</a></li>
+    <li><a href="viewnursetimings.php">View Nurse Timings</a></li>
  </ul>
 </li>
     
@@ -227,16 +227,16 @@ if(isset($_SESSION[adminid]))
 }
 ?>
 <?php
-if(isset($_SESSION[doctorid]))
+if(isset($_SESSION[nurseid]))
 {
 ?>
 <div id="mmenu">
-    <li><a href="doctoraccount.php">Account</a></li>
+    <li><a href="nurseaccount.php">Account</a></li>
     <li>
     <a href=" ######### ">Settings</a>
         <ul>
-       <li><a href="doctorprofile.php">Profile</a></li>
-            <li><a href="doctorchangepassword.php">Change Password</a></li>
+       <li><a href="nurseprofile.php">Profile</a></li>
+            <li><a href="nursechangepassword.php">Change Password</a></li>
           </ul>
     </li>
     <li>
@@ -251,10 +251,10 @@ if(isset($_SESSION[doctorid]))
        <li><a href="viewpatient.php">View Patient</a></li>
         </ul>
     </li>
-       <li><a href=" ######### ">Doctor Timings</a>
+       <li><a href=" ######### ">Nurse Timings</a>
         <ul>
-       <li><a href="doctortimings.php">Add Timings</a></li>
-       <li><a href="viewdoctortimings.php">View Timings</a></li>
+       <li><a href="nursetimings.php">Add Timings</a></li>
+       <li><a href="viewnursetimings.php">View Timings</a></li>
         </ul>
     </li>
     <li>
@@ -267,7 +267,7 @@ if(isset($_SESSION[doctorid]))
     
     <li>
  
-    <li><a href="viewdoctorconsultancycharge.php">Income Report</a></li>
+    <li><a href="viewnurseconsultancycharge.php">Income Report</a></li>
         
 		</ul>
   

@@ -103,7 +103,7 @@ label.form-label {
 	<div class="w3ls-banner">
 	<!---728x90--->
 	<div class="heading">
-				<h1>Appoint My Doctor</h1>
+				<h1>Appoint My Nurse</h1>
 				
 	</div>
 	<!---728x90--->
@@ -168,7 +168,7 @@ label.form-label {
 
 	</div>
 <div class="copyright">
-		<p>© 2017 Appoint My Doctor Form. All rights reserved | Design by <a href="www.w3layouts.com">W3layouts</a></p> 
+		<p>© 2017 Appoint My Nurse Form. All rights reserved | Design by <a href="www.w3layouts.com">W3layouts</a></p> 
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
@@ -211,7 +211,7 @@ label.form-label {
 				}	
 				
 		}
-		function showdoctor(id)
+		function shownurse(id)
 		{
 			$('#show_doctnm').load('show_doct.php?id='+id);
 			

@@ -4,7 +4,7 @@ include("adheader.php");
 include("dbconnection.php");
 if(isset($_POST[submit]))
 {
-	$sql = "UPDATE doctor SET password='$_POST[newpassword]' WHERE password='$_POST[oldpassword]' AND doctorid='$_SESSION[doctorid]'";
+	$sql = "UPDATE nurse SET password='$_POST[newpassword]' WHERE password='$_POST[oldpassword]' AND nurseid='$_SESSION[nurseid]'";
 	$qsql= mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
@@ -19,7 +19,7 @@ if(isset($_POST[submit]))
 
 <div class="container-fluid">
     <div class="block-header">
-        <h2> Doctor's Password</h2>
+        <h2> Nurse's Password</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

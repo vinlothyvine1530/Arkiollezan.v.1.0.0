@@ -7,7 +7,7 @@ include("dbconnection.php");
           <tr>
             <td><strong>Treatment type</strong></td>
             <td><strong>Treatment date & time</strong></td>
-            <td><strong>Doctor</strong></td>
+            <td><strong>Nurse</strong></td>
             <td><strong>Treatment Description</strong></td>
             <td><strong>Treatment cost</strong></td>
           </tr>
@@ -20,7 +20,7 @@ include("dbconnection.php");
 			$qsqlpat = mysqli_query($con,$sqlpat);
 			$rspat = mysqli_fetch_array($qsqlpat);
 			
-			$sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
+			$sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
 			$qsqldoc = mysqli_query($con,$sqldoc);
 			$rsdoc = mysqli_fetch_array($qsqldoc);
 			
@@ -31,7 +31,7 @@ include("dbconnection.php");
 			echo "<tr>
 					<td>&nbsp;$rstreatment[treatmenttype]</td>
 					</td><td>&nbsp;" . date("d-m-Y",strtotime($rs[treatment_date])). "  &nbsp;". date("h:i A",strtotime($rs[treatment_time])) . "</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
+					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[treatment_description]";
 if(file_exists("treatmentfiles/$rs[uploads]"))
 {
@@ -46,7 +46,7 @@ if(file_exists("treatmentfiles/$rs[uploads]"))
 		?>
 </table>
 <?php
-if(isset($_SESSION[doctorid]))
+if(isset($_SESSION[nurseid]))
 {
 ?>  
 <hr>
@@ -70,7 +70,7 @@ function validateform()
 	
 	else if(document.frmtreatdetail.select2.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Nurse name should not be empty..");
 		document.frmtreatdetail.select2.focus();
 		return false;
 	}

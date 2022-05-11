@@ -150,9 +150,9 @@ if(isset($_GET[editid]))
                                 <div class="form-group">
                                     <div class="form-line">
                                         <select name="select6" id="select6" class=" form-control show-tick">
-                                            <option value="">Select Doctor</option>
+                                            <option value="">Select Nurse</option>
                                             <?php
-                                $sqldoctor= "SELECT * FROM doctor INNER JOIN department ON department.departmentid=doctor.departmentid WHERE doctor.status='Active'";
+                                $sqldoctor= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active'";
                                 $qsqldoctor = mysqli_query($con,$sqldoctor);
                                 while($rsdoctor = mysqli_fetch_array($qsqldoctor))
                                 {
@@ -263,7 +263,7 @@ function validateform() {
         document.frmappnt.time.focus();
         return false;
     } else if (document.frmappnt.select6.value == "") {
-        alert("Doctor name should not be empty..");
+        alert("Nurse name should not be empty..");
         document.frmappnt.select6.focus();
         return false;
     } else if (document.frmappnt.select.value == "") {

@@ -1,7 +1,7 @@
 <table class="table table-bordered table-striped">
       <tbody>
         <tr>
-          <th>Doctor</th>
+          <th>Nurse</th>
           <th>Patient</th>
           <th>Prescription Date</th>
           <th>View</th>              
@@ -15,12 +15,12 @@ while($rs = mysqli_fetch_array($qsql))
 	$qsqlpatient = mysqli_query($con,$sqlpatient);
 	$rspatient = mysqli_fetch_array($qsqlpatient);
 	
-	$sqldoctor = "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
-	$qsqldoctor = mysqli_query($con,$sqldoctor);
-	$rsdoctor = mysqli_fetch_array($qsqldoctor);
+	$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+	$qsqlnurse = mysqli_query($con,$sqlnurse);
+	$rsnurse = mysqli_fetch_array($qsqlnurse);
 
             echo "<tr>
-              		<td>&nbsp;$rsdoctor[doctorname]</td>
+              		<td>&nbsp;$rsnurse[nursename]</td>
               		<td>&nbsp;$rspatient[patientname]</td>
                		<td>&nbsp;$rs[prescriptiondate]</td>
 					<td><a href='prescriptionrecord.php?prescriptionid=$rs[0]&patientid=$rs[patientid]' >View</td>
@@ -30,7 +30,7 @@ while($rs = mysqli_fetch_array($qsql))
   </tbody>
 </table>
 <?php
-if(isset($_SESSION[doctorid]))
+if(isset($_SESSION[nurseid]))
 {
 ?>  
 <hr>

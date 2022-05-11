@@ -7,6 +7,8 @@ if(!isset($_SESSION[adminid]))
 {
     echo "<script>window.location='adminlogin.php';</script>";
 }
+
+
 if(!isset($_SESSION[adminid]))
 {
     echo "<script>window.location='adminlogin.php';</script>";
@@ -47,10 +49,10 @@ if(!isset($_SESSION[adminid]))
             <div class="info-box-4 hover-zoom-effect">
                 <div class="icon"> <i class="zmdi zmdi-account col-green"></i> </div>
                 <div class="content">
-                    <div class="text">Total Doctor </div>
+                    <div class="text">Total Patient</div>
                     <div class="number">
                         <?php
-                        $sql = "SELECT * FROM doctor WHERE status='Active' ";
+                        $sql = "SELECT * FROM patient WHERE status='Active' ";
                         $qsql = mysqli_query($con,$sql);
                         echo mysqli_num_rows($qsql);
                         ?>

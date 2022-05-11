@@ -74,7 +74,11 @@ $tim = date("H:i:s");
   <!-- Header -->
   <header class="header-style-2">
     <div class="container">
-      <div class="logo"> <a href="index.php"><img src="images/ctunewlogo.png" alt="" style="height: 54px;"></a> </div>
+      <div class="logo"> <a href="index.php"> <img src="images/ctunewlogo.png" alt="" style="height: 45px;"> </a>
+        <div class="ctu"> <h1>CEBU TECHNOLOGICAL UNIVERSITY <br>
+              Naga Extension Campus</h1></div>
+        </div>
+
       <div class="head-info">
         <ul>
           <li> <i class="fa fa-phone"></i>
@@ -83,7 +87,7 @@ $tim = date("H:i:s");
           </li>
           <li> <i class="fa fa-envelope-o"></i>
             <p>systemclinic21@gmail.com<br>
-              ctunagaakonggarbo@gmail.com</p>
+              marcpabico@gmail.com</p>
           </li>
           <li> <i class="fa fa-map-marker"></i>
             <p>City of Naga, Cebu <br>
@@ -110,8 +114,8 @@ $tim = date("H:i:s");
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In </a>
               <ul class="dropdown-menu multi-level" style="display: none;">
                 <li><a href="adminlogin.php">Admin</a></li>
-                <li><a href="doctorlogin.php">Doctor</a></li>
-                <li><a href="patientlogin.php">Patient </a></li>
+                <li><a href="doctorlogin.php">Nurse</a></li>
+                <li><a href="patientlogin.php">Patient (Student) </a></li>
                 
               </ul>
             </li>           

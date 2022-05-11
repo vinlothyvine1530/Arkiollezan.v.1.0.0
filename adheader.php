@@ -53,7 +53,7 @@ $tim = date("H:i:s");
     <nav class="navbar clearHeader">
         <div class="col-12">
             <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand"
-                    href="#">Clinic Management System</a> </div>
+                    href="#">Clinical Monitoring and Inventory System</a> </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Notifications -->
                 <li>
@@ -101,7 +101,7 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-add"></i><span>nurse</span> </a>
+                                class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
                             <li><a href="nurse.php">Add Nurse</a>
                             </li>

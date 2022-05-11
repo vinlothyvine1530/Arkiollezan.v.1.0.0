@@ -637,6 +637,11 @@ header .navbar li a {
 	letter-spacing: 0px;
 	text-transform: uppercase;
 }
+
+header .navbar a
+{
+	font-family: 'Montserrat', sans-serif;
+}
 .navbar-collapse {
 	padding: 0px;
 	float: left;

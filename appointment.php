@@ -6,7 +6,7 @@ if(isset($_POST[submit]))
 {
   if(isset($_GET[editid]))
   {
-   $sql ="UPDATE appointment SET patientid='$_POST[select4]',departmentid='$_POST[select5]',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]',doctorid='$_POST[select6]',status='$_POST[select]' WHERE appointmentid='$_GET[editid]'";
+   $sql ="UPDATE appointment SET patientid='$_POST[select4]',departmentid='$_POST[select5]',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]',nurseid='$_POST[select6]',status='$_POST[select]' WHERE appointmentid='$_GET[editid]'";
    if($qsql = mysqli_query($con,$sql))
    {
     echo "<script>alert('Appointment Record Updated Successfully...');</script>";
@@ -21,7 +21,7 @@ else
    $sql ="UPDATE patient SET status='Active' WHERE patientid='$_POST[select4]'";
    $qsql=mysqli_query($con,$sql);
 
-   $sql ="INSERT INTO appointment(patientid, departmentid, appointmentdate, appointmenttime, doctorid, status, app_reason) values('$_POST[select4]','$_POST[select5]','$_POST[appointmentdate]','$_POST[time]','$_POST[select6]','$_POST[select]','$_POST[appreason]')";
+   $sql ="INSERT INTO appointment(patientid, departmentid, appointmentdate, appointmenttime, nurseid, status, app_reason) values('$_POST[select4]','$_POST[select5]','$_POST[appointmentdate]','$_POST[time]','$_POST[select6]','$_POST[select]','$_POST[appreason]')";
    if($qsql = mysqli_query($con,$sql))
    {
 
@@ -152,20 +152,15 @@ if(isset($_GET[editid]))
                                         <select name="select6" id="select6" class=" form-control show-tick">
                                             <option value="">Select Nurse</option>
                                             <?php
-                                $sqldoctor= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active'";
-                                $qsqldoctor = mysqli_query($con,$sqldoctor);
-                                while($rsdoctor = mysqli_fetch_array($qsqldoctor))
-                                {
-                                   if($rsdoctor[doctorid] == $rsedit[doctorid])
-                                   {
-                                    echo "<option value='$rsdoctor[doctorid]' selected>$rsdoctor[doctorname] ( $rsdoctor[departmentname] ) </option>";
-                                }
-                                else
-                                {
-                                    echo "<option value='$rsdoctor[doctorid]'>$rsdoctor[doctorname] ( $rsdoctor[departmentname] )</option>";				
-                                }
-                            }
-                            ?>
+                        $sqldept = "SELECT * FROM nurse WHERE status='Active'";
+                        $qsqldept = mysqli_query($con,$sqldept);
+                        while($rsdept = mysqli_fetch_array($qsqldept))
+                        {
+                            echo "<option value='$rsdept[nurseid]'>$rsdept[nursename] ";
+                            echo $rsdept[departmentname];
+                            echo "</option>";
+                        }
+                        ?>
                                         </select>
                                     </div>
                                 </div>

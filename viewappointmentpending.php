@@ -40,7 +40,6 @@ if(isset($_GET[approveid]))
 
 					<th>Patient detail</th>
 					<th>Appointment Date &  Time</th>
-					<th>Department</th>
 					<th>Nurse</th>
 					<th>Appointment Reason</th>
 					<th>Status</th>
@@ -73,7 +72,6 @@ if(isset($_GET[approveid]))
 
 					<td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>		 
 					<td>&nbsp;" . date("d-M-Y",strtotime($rs[appointmentdate])) . " &nbsp; " . date("H:i A",strtotime($rs[appointmenttime])) . "</td> 
-					<td>&nbsp;$rsdept[departmentname]</td>
 					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[app_reason]</td>
 					<td>&nbsp;$rs[status]</td>

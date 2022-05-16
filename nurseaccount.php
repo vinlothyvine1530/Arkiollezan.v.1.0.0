@@ -16,7 +16,7 @@ if(!isset($_SESSION[nurseid]))
     $nursetable = mysqli_query($con,$sql);
     $doc = mysqli_fetch_array($nursetable);
 
-    echo 'Nurse. '. $doc[nursename]; ?>
+    echo 'Nurse '. $doc[nursename]; ?>
 
   </h1>
 </div>

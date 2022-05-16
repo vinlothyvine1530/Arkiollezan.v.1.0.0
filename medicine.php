@@ -53,7 +53,7 @@ if(isset($_GET[editid]))
           <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinename" id="medicinename" value="<?php echo $rsedit[medicinename]; ?>" /></td>
         </tr>
         <tr>
-          <td width="34%">Medicine cost</td>
+          <td width="34%">Quantity</td>
           <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinecost" id="medicinecost" value="<?php echo $rsedit[medicinecost]; ?>" /></td>
         </tr>
         <tr>

@@ -54,7 +54,7 @@ if(isset($_GET[delid]))
 ?>
 <div class="container-fluid">
   <div class="block-header">
-    <h2>Add New treatment records</h2>
+    <h2>Add New Vital records</h2>
 
   </div>
 
@@ -82,7 +82,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         </tr>
         
         <tr>
-          <td>Select Treatment type</td>
+          <td>Select Vital type</td>
           <td>          
           <select name="select4" id="select4" class="form-control show-tick">
            <option value="">Select</option>
@@ -93,11 +93,11 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
 			{
 				if($rstreatment[treatmentid] == $rsedit[treatmentid])
 				{
-				echo "<option value='$rstreatment[treatmentid]' selected>$rstreatment[treatmenttype]  - (₱ $rstreatment[treatment_cost])</option>";
+				echo "<option value='$rstreatment[treatmentid]' selected>$rstreatment[treatmenttype]  - ( $rstreatment[treatment_cost])</option>";
 				}
 				else
 				{
-					echo "<option value='$rstreatment[treatmentid]'>$rstreatment[treatmenttype]  - (₱ $rstreatment[treatment_cost])</option>";
+					echo "<option value='$rstreatment[treatmentid]'>$rstreatment[treatmenttype]  - ( $rstreatment[treatment_cost])</option>";
 				}
 				
 			}
@@ -157,20 +157,20 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
        
         </tr>
         <tr>
-          <td>Treatment Description</td>
+          <td>Vital Description</td>
           <td><input class="form-control" name="textarea" id="textarea" cols="45" rows="5"><?php echo $rsedit[treatment_description] ; ?></textarea></td>
         </tr>
         <tr>
-          <td>Treatment files</td>
+          <td>Vital Record files</td>
           <td><input class="form-control" type="file" name="uploads" id="uploads" value="<?php echo $rsedit[uploads]; ?>" /></td>
         </tr>
         <tr>
-          <td>Treatment date</td>
+          <td>Vital Record date</td>
           <td><input class="form-control" type="date" max="<?php echo date("Y-m-d"); ?>" name="treatmentdate" id="treatmentdate" value="<?php echo $rsedit[treatment_date]; ?>" /></td>
          
         </tr>
         <tr>
-          <td>Treatment Time</td>
+          <td>Vital Record Time</td>
           <td><input class="form-control" type="time" name="treatmenttime" id="treatmenttime" value="<?php echo $rsedit[treatment_time]; ?>" /></td>
         </tr>
 
@@ -184,12 +184,12 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
           <table class="table table-bordered table-striped">
         <tbody>
           <tr>
-            <td width="71">Treatment type</td>
+            <td width="71">Vital type</td>
             <td width="78">Nurse</td>
-            <td width="82">Treatment Description</td>
+            <td width="82">Vital Description</td>
             <td width="103">Uploads</td>
-            <td width="43">Treatment date</td>
-            <td width="43">Treatment time</td>
+            <td width="43">Vital Record date</td>
+            <td width="43">Vital Record time</td>
             <td width="54">Status</td>
             <td width="58">Action</td>
           </tr>

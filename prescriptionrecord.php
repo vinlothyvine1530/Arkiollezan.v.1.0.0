@@ -112,23 +112,15 @@ if(isset($_GET[editid]))
 		$qsqlmedicine = mysqli_query($con,$sqlmedicine);
 		while($rsmedicine = mysqli_fetch_array($qsqlmedicine))
 		{
-			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] ( ₱ $rsmedicine[medicinecost] )</option>";
+			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] ($rsmedicine[medicinecost] )</option>";
 		}
 		?>
 		  </select>
 		  </td>
         </tr>
         <tr>
-          <td>Cost</td>
-          <td><input class="form-control" type="text" name="cost" id="cost" value="<?php echo $rsmedicine[medicinecost]; ?>" readonly style="background-color:pink;" /></td>
-        </tr>
-        <tr>
           <td>Unit</td>
           <td><input class="form-control" type="number" min="1" name="unit" id="unit" value="<?php echo $rsedit[unit]; ?>" onkeyup="calctotalcost(cost.value,this.value)" onchange="" /></td>
-        </tr>
-        <tr>
-          <td>Total Cost</td>
-          <td><input class="form-control" type="text" name="totcost" id="totcost" value="<?php echo $rsedit[cost]; ?>" readonly style="background-color:pink;" /></td>
         </tr>
         <tr>
           <td>Dosage</td>
@@ -168,9 +160,7 @@ if(isset($_GET[editid]))
         <tr>
           <td><strong>Medicine</strong></td>
           <td><strong>Dosage</strong></td>
-          <td><strong>Cost</strong></td>
           <td><strong>Unit</strong></td>
-          <td><strong>Total Cost</strong></td>
                     <?php
 			if(!isset($_SESSION[patientid]))
 			{
@@ -189,9 +179,8 @@ if(isset($_GET[editid]))
         echo "<tr>
           <td>&nbsp;$rs[medicinename]</td>
 		    <td>&nbsp;$rs[dosage]</td>
-          <td>&nbsp;₹$rs[cost]</td>
 		   <td>&nbsp;$rs[unit]</td>
-		   <td  align='right'>₱" . $rs[cost] * $rs[unit] . "</td>";
+		   <td  align='right'>" . $rs[cost] * $rs[unit] . "</td>";
 			if(!isset($_SESSION[patientid]))
 			{
 			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 
@@ -200,11 +189,6 @@ if(isset($_GET[editid]))
 		$gtotal = $gtotal+($rs[cost] * $rs[unit]);
 		}
 		?>
-        <tr>
-          <th colspan="4" align="right">Grand Total </th>
-		  <th align="right">₱ <?php echo $gtotal; ?></th>
-		  <td></td>
-          </tr>
         <tr>
           <td colspan="6"><div align="center">
             <input Class="btn btn-default" type="submit" name="print" id="print" value="Print" onclick="myFunction()"/>
@@ -249,7 +233,6 @@ function loadmedicine(medicineid)
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("totcost").value = this.responseText;
-			document.getElementById("cost").value = this.responseText;
 			document.getElementById("unit").value = 1;
 		} 
 	};

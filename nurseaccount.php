@@ -70,26 +70,10 @@ if(!isset($_SESSION[nurseid]))
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3 col-sm-6">
-        <div class="info-box-4 hover-zoom-effect">
-          <div class="icon"> <i class="zmdi zmdi-balance col-cyan"></i> </div>
-          <div class="content">
-            <div class="text">Total Earning Earning</div>
-            <div class="number">₱ 
-              <?php 
-              $sql = "SELECT sum(bill_amount) as total  FROM `billing_records` WHERE `bill_type` = 'Consultancy Charge'" ;
-              $qsql = mysqli_query($con,$sql);
-              while ($row = mysqli_fetch_assoc($qsql))
-              { 
-               echo $row['total'];
-             }
-              ?>
-
-            </div>
-          </div>
-        </div>
-      </div>
+      
+     
     </div>
+
   </section>
 </div>
 

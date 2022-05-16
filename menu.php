@@ -197,7 +197,7 @@ if(isset($_SESSION[adminid]))
     <li><a href="viewappointmentapproved.php" style="width:200px;">View Approved Appointments</a></li>
     </ul>
 </li>
-<li><a href="viewtreatmentrecord.php">Treatment</a></li>
+<li><a href="viewtreatmentrecord.php">Vital Record</a></li>
 <li>
 <a href=" ######### ">Nurse</a>
     <ul>
@@ -215,8 +215,8 @@ if(isset($_SESSION[adminid]))
       
        	<li><a href="department.php" style="width:150px;">Add Department</a></li>
     	<li><a href="Viewdepartment.php" style="width:150px;">View Department</a></li>
-        <li><a href="treatment.php" style="width:150px;">Add Treatment type</a></li>
-        <li><a href="viewtreatment.php" style="width:150px;">View Treatment types</a></li>
+        <li><a href="treatment.php" style="width:150px;">Add Vital Record Type</a></li>
+        <li><a href="viewtreatment.php" style="width:150px;">View Vital Record Types</a></li>
        	<li><a href="medicine.php" style="width:150px;">Add Medicine</a></li>
     	<li><a href="Viewmedicine.php" style="width:150px;">View Medicine</a></li>
       </ul>
@@ -260,16 +260,13 @@ if(isset($_SESSION[nurseid]))
     <li>
     <a href=" ######### ">Treatment</a>
         <ul>
-           <li><a href="viewtreatmentrecord.php">View Treatment Records</a></li>
-            <li><a href="viewtreatment.php">View Treatment</a></li>
+           <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
+            <li><a href="viewtreatment.php">View Vital Record</a></li>
         </ul>
     </li>    
     
     <li>
- 
-    <li><a href="viewnurseconsultancycharge.php">Income Report</a></li>
-        
-		</ul>
+
   
     <li><a href="logout.php">Log Out</a></li>       
  </div>
@@ -306,7 +303,7 @@ if(isset($_SESSION[patientid]))
 <li>
 <a href=" ######### ">Treatment</a>
     <ul>
-       <li><a href="viewtreatmentrecord.php">View Treatment Records</a></li>
+       <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
     </ul>
 </li>
 

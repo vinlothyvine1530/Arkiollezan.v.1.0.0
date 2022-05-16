@@ -1707,28 +1707,28 @@ header .is-sticky .sticky .logo {
 .department .dep-sec-txt {
 	text-align: left;
 }
-.department .doctor-img {
+.department .programmer-img {
 	position: relative;
 }
-.department .doctor-img img {
+.department .programmer-img img {
 	border: 5px solid #fff;
 	border-radius: 4px;
 	box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
-.department .doctor-img .name-doc {
+.department .programmer-img .name-doc {
 	padding: 20px;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
 }
-.department .doctor-img h6 {
+.department .programmer-img h6 {
 	text-transform: uppercase;
 	background: #fff;
 	padding: 15px;
 	margin: 0px;
 	line-height: 22px;
 }
-.department .doctor-img span {
+.department .programmer-img span {
 	font-size: 13px;
 	text-transform: none;
 	font-weight: normal;

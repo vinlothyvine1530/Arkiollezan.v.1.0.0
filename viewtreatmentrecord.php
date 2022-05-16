@@ -14,7 +14,7 @@ if(isset($_GET[delid]))
 
 <div class="container-fluid">
   <div class="block-header">
-    <h2>View new treatment records</h2>
+    <h2>View Vital Records</h2>
 
   </div>
 
@@ -24,12 +24,12 @@ if(isset($_GET[delid]))
      <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
      	<thead>
      		 <tr>
-            <td width="71"	scope="col">Treatment type</td>
+            <td width="71"	scope="col">Vital Record Type</td>
             <td width="52"	scope="col">Patient</td>
             <td width="78"	scope="col">Nurse</td>
-            <td width="82"	scope="col">Treatment Description</td>
-            <td width="43"	scope="col">Treatment date</td>
-            <td width="43"	scope="col">Treatment time</td>
+            <td width="82"	scope="col">Vital Record Description</td>
+            <td width="43"	scope="col">Vital Record date</td>
+            <td width="43"	scope="col">Vital Record time</td>
      
           </tr>
      	</thead>

@@ -25,7 +25,7 @@ if(isset($_GET[delid]))
       <tbody>
         <tr>
           <td>Medicine</td>
-          <td>Cost</td>
+          <td>Quantity</td>
           <td>Unit</td>
           <td>Dosage</td>
           <td>Status</td>

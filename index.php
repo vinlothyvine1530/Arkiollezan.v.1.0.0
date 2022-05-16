@@ -9,7 +9,7 @@
           <!-- SLIDE  -->
           <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
             <!-- MAIN IMAGE --> 
-            <img src="images/slider-bg-1.png"  alt="slider"  data-bgposition=" center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <img src="images/ctu-bg-1.png"  alt="ctu"  data-bgposition=" center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
             
             <!-- LAYER NR. 1 -->
             <div class="tp-caption sfl tp-resizeme" 
@@ -70,7 +70,7 @@
           <!-- SLIDE  -->
           <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
             <!-- MAIN IMAGE --> 
-            <img src="images/slider-bg-2.png"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <img src="images/ctu-bg-2.png"  alt="ctu"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
             
             <!-- LAYER NR. 1 -->
             <div class="tp-caption sfl tp-resizeme" 
@@ -132,7 +132,7 @@
           <!-- SLIDE  -->
           <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
             <!-- MAIN IMAGE --> 
-            <img src="images/slider-bg-3.png"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <img src="images/ctu-bg-3.png"  alt="ctu"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
             
             <!-- LAYER NR. 2 -->
             <div class="tp-caption sfb tp-resizeme" 

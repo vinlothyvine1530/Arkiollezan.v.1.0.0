@@ -179,8 +179,7 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="viewpatient.php">View Patient</a>
-                            </li>
+                            <li><a href="viewpatient.php">View Patient</a></li>
                         </ul>
                     </li>
 

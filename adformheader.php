@@ -182,10 +182,6 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
 
-                    <li> <a href="viewnurseconsultancycharge.php"><i class="zmdi zmdi-copy"></i><span>Income
-                                Report</span> </a></li>
-
-
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-settings-square"></i><span>Service</span> </a>
                         <ul class="ml-menu">

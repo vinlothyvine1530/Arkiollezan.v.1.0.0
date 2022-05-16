@@ -25,9 +25,7 @@ if(isset($_GET[delid]))
 				<tr>
 					<td>Nurse Name</td>
 					<td>Mobile Number</td>
-					<td>Department</td>
 					<td>Login ID</td>
-					<td>Consultancy Charge</td>
 					<td>Education</td>
 					<td>Experience</td>
 					<td>Status</td>
@@ -48,9 +46,7 @@ if(isset($_GET[delid]))
 					echo "<tr>
 					<td>&nbsp;$rs[nursename]</td>
 					<td>&nbsp;$rs[mobileno]</td>
-					<td>&nbsp;$rsdept[departmentname]</td>
 					<td>&nbsp;$rs[loginid]</td>
-					<td>&nbsp;₱ $rs[consultancy_charge]</td>
 					<td>&nbsp;$rs[education]</td>
 					<td>&nbsp;$rs[experience] year</td>
 					<td>$rs[status]</td>

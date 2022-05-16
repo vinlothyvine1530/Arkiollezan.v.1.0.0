@@ -3,8 +3,9 @@ include("adformheader.php");
 include("dbconnection.php");
 if(isset($_GET[delid]))
 {
+
 	$sql ="DELETE FROM medicine WHERE medicineid='$_GET[delid]'";
-	$qsql=mysqli_query($con,$sql);
+	$qsql=mysqli_query($con,$sql );
 	if(mysqli_affected_rows($con) == 1)
 	{
 		echo "<script>alert('Medicine redcord deleted successfully..');</script>";

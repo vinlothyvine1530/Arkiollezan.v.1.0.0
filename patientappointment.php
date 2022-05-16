@@ -278,19 +278,15 @@ if(isset($_SESSION[patientid]))
                                             <label>
                                                 <select name="doct" class="selectpicker" id="department"
                                                     >
-                                                    <option value="">Select department</option>
+                                                    <option value="">Select Nurse's</option>
                                                     <?php
                         $sqldept = "SELECT * FROM nurse WHERE status='Active'";
                         $qsqldept = mysqli_query($con,$sqldept);
                         while($rsdept = mysqli_fetch_array($qsqldept))
                         {
-                            echo "<option value='$rsdept[nurseid]'>$rsdept[nursename] (";
-                            $sqldept = "SELECT * FROM department WHERE departmentid='$rsdept[departmentid]'";
-                            $qsqldept = mysqli_query($con,$sqldept);
-                            $rsdept = mysqli_fetch_array($qsqldept);
+                            echo "<option value='$rsdept[nurseid]'>$rsdept[nursename] ";
                             echo $rsdept[departmentname];
-
-                            echo ")</option>";
+                            echo "</option>";
                         }
                         ?>
                                                 </select>

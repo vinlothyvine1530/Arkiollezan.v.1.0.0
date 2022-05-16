@@ -13,6 +13,7 @@ if(isset($_GET[delid]))
 }
 if(isset($_POST[submit]))
 {
+	
 	if(isset($_GET[editid]))
 	{
 			$sql ="UPDATE prescription_records SET prescription_id='$_POST[prescriptionid]',medicine_name='$_POST[medicine]',cost='$_POST[cost]',unit='$_POST[unit]',dosage='$_POST[select2]',status=' $_POST[select]' WHERE prescription_record_id='$_GET[editid]'";
@@ -180,13 +181,14 @@ if(isset($_GET[editid]))
           <td>&nbsp;$rs[medicinename]</td>
 		    <td>&nbsp;$rs[dosage]</td>
 		   <td>&nbsp;$rs[unit]</td>
-		   <td  align='right'>" . $rs[cost] * $rs[unit] . "</td>";
+		   ";
 			if(!isset($_SESSION[patientid]))
 			{
 			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 
 			}
-		echo "</tr>";
-		$gtotal = $gtotal+($rs[cost] * $rs[unit]);
+		echo "
+		</tr>";
+		
 		}
 		?>
         <tr>
@@ -259,12 +261,7 @@ function validateform()
 		document.frmpresrecord.medicine.focus();
 		return false;
 	}
-	else if(document.frmpresrecord.cost.value == "")
-	{
-		alert("Cost should not be empty..");
-		document.frmpresrecord.cost.focus();
-		return false;
-	}
+
 	else if(document.frmpresrecord.unit.value == "")
 	{
 		alert("Unit should not be empty..");

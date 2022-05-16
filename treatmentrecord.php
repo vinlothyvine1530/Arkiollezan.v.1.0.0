@@ -118,7 +118,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
 				$qsqlnurse = mysqli_query($con,$sqlnurse);
 				while($rsnurse = mysqli_fetch_array($qsqlnurse))
 				{
-					echo "$rsnurse[nursename] ( $rsnurse[departmentname] )";
+					echo "$rsnurse[nursename]";
 				}
 				?>
                 <input class="form-control" type="hidden" name="select5" value="<?php echo $_SESSION[nurseid]; ?>"  />

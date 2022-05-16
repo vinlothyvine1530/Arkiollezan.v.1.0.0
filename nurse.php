@@ -62,31 +62,7 @@ if(isset($_GET[editid]))
 					<input class="form-control" type="text" name="mobilenumber" id="mobilenumber" value="<?php echo $rsedit[mobileno]; ?>"/>
 				</div>
 				</div>
-
-
-					<div class="form-group"><label>Department</label> 
-						<div class="form-line">
-					<select  name="select3" id="select3" class="form-control show-tick">
-						<option value="">Select</option>
-						<?php
-						$sqldepartment= "SELECT * FROM department WHERE status='Active'";
-						$qsqldepartment = mysqli_query($con,$sqldepartment);
-						while($rsdepartment=mysqli_fetch_array($qsqldepartment))
-						{
-							if($rsdepartment[departmentid] == $rsedit[departmentid])
-							{
-								echo "<option value='$rsdepartment[departmentid]' selected>$rsdepartment[departmentname]</option>";
-							}
-							else
-							{
-								echo "<option value='$rsdepartment[departmentid]'>$rsdepartment[departmentname]</option>";
-							}
-
-						}
-						?>
-					</select>
-				</div>
-			</div>
+				
 
 					<div class="form-group"><label>Login ID</label> 
 					<div class="form-line">
@@ -122,12 +98,6 @@ if(isset($_GET[editid]))
 				</div>
 				</div>
 
-
-					<div class="form-group"><label>Consultancy Charge</label> 
-					<div class="form-line">
-					<input class="form-control" type="text" name="consultancy_charge" id="consultancy_charge" value="<?php echo $rsedit[experience]; ?>"/>
-				</div>
-				</div>
 
 					<div class="form-group">
 					<label>Status</label> 

@@ -40,7 +40,7 @@ if(isset($_GET[editid]))
 
 <div class="container-fluid">
 	<div class="block-header">
-		<h2>Add New treatment</h2>
+		<h2>Add New Vital record</h2>
 	</div>
 	<div class="row clearfix">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -52,22 +52,14 @@ if(isset($_GET[editid]))
 					<div class="row">
 						<div class="col-sm-4 col-xs-12">
 							<div class="form-group">
-								<label for="type">Treatment Type</label>
+								<label for="type">Record Type</label>
 								<div class="form-line">
 									<input type="text" class="form-control" name="treatmenttype" id="treatmenttype"
 									value="<?php echo $rsedit[treatmenttype]; ?>">
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4 col-xs-12">
-							<div class="form-group">
-								<label for="type">Treatment Cost</label>
-								<div class="form-line">
-									<input type="text" class="form-control" name="treatmentcost" id="treatmentcost"
-									value="<?php echo $rsedit[treatment_cost]; ?>" />
-								</div>
-							</div>
-						</div>
+					
 						<div class="col-sm-4 col-xs-12">
 							<div class="form-group">
 								<label>Status</label>
@@ -128,11 +120,11 @@ var alphanumericExp = /^[0-9a-zA-Z]+$/; //Variable to validate numbers and alpha
 var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable to validate Email ID 
 function validateform() {
 	if (document.frmtreat.treatmenttype.value == "") {
-		alert("Treatment type should not be empty..");
+		alert("Vital Record Type should not be empty..");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (!document.frmtreat.treatmenttype.value.match(alphaspaceExp)) {
-		alert("Treatment type not valid..");
+		alert("Vital Record Type not valid..");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (document.frmtreat.select.value == "") {

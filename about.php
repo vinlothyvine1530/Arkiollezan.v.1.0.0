@@ -99,9 +99,9 @@
                     
                     <!-- programmer Img -->
                     <div class="col-md-offset-1 col-md-4">
-                      <div class="doctor-img"> <img class="img-responsive" src="images/depart-doctor-img.png" alt="" >
+                      <div class="programmer-img"> <img class="img-responsive" src="images/barcoma-programmer.png" alt="" >
                         <div class="name-doc">
-                          <h6>Brylle Vincent L. Barcoma <span>Programmer</span></h6>
+                          <h6>Brylle Vincent L. Barcoma <span><br>Programmer</span></h6>
                         </div>
                       </div>
                     </div>
@@ -133,7 +133,7 @@
                     
                     <!-- programmer Img -->
                     <div class="col-md-offset-1 col-md-4">
-                      <div class="doctor-img"> <img class="img-responsive" src="images/depart-doctor-img-2.png" alt="" >
+                      <div class="programmer-img"> <img class="img-responsive" src="images/artizuela-programmer.png" alt="" >
                         <div class="name-doc">
                           <h6>Mienzan D. Artizuela <span><br>Programmer</span></h6>
                         </div>
@@ -167,7 +167,7 @@
                     
                     <!-- programmer Img -->
                     <div class="col-md-offset-1 col-md-4">
-                      <div class="doctor-img"> <img class="img-responsive" src="images/depart-doctor-img-3.png" alt="" >
+                      <div class="programmer-img"> <img class="img-responsive" src="images/badian-programmer.png" alt="" >
                         <div class="name-doc">
                           <h6>Mark Louie B. Badian <span><br>Programmer</span></h6>
                         </div>
@@ -201,7 +201,7 @@
                     
                     <!-- menor Img -->
                     <div class="col-md-offset-1 col-md-4">
-                      <div class="doctor-img"> <img class="img-responsive" src="images/depart-doctor-img-4.png" alt="" >
+                      <div class="programmer-img"> <img class="img-responsive" src="images/menor-programmer.png" alt="" >
                         <div class="name-doc">
                           <h6>Rio E. Menor <span><br>Programmer</span></h6>
                         </div>
@@ -235,7 +235,7 @@
                     
                     <!-- adviser Img -->
                     <div class="col-md-offset-1 col-md-4">
-                      <div class="doctor-img"> <img class="img-responsive" src="images/depart-doctor-img-5.png" alt="" >
+                      <div class="programmer-img"> <img class="img-responsive" src="images/adviser.png" alt="" >
                         <div class="name-doc">
                           <h6>Prof. Glenn A. Trinidad<br><span>Professor</span></h6>
                         </div>

@@ -25,8 +25,7 @@ if(isset($_GET[delid]))
      <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
       <tbody>
         <tr>
-          <td><strong>Treatment Type</strong></td>
-          <td><strong>Treatment cost</strong></td>
+          <td><strong>Vital Record Type</strong></td>
           <td><strong>Note</strong></td>
           <td><strong>Status</strong></td>
           <?php
@@ -45,7 +44,6 @@ if(isset($_GET[delid]))
         {
           echo "<tr>
           <td>&nbsp;$rs[treatmenttype]</td>
-          <td>&nbsp;₱ $rs[treatment_cost]</td>
           <td>&nbsp;$rs[note]</td>
           <td>&nbsp;$rs[status]</td>";
           if(isset($_SESSION[adminid]))

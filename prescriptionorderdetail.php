@@ -95,7 +95,6 @@ if(isset($_GET[editid]))
       <tbody>
         <tr>
           <td><strong>Medicine</strong></td>
-          <td><strong>Cost</strong></td>
           <td><strong>Unit</strong></td>
           <td><strong>Dosage</strong></td>
                     <?php
@@ -114,7 +113,6 @@ if(isset($_GET[editid]))
 		{
         echo "<tr>
           <td>&nbsp;$rs[medicine_name]</td>
-          <td>&nbsp;Rs. $rs[cost]</td>
 		   <td>&nbsp;$rs[unit]</td>
 		    <td>&nbsp;$rs[dosage]</td>";
 			if(!isset($_SESSION[patientid]))
@@ -149,10 +147,6 @@ function myFunction() {
         <tr>
           <td width="34%">Medicine</td>
           <td width="66%"><input type="text" name="medicine" id="medicine" value="<?php echo $rsedit[medicine_name]; ?>" /></td>
-        </tr>
-        <tr>
-          <td>Cost</td>
-          <td><input type="text" name="cost" id="cost" value="<?php echo $rsedit[cost]; ?>"/></td>
         </tr>
         <tr>
           <td>Unit</td>

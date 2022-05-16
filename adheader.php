@@ -123,8 +123,8 @@ $tim = date("H:i:s");
                         <ul class="ml-menu" style="display: block;">
                             <li><a href="department.php" class=" waves-effect waves-block">Add Department</a></li>
                             <li><a href="viewdepartment.php" class=" waves-effect waves-block">View Department</a></li>
-                            <li><a href="treatment.php" class=" waves-effect waves-block">Add Treatment type</a></li>
-                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Treatment types</a></li>
+                            <li><a href="treatment.php" class=" waves-effect waves-block">Add Vital Record</a></li>
+                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record</a></li>
                             <li><a href="medicine.php" class=" waves-effect waves-block">Add Medicine</a></li>
                             <li><a href="viewmedicine.php" class=" waves-effect waves-block">View Medicine</a></li>
                         </ul>
@@ -180,18 +180,16 @@ $tim = date("H:i:s");
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
                             <li><a href="viewpatient.php">View Patient</a></li>
+                    
                         </ul>
                     </li>
-
-                    <li> <a href="viewnurseconsultancycharge.php"><i class="zmdi zmdi-copy"></i><span>Income
-                                Report</span> </a></li>
 
 
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-copy"></i><span>Service</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="viewtreatmentrecord.php">View Treatment Records</a></li>
-                            <li><a href="viewtreatment.php">View Treatment</a></li>
+                            <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
+                            <li><a href="viewtreatment.php">View Vital</a></li>
                         </ul>
                     </li>
 
@@ -239,9 +237,9 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-o"></i><span>Treatment</span> </a>
+                                class="zmdi zmdi-account-o"></i><span>Vital Record</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="viewtreatmentrecord.php">View Treatment Records</a></li>
+                            <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
                     </li>
                 </ul>
                 </li>

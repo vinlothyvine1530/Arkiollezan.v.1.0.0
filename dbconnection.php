@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$con=mysqli_connect("localhost","root","","hms");
+$con=mysqli_connect("localhost","root","","cmis");
 
 // Check connection
 if (mysqli_connect_errno($con))

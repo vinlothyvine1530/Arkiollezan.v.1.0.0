@@ -67,7 +67,6 @@ if(isset($_GET[delid]))
           <thead>
              <tr>
               <td>Medicine</td>
-              <td>Cost</td>
               <td>Unit</td>
               <td>Dosage</td>
             </tr>
@@ -81,7 +80,6 @@ if(isset($_GET[delid]))
             {
               echo "<tr>
               <td>&nbsp;$rsprescription_records[medicinename]</td>
-              <td>&nbsp;$rsprescription_records[cost]</td>
               <td>&nbsp;$rsprescription_records[unit]</td>
               <td>&nbsp;$rsprescription_records[dosage]</td>
 

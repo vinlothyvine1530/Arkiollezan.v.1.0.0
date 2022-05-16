@@ -60,7 +60,7 @@ while($rs = mysqli_fetch_array($qsql))
           <tbody>
             <tr>
               <td>Medicine</td>
-              <td>Cost</td>
+              <td>Quantity</td>
               <td>Unit</td>
               <td>Dosage</td>
             </tr>

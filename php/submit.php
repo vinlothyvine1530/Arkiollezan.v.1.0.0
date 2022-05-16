@@ -2,7 +2,7 @@
 
 
 	// specify your email here
-	$to = 'adnanarf@gmail.com';
+	$to = 'systemclinic21@gmail.com';
 
 
 

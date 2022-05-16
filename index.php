@@ -23,7 +23,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 5; font-size:50px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring and Inventory System</div>
+                style="z-index: 5; font-size:50px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Welcome to Naga Campus Online Clinic!</div>
             
             <!-- LAYER NR. 2 -->
             <div class="tp-caption sfr tp-resizeme" 
@@ -37,7 +37,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 6; font-size:40px; color:#fff; font-weight:500; white-space: nowrap;">We care about your health </div>
+                style="z-index: 6; font-size:35px; color:#fff; font-weight:500; white-space: nowrap;">A web-based clinical system created just for you. </div>
             
             <!-- LAYER NR. 3 -->
             <div class="tp-caption sfb tp-resizeme" 
@@ -51,7 +51,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7;  font-size:22px; color:#fff; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">Best Clinicity Services in your town</div>
+                style="z-index: 7;  font-size:22px; color:#fff; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">Phase 2</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 
@@ -64,7 +64,7 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 8;"><a href="patientappointment.php." class="btn">Book Now</a> </div>
+                style="z-index: 8;"><a href="patientappointment.php." class="btn">Schedule Now</a> </div>
           </li>
           
           <!-- SLIDE  -->
@@ -84,7 +84,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 5; font-size:40px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Best Diagnostic Centre </div>
+                style="z-index: 5; font-size:40px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;"> </div>
             
             <!-- LAYER NR. 2 -->
             <div class="tp-caption sfr tp-resizeme" 
@@ -98,7 +98,8 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 5; font-size:55px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinic Management System</div>
+                style="z-index: 2; font-size:55px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring<br>
+                   and Inventory System</div>
             
             <!-- LAYER NR. 3 -->
             <div class="tp-caption sfb tp-resizeme" 
@@ -112,7 +113,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7; font-size:16px; color:#fff; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">Improved diagnostic performance and heightened satisfaction of patients <br> and physicians delight.</div>
+                style="z-index: 7; font-size:16px; color:#fff; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring and Inventory System</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 

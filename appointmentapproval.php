@@ -8,7 +8,7 @@ if(isset($_POST[submit]))
 				$sql ="UPDATE patient SET status='Active' WHERE patientid='$_GET[patientid]'";
 				$qsql=mysqli_query($con,$sql);
 			$roomid=0;
-			$sql ="UPDATE appointment SET appointmenttype='$_POST[apptype]',departmentid='$_POST[select5]',doctorid='$_POST[select6]',status='Approved',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]' WHERE appointmentid='$_GET[editid]'";
+			$sql ="UPDATE appointment SET appointmenttype='$_POST[apptype]',departmentid='$_POST[select5]',nurseid='$_POST[select6]',status='Approved',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]' WHERE appointmentid='$_GET[editid]'";
 			if($qsql = mysqli_query($con,$sql))
 			{
 				$roomid= $_POST[select3];
@@ -27,7 +27,7 @@ if(isset($_POST[submit]))
 			$sql ="UPDATE patient SET status='Active' WHERE patientid='$_POST[select4]'";
 			$qsql=mysqli_query($con,$sql);
 				
-			$sql ="INSERT INTO appointment(appointmenttype,patientid,roomid,departmentid,appointmentdate,appointmenttime,doctorid,status) values('$_POST[select2]','$_POST[select4]','$_POST[select3]','$_POST[select5]','$_POST[appointmentdate]','$_POST[time]','$_POST[select6]','$_POST[select]')";
+			$sql ="INSERT INTO appointment(appointmenttype,patientid,roomid,departmentid,appointmentdate,appointmenttime,nurseid,status) values('$_POST[select2]','$_POST[select4]','$_POST[select3]','$_POST[select5]','$_POST[appointmentdate]','$_POST[time]','$_POST[select6]','$_POST[select]')";
 			if($qsql = mysqli_query($con,$sql))
 			{
 				echo "<script>alert('Appointment record inserted successfully...');</script>";
@@ -113,13 +113,13 @@ if(isset($_GET[editid]))
 			$qsqldoctor = mysqli_query($con,$sqldoctor);
 			while($rsdoctor = mysqli_fetch_array($qsqldoctor))
 			{
-				if($rsdoctor[doctorid] == $rsedit[doctorid])
+				if($rsdoctor[nurseid] == $rsedit[nurseid])
 				{
-					echo "<option value='$rsdoctor[doctorid]' selected>$rsdoctor[doctorname] ( $rsdoctor[departmentname] ) </option>";
+					echo "<option value='$rsdoctor[nurseid]' selected>$rsdoctor[doctorname] ( $rsdoctor[departmentname] ) </option>";
 				}
 				else
 				{
-					echo "<option value='$rsdoctor[doctorid]'>$rsdoctor[doctorname] ( $rsdoctor[departmentname] )</option>";				
+					echo "<option value='$rsdoctor[nurseid]'>$rsdoctor[doctorname] ( $rsdoctor[departmentname] )</option>";				
 				}
 			}
 		  ?>

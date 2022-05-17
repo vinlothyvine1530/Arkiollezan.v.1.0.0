@@ -103,7 +103,7 @@ INSERT INTO `department` (`departmentid`, `departmentname`, `description`, `stat
 CREATE TABLE `medicine` (
   `medicineid` int(10) NOT NULL,
   `medicinename` varchar(25) NOT NULL,
-  `medicinecost` float(10,2) NOT NULL,
+  `medicinecost` int(10) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -113,10 +113,10 @@ CREATE TABLE `medicine` (
 --
 
 INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinecost`, `description`, `status`) VALUES
-(2, 'Rexidol', 0.00, 'For Headache', 'Active'),
-(3, 'Imodium', 0.00, 'For Stomach Ache', 'Active'),
-(4, 'tambal makbuang', 10.00, 'ambot lang', 'Active'),
-(5, 'lagundi', 10.00, 'para hubak', 'Active');
+(2, 'Rexidol', 0, 'For Headache', 'Active'),
+(3, 'Imodium', 0, 'For Stomach Ache', 'Active'),
+(4, 'tambal makbuang', 10, 'ambot lang', 'Active'),
+(5, 'lagundi', 10, 'para hubak', 'Active');
 
 -- --------------------------------------------------------
 
@@ -133,17 +133,16 @@ CREATE TABLE `nurse` (
   `password` varchar(25) NOT NULL,
   `status` varchar(10) NOT NULL,
   `education` varchar(25) NOT NULL,
-  `experience` float(11,1) NOT NULL,
-  `consultancy_charge` float(10,2) NOT NULL
+  `experience` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `nurse`
 --
 
-INSERT INTO `nurse` (`nurseid`, `nursename`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`, `consultancy_charge`) VALUES
-(4, 'Brylle Barcoma', '09980368786', 2, '1177140', 'barcoma1177140', 'Active', 'BSN', 5.0, 0.00),
-(5, 'Mienzan Artizuela', '0998456789', 0, '1177135', '1177135mienzan', 'Active', 'BSN', 7.0, 0.00);
+INSERT INTO `nurse` (`nurseid`, `nursename`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`) VALUES
+(4, 'Brylle Barcoma', '09980368786', 2, '1177140', 'barcoma1177140', 'Active', 'BSN', 5 ),
+(5, 'Mienzan Artizuela', '0998456789', 0, '1177135', '1177135mienzan', 'Active', 'BSN', 7);
 
 -- --------------------------------------------------------
 

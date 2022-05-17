@@ -13,20 +13,20 @@
                     <!-- Intro Detail -->
                     <div class="col-md-7">
                         <div class="text-sec padding-right-0">
-                            <h5>Health Check Up At Clinic Management System</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h5>Health Record and Inventory of Medicine System</h5>
+                            <p>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</p>
                             <ul class="row">
                               <li class="col-sm-6">
-                                <h6> <i class="lnr  lnr-checkmark-circle"></i> EMERGENCY CASE</h6>
-                                <p>CMIS provide reliable communications and improve public safety areas. </p>
+                                <h6> <i class="lnr  lnr-checkmark-circle"></i> RECORD MONITORING</h6>
+                                <p>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness. </p>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED NURSE</h6>
-                                <p>Hopital Management System has licensed and qualified nurse! </p>
+                                <p>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </p>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</h6>
-                                <p>Clinic Management System Supports Online Appointment. Check the appointment tab above. </p>
+                                <p>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above. </p>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</h6>
@@ -51,9 +51,9 @@
         
         <!-- Heading -->
         <div class="heading-block">
-          <h2>Programmers</h2>
+          <h2>Creators / Programmers</h2>
           <hr>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span> </div>
+          <span>A group of people that made this system possible and their adviser who guided them throughout the whole process.</span> </div>
       </div>
       
       <!-- Department -->
@@ -81,19 +81,24 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5>Our Best <span>PROGRAMMER</span> Services</h5>
-                      <p> # 1 sa Balota <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     <h5><span><b>BARCOMA, Brylle Vincent L.</b></span></h5> 
+                     <hr>
+                      <p><b>Address:</b> Sitio Bonbon, Ocana, Carcar City Cebu 
+                      <br><b>Contact:</b> 0998-036-8786
+                      <br><b>Email:</b> vinlothyvine@gmail.com
+                      <br><b>Birthdate:</b> October 15,1999
+                      <br><b>Age:</b> 22
+                      <br><b>Gender:</b> Male
+                      <br><b>Nationality:</b> Filipino
+
                         <br><br>
-                       Maka-Ulbo Kaspa Party List</p>
+                       Educational Background</p>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Gwapo </li>
-                        <li> Mabait </li>
-                        <li> Tahimik </li>
-                        <li> Matapat </li>
-                        <li> Matulungin </li>
-                        <li> Marangal </li>
+                        <li> Primary (Immaculate Heart of Mary) </li>
+                        <li> Secondary (UV-Minglanilla) </li>
+                        <li> Tertiary (CTU Naga) </li>
                       </ul>
                     </div>
                     
@@ -101,7 +106,7 @@
                     <div class="col-md-offset-1 col-md-4">
                       <div class="programmer-img"> <img class="img-responsive" src="images/barcoma-programmer.png" alt="" >
                         <div class="name-doc">
-                          <h6>Brylle Vincent L. Barcoma <span><br>Programmer</span></h6>
+                        <!--  <h6>Brylle Vincent L. Barcoma <span><br>Programmer</span></h6> -->
                         </div>
                       </div>
                     </div>
@@ -115,19 +120,24 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5>Our Best <span>PROGRAMMER</span> Services</h5>
-                      <p> # 2 sa Balota <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     <h5><span><b>ARTIZUELA, Mienzan C.</b></span></h5> 
+                     <hr>
+                      <p><b>Address:</b> West Poblacion, Naga City, Cebu
+                      <br><b>Contact:</b> 0955-179-3271
+                      <br><b>Email:</b> mienzanartizuela17@gmail.com
+                      <br><b>Birthdate:</b> December 1,1999
+                      <br><b>Age:</b> 22
+                      <br><b>Gender:</b> Female
+                      <br><b>Nationality:</b> Filipina
+
                         <br><br>
-                        Simhot Lubot Party List </p>
+                       Educational Background</p>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Gwapa </li>
-                        <li> Mabait </li>
-                        <li> Tahimik </li>
-                        <li> Matapat </li>
-                        <li> Matulungin </li>
-                        <li> Marangal </li>
+                        <li> Primary (Kalilangan Central Elementary School) </li>
+                        <li> Secondary (Naga National High School) </li>
+                        <li> Tertiary (CTU Naga) </li>
                       </ul>
                     </div>
                     
@@ -135,7 +145,7 @@
                     <div class="col-md-offset-1 col-md-4">
                       <div class="programmer-img"> <img class="img-responsive" src="images/artizuela-programmer.png" alt="" >
                         <div class="name-doc">
-                          <h6>Mienzan D. Artizuela <span><br>Programmer</span></h6>
+                       <!--   <h6>Mienzan D. Artizuela <span><br>Programmer</span></h6>-->
                         </div>
                       </div>
                     </div>
@@ -149,19 +159,24 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5>Our Best <span>PROGRAMMER</span> Services </h5>
-                      <p> # 3 sa Balota <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                       <h5><span><b>BADIAN, Mark Loiue D.</b></span></h5> 
+                        <hr>
+                      <p><b>Address:</b> Pitalo, San Fernando, Cebu
+                      <br><b>Contact:</b> 0945-437-9315
+                      <br><b>Email:</b> mazu.kenji@gmail.com
+                      <br><b>Birthdate:</b> December 17,1998
+                      <br><b>Age:</b> 22
+                      <br><b>Gender:</b> Male
+                      <br><b>Nationality:</b> Filipino
+
                         <br><br>
-                        Kuot Kigol Party List </p>
+                       Educational Background</p>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Gwapo </li>
-                        <li> Mabait </li>
-                        <li> Tahimik </li>
-                        <li> Matapat </li>
-                        <li> Matulungin </li>
-                        <li> Marangal </li>
+                        <li> Primary (Pitalo Elementary Scchool) </li>
+                        <li> Secondary (Sangat National Hgh School) </li>
+                        <li> Tertiary (CTU Naga) </li>
                       </ul>
                     </div>
                     
@@ -169,7 +184,7 @@
                     <div class="col-md-offset-1 col-md-4">
                       <div class="programmer-img"> <img class="img-responsive" src="images/badian-programmer.png" alt="" >
                         <div class="name-doc">
-                          <h6>Mark Louie B. Badian <span><br>Programmer</span></h6>
+                          <!--  <h6>Mark Louie B. Badian <span><br>Programmer</span></h6>-->
                         </div>
                       </div>
                     </div>
@@ -183,27 +198,31 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5>Our Best <span>PROGRAMMER</span> Services</h5>
-                      <p> # 4 sa Balota <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <h5><span><b>MENOR, Rio E.</b></span></h5> 
+                        <hr>
+                      <p><b>Address:</b> Tina-an, Naga City, Cebu
+                      <br><b>Contact:</b> 0912-471-0024
+                      <br><b>Email:</b> riomenor5@gmail.com
+                      <br><b>Birthdate:</b> February 2,1998
+                      <br><b>Age:</b> 23
+                      <br><b>Gender:</b> Male
+                      <br><b>Nationality:</b> Filipino
+
                         <br><br>
-                        Simhot Kugmo Party List </p>
+                       Educational Background</p>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Gwapo </li>
-                        <li> Mabait </li>
-                        <li> Tahimik </li>
-                        <li> Matapat </li>
-                        <li> Matulungin </li>
-                        <li> Marangal </li>
+                        <li> Primary (Cepoc Central School) </li>
+                        <li> Secondary (Naga National High School) </li>
+                        <li> Tertiary (CTU Naga) </li>
                       </ul>
                     </div>
-                    
                     <!-- menor Img -->
                     <div class="col-md-offset-1 col-md-4">
                       <div class="programmer-img"> <img class="img-responsive" src="images/menor-programmer.png" alt="" >
                         <div class="name-doc">
-                          <h6>Rio E. Menor <span><br>Programmer</span></h6>
+                         <!-- <h6>Rio E. Menor <span><br>Programmer</span></h6> -->   
                         </div>
                       </div>
                     </div>
@@ -217,7 +236,7 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5>Our Best <span>ADVISER</span> Services</h5>
+                      <h5><span><b>Professor Glenn Adorable Trinidad</b></span></h5><hr>
                       <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>
                         <br>
                         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s PageMaker including versions of Lorem Ipsum. </p>
@@ -237,7 +256,7 @@
                     <div class="col-md-offset-1 col-md-4">
                       <div class="programmer-img"> <img class="img-responsive" src="images/adviser.png" alt="" >
                         <div class="name-doc">
-                          <h6>Prof. Glenn A. Trinidad<br><span>Professor</span></h6>
+                        <!-- <h6>Prof. Glenn A. Trinidad<br><span>Professor</span></h6> -->
                         </div>
                       </div>
                     </div>

@@ -51,7 +51,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7;  font-size:22px; color:#fff; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">Phase 2</div>
+                style="z-index: 7;  font-size:22px; color:#fff; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">2021-2022</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 
@@ -113,7 +113,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7; font-size:16px; color:#fff; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring and Inventory System</div>
+                style="z-index: 7; font-size:16px; color:#fff; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">By: Arkiollezan</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 

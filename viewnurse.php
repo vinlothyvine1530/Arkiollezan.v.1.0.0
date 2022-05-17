@@ -27,7 +27,7 @@ if(isset($_GET[delid]))
 					<td>Mobile Number</td>
 					<td>Login ID</td>
 					<td>Education</td>
-					<td>Experience</td>
+					<td>Year(s) of Experience</td>
 					<td>Status</td>
 					<td>Action</td>
 				</tr>
@@ -48,7 +48,7 @@ if(isset($_GET[delid]))
 					<td>&nbsp;$rs[mobileno]</td>
 					<td>&nbsp;$rs[loginid]</td>
 					<td>&nbsp;$rs[education]</td>
-					<td>&nbsp;$rs[experience] year</td>
+					<td>&nbsp;$rs[experience] year(s)</td>
 					<td>$rs[status]</td>
 					<td>&nbsp;
 					<a href='nurse.php?editid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a> <a href='viewnurse.php?delid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>

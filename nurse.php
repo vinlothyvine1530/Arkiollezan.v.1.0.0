@@ -92,7 +92,7 @@ if(isset($_GET[editid]))
 				</div>
 
 
-					<div class="form-group"><label>Experience</label> 
+					<div class="form-group"><label>Year(s) of Experience</label> 
 					<div class="form-line">
 					<input class="form-control" type="text" name="experience" id="experience" value="<?php echo $rsedit[experience]; ?>"/>
 				</div>

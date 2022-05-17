@@ -6,7 +6,7 @@
         <div class="col-sm-7">
           <h6>About Us</h6>
           <div class="about-foot">
-            <p> A Clinic Management System (CMIS) refers to a system designed to manage healthcare data. This includes systems that collect, store, manage and transmit a patient’s electronic medical record (EMR), a Clinic’s operational management or a system supporting healthcare policy decisions. </p>
+            <p> A Clinical Monitoring and Inventory System (CMIS) refers to a system designed to manage healthcare data. This includes systems that collect, store, manage and transmit a patient’s electronic medical record (EMR), a Clinic’s operational management or a system supporting healthcare policy decisions. </p>
           </div>
         </div>
         

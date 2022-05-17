@@ -145,7 +145,7 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 6; font-size:40px; color:#fff; font-weight:500; white-space: nowrap;"> Welcome To Our Research Center </div>
+                style="z-index: 6; font-size:40px; color:#fff; font-weight:500; white-space: nowrap;"> Feel free to explore our system. </div>
             
             <!-- LAYER NR. 3 -->
             <div class="tp-caption sfb tp-resizeme text-center" 
@@ -158,8 +158,8 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">We work in a friendly and efficient using the latest <br>
-              technologies and sharing our expertise.</div>
+                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">A place where you can book an appointment <br>
+              easily.</div>
           </li>
         </ul>
       </div>

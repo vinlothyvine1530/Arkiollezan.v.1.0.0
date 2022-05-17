@@ -105,25 +105,25 @@ function validateform()
 {
 	 if(document.frmdoctlogin.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID should not be empty.");
 		document.frmdoctlogin.loginid.focus();
 		return false;
 	}
 	else if(!document.frmdoctlogin.loginid.value.match(alphanumericExp))
 	{
-		alert("Login ID not valid..");
+		alert("Login ID not valid.");
 		document.frmdoctlogin.loginid.focus();
 		return false;
 	}
 	else if(document.frmdoctlogin.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password should not be empty.");
 		document.frmdoctlogin.password.focus();
 		return false;
 	}
 	else if(document.frmdoctlogin.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password length should be more than 8 characters.");
 		document.frmdoctlogin.password.focus();
 		return false;
 	}

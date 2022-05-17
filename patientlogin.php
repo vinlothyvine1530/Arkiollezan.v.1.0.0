@@ -36,7 +36,7 @@ if(isset($_POST[submit]))
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>SMS - Patient Login</title>
+<title>CMIS - Patient Login</title>
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -58,7 +58,7 @@ if(isset($_POST[submit]))
 ?></div>
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>Clinic Management System</span>PATIENT Login <span class="msg">Hello, Patient!</span></h1>
+        <h1 class="title"><span>Clinical Monitoring and Inventory System</span>PATIENT Login <span class="msg">Hello, Patient! <br>How are you?</span></h1>
         <div class="col-md-12">
 
     <form method="post" action="" name="frmadminlogin" id="sign_in" onSubmit="return validateform()">
@@ -98,19 +98,19 @@ function validateform()
 {
 	if(document.frmpatlogin.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID should not be empty.");
 		document.frmpatlogin.loginid.focus();
 		return false;
 	}
 	else if(document.frmpatlogin.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password should not be empty.");
 		document.frmpatlogin.password.focus();
 		return false;
 	}
 	else if(document.frmpatlogin.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password length should be more than 8 characters.");
 		document.frmpatlogin.password.focus();
 		return false;
 	}

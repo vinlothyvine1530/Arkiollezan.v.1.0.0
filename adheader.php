@@ -75,7 +75,7 @@ $tim = date("H:i:s");
             <!--Admin Menu -->
             <div class="menu">
                 <ul class="list" style="overflow: hidden; width: auto; height: calc(-184px + 100vh);">
-                    <li class="header">Main Navigation</li>
+                    <li class="header">ADMIN MAIN NAVIGATION</li>
                     <li class="active open"><a href="adminaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 
@@ -146,7 +146,7 @@ $tim = date("H:i:s");
             ?>
             <div class="menu">
                 <ul class="list">
-                    <li class="header">Main Navigation</li>
+                    <li class="header">NURSE MAIN NAVIGATION</li>
                     <li class="active open"><a href="nurseaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 
@@ -209,7 +209,7 @@ $tim = date("H:i:s");
             ?>
             <div class="menu">
                 <ul class="list">
-                    <li class="header">Main Navigation</li>
+                    <li class="header">PATIENT MAIN NAVIGATION</li>
                     <li class="active open"><a href="patientaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 

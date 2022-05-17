@@ -12,6 +12,7 @@ if(!isset($_SESSION[nurseid]))
 ?>
 <div class="container-fluid">
   <div class="block-header">
+    <h2>Nurses' Dashboard</h2>
     <h1>Welcome <?php  $sql="SELECT * FROM `nurse` WHERE nurseid='$_SESSION[nurseid]' ";
     $nursetable = mysqli_query($con,$sql);
     $doc = mysqli_fetch_array($nursetable);

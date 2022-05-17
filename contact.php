@@ -73,7 +73,7 @@
               <h6>Clinic INFO</h6>
               <ul class="location">
                 <li> <i class="fa fa-location-arrow"></i>
-                  <p>Negros Occidental, 
+                  <p>City of Naga, Cebu 
                     Philippines</p>
                 </li>
                 <li> <i class="fa fa-phone"></i>
@@ -81,12 +81,12 @@
                   <p>1-222-333-4444</p>
                 </li>
                 <li> <i class="fa fa-envelope"></i>
-                  <p>itsc@sample.com</p>
-                  <p>CMIS@sample.com</p>
+                  <p>systemclinic21@gmail.com</p>
+                  <p>marcpabico@gmail.com</p>
                 </li>
                 <li> <i class="fa fa-clock-o"></i>
-                  <p>Mon-Fri: 9AM - 8PM</p>
-                  <p>Sat-Sun: 9AM - 8PM</p>
+                  <p>Mon-Fri: 7AM - 5PM</p>
+                  <p>Sat-Sun: 7AM - 5PM</p>
                 </li>
               </ul>
             </div>

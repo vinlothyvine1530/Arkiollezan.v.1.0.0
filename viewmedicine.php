@@ -25,9 +25,9 @@ if(isset($_GET[delid]))
 
           <thead>
             <tr>
-              <th>Medicine name</th>
-              <th>Quantity</th>
-              <th>description</th>
+              <th>Medicine Name</th>
+              <th>Quantity Left</th>
+              <th>Description</th>
               <th>Status</th>
               <th>Action</th>
             </tr>

@@ -5,7 +5,7 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-		$sql ="UPDATE medicine SET medicinename='$_POST[medicinename]',medicinecost='$_POST[medicinecost]',description='$_POST[description]',status='$_POST[status]' WHERE medicineid='$_GET[editid]'";
+		$sql ="UPDATE medicine SET medicinename='$_POST[medicinename]',medicinequantity='$_POST[medicinequantity]',description='$_POST[description]',status='$_POST[status]' WHERE medicineid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('Medicine record updated successfully...');</script>";
@@ -17,7 +17,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-		$sql ="INSERT INTO medicine(medicinename,medicinecost,description,status) values('$_POST[medicinename]','$_POST[medicinecost]','$_POST[description]','$_POST[status]') ";
+		$sql ="INSERT INTO medicine(medicinename,medicinequantity,description,status) values('$_POST[medicinename]','$_POST[medicinequantity]','$_POST[description]','$_POST[status]') ";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('Medicine record inserted successfully...');</script>";
@@ -54,7 +54,7 @@ if(isset($_GET[editid]))
         </tr>
         <tr>
           <td width="34%">Quantity</td>
-          <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinecost" id="medicinecost" value="<?php echo $rsedit[medicinecost]; ?>" /></td>
+          <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinequantity" id="medicinequantity" value="<?php echo $rsedit[medicinequantity]; ?>" /></td>
         </tr>
         <tr>
           <td>Description</td>

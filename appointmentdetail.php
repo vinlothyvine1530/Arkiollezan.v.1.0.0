@@ -3,7 +3,7 @@ session_start();
 include("dbconnection.php");
 if(isset($_POST[submitapp]))
 {
-	$sql ="INSERT INTO appointment(appointmenttype,roomid,departmentid,appointmentdate,appointmenttime,doctorid) values('$_POST[select]','$_POST[select2]','$_POST[select3]','$_POST[date]','$_POST[time]','$_POST[select5]')";
+	$sql ="INSERT INTO appointment(appointmenttype,roomid,departmentid,appointmentdate,appointmenttime,nurseid) values('$_POST[select]','$_POST[select2]','$_POST[select3]','$_POST[date]','$_POST[time]','$_POST[select5]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
 		echo "<script>alert('appointment record inserted successfully...');</script>";
@@ -48,9 +48,9 @@ else
 	$qsqldepartment = mysqli_query($con,$sqldepartment);
 	$rsdepartment =mysqli_fetch_array($qsqldepartment);
 	
-	$sqldoctor = "SELECT * FROM nurse where doctorid='$rsappointment[doctorid]'";
-	$qsqldoctor = mysqli_query($con,$sqldoctor);
-	$rsdoctor =mysqli_fetch_array($qsqldoctor);
+	$sqlnurse = "SELECT * FROM nurse where nurseid='$rsappointment[nurseid]'";
+	$qsqlnurse = mysqli_query($con,$sqlnurse);
+	$rsnurse =mysqli_fetch_array($qsqlnurse);
 ?>
 <table class="table table-bordered table-striped">
   
@@ -61,7 +61,7 @@ else
   </tr>
   <tr>
     <td>Nurse</td>
-    <td>&nbsp;<?php echo $rsdoctor[doctorname]; ?></td>
+    <td>&nbsp;<?php echo $rsnurse[nursename]; ?></td>
   </tr>
   <tr>
     <td>Appointment Date</td>

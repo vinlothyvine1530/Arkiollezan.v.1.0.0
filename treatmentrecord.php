@@ -71,7 +71,7 @@ if(isset($_GET[delid]))
         <tr>
           <td>Patient</td>
           <td>
-          <input class="form-control" type="hidden" name="patientid" value="<?php echo $_GET[patientid]; ?>" />
+          <input class="form-control" type="show" name="patientid" value="<?php echo $_GET[patientid]; ?>" />
 <?php
 $sqlpatient= "SELECT * FROM patient WHERE status='Active' AND patientid='$_GET[patientid]'";
 $qsqlpatient = mysqli_query($con,$sqlpatient);
@@ -93,11 +93,11 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
 			{
 				if($rstreatment[treatmentid] == $rsedit[treatmentid])
 				{
-				echo "<option value='$rstreatment[treatmentid]' selected>$rstreatment[treatmenttype]  - ( $rstreatment[treatment_cost])</option>";
+				echo "<option value='$rstreatment[treatmentid]' selected>$rstreatment[treatmenttype]</option>";
 				}
 				else
 				{
-					echo "<option value='$rstreatment[treatmentid]'>$rstreatment[treatmenttype]  - ( $rstreatment[treatment_cost])</option>";
+					echo "<option value='$rstreatment[treatmentid]'>$rstreatment[treatmenttype]</option>";
 				}
 				
 			}
@@ -105,65 +105,12 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
  </select></td>
         </tr>
         
-        
-        <?php
-		if(isset($_SESSION[nurseid]))
-		{
-		?>
-        <tr>
-          <td>Nurse</td>
-          <td>
-    		<?php
-				$sqlnurse= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active' AND nurse.nurseid='$_SESSION[nurseid]'";
-				$qsqlnurse = mysqli_query($con,$sqlnurse);
-				while($rsnurse = mysqli_fetch_array($qsqlnurse))
-				{
-					echo "$rsnurse[nursename]";
-				}
-				?>
-                <input class="form-control" type="hidden" name="select5" value="<?php echo $_SESSION[nurseid]; ?>"  />
-          </td>
-        <?php
-		}
-		else
-		{
-		?>
-        <tr>
-          <td>Nurse</td>
-          <td>
-          <select name="select5" id="select5">
-    		<option value="">Select</option>
-    		<?php
-				$sqlnurse= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active'";
-				$qsqlnurse = mysqli_query($con,$sqlnurse);
-				while($rsnurse = mysqli_fetch_array($qsqlnurse))
-				{
-					if($rsnurse[nurseid] == $rsedit[nurseid])
-					{
-					echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nursename] ( $rsnurse[departmentname] ) </option>";
-					}
-					else
-					{
-					echo "<option value='$rsnurse[nurseid]'>$rsnurse[nursename] ( $rsnurse[departmentname] )</option>";				
-					}
-				}
-		  		?>
-          	</select>
-          </td>
-        <?php
-		}
-		?>
-          
-       
-        </tr>
-        <tr>
+ 
+		<tr>
           <td>Vital Description</td>
           <td><input class="form-control" name="textarea" id="textarea" cols="45" rows="5"><?php echo $rsedit[treatment_description] ; ?></textarea></td>
         </tr>
-        <tr>
-          <td>Vital Record files</td>
-          <td><input class="form-control" type="file" name="uploads" id="uploads" value="<?php echo $rsedit[uploads]; ?>" /></td>
-        </tr>
+    
         <tr>
           <td>Vital Record date</td>
           <td><input class="form-control" type="date" max="<?php echo date("Y-m-d"); ?>" name="treatmentdate" id="treatmentdate" value="<?php echo $rsedit[treatment_date]; ?>" /></td>
@@ -185,9 +132,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         <tbody>
           <tr>
             <td width="71">Vital type</td>
-            <td width="78">Nurse</td>
             <td width="82">Vital Description</td>
-            <td width="103">Uploads</td>
             <td width="43">Vital Record date</td>
             <td width="43">Vital Record time</td>
             <td width="54">Status</td>
@@ -211,14 +156,12 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
 			$rstreatment = mysqli_fetch_array($qsqltreatment);
 			
         echo "<tr>
-          <td>&nbsp;$rstreatment[treatmenttype]</td>
-		    <td>&nbsp;$rsdoc[nursename]</td>
-			<td>&nbsp;$rs[treatment_description]</td>
-			<td>&nbsp;<a href='treatmentfiles/$rs[uploads]'>Download</a></td>
-			 <td>&nbsp;$rs[treatment_date]</td>
-			  <td>&nbsp;$rs[treatment_time]</td>
-			    <td>&nbsp;$rs[status]</td>
-          <td>&nbsp;
+            <td>&nbsp;$rstreatment[treatmenttype]</td>
+		 	<td>&nbsp;$rs[treatment_description]</td>
+			<td>&nbsp;$rs[treatment_date]</td>
+			<td>&nbsp;$rs[treatment_time]</td>
+			<td>&nbsp;$rs[status]</td>
+            <td>&nbsp;
 		  <a href='treatmentrecord.php?editid=$rs[appointmentid]&patientid=$_GET[patientid]&appid=$_GET[appid]'>Edit</a>| <a href='treatmentrecord.php?delid=$rs[appointmentid]&patientid=$_GET[patientid]&appointmentid=$_GET[appid]'>Delete</a> </td>
         </tr>";
 		}

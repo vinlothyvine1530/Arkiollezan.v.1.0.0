@@ -5,9 +5,9 @@ include("dbconnection.php");
 		
 <table class="table table-bordered table-striped">
           <tr>
+		  	<td><strong>Nurse</strong></td>
             <td><strong>Vital type</strong></td>
             <td><strong>Vital Record date & time</strong></td>
-            <td><strong>Nurse</strong></td>
             <td><strong>Vital Description</strong></td>
             
           </tr>
@@ -29,9 +29,9 @@ include("dbconnection.php");
 			$rstreatment = mysqli_fetch_array($qsqltreatment);
 				
 			echo "<tr>
+					<td>&nbsp;$rsnurse[nursename]</td>
 					<td>&nbsp;$rstreatment[treatmenttype]</td>
 					</td><td>&nbsp;" . date("d-m-Y",strtotime($rs[treatment_date])). "  &nbsp;". date("h:i A",strtotime($rs[treatment_time])) . "</td>
-					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[treatment_description]";
 if(file_exists("treatmentfiles/$rs[uploads]"))
 {

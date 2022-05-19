@@ -5,7 +5,7 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-			$sql ="UPDATE nurse SET nursename='$_POST[nursename]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE nurseid='$_GET[editid]'";
+			$sql ="UPDATE nurse SET nursename='$_POST[nursename]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('Nurse record updated successfully...');</script>";
@@ -17,7 +17,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-	$sql ="INSERT INTO nurse(nursename,mobileno,departmentid,loginid,password,status,education,experience,consultancy_charge) values('$_POST[nursename]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]','$_POST[consultancy_charge]')";
+	$sql ="INSERT INTO nurse(nursename,mobileno,departmentid,loginid,password,status,education,experience) values('$_POST[nursename]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
 		echo "<script>alert('Nurse record inserted successfully...');</script>";

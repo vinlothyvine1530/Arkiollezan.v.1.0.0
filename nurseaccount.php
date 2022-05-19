@@ -36,7 +36,7 @@ if(!isset($_SESSION[nurseid]))
           <div class="content">
             <div class="text">New Appointment</div>
             <div class="number"><?php
-            $sql = "SELECT * FROM appointment WHERE `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'";
+            $sql = "SELECT * FROM appointment WHERE status='Active' AND `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'";
             $qsql = mysqli_query($con,$sql);
             echo mysqli_num_rows($qsql);
             ?></div>

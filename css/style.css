@@ -1,4 +1,13 @@
 /*------------------------------------------------------------------
+    Main Style Stylesheet
+    Project:        SEO Factory - HTML5 Template
+    Version:        1.0
+    Author:         M_Adnan
+    Last change:    03/05/2017
+    Primary use:    Creative, Coporate, Business, Portfolio, Personal, Minimal
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
 body 
 	 + WRAP
 	 + HEADER
@@ -27,11 +36,11 @@ body
 	padding: 0px;
 }
 body {
-	background: #FFF;
+	background: #00344d;
 	font-weight: normal;
 	position: relative;
 	font-size: 14px;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Montserrat light';
 }
 .fonts {
 	font-family: 'Montserrat', sans-serif;
@@ -51,7 +60,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	color: #222222;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat light';
 }
 h1 {
 	font-size: 48px;
@@ -74,7 +83,7 @@ h6 {
 	font-size: 14px;
 }
 p {
-	color: #535353;
+	color: white;
 	font-size: 14px;
 	letter-spacing: 0px;
 	line-height: 24px;
@@ -114,7 +123,7 @@ a {
 section {
 	position: relative;
 	width: 100%;
-	background: #fff;
+	background:#cce6ff
 }
 /*=======================================================
       BUTTON
@@ -278,7 +287,7 @@ section {
 .top-bar p {
 	line-height: 40px;
 	margin: 0px;
-	color: #222222;
+	color: white;
 	font-weight: 500;
 	font-size: 12px;
 	display: inline-block;
@@ -299,7 +308,7 @@ section {
 	background: #222222;
 }
 .top-bar .social-icons a:hover {
-	background: #2B96CC;
+	background: black;
 }
 .top-bar .dropdown-menu>li>a {
 	width: 100%;
@@ -567,6 +576,7 @@ header .navbar {
 header .nav {
 	padding: 0px;
 	margin: 0px;
+	margin-bottom: -5px;;
 }
 header .logo {
 	float: left;
@@ -578,20 +588,21 @@ header .logo {
 	transition: 0.2s ease-in-out;
 }
 header .logo img {
-	z-index: 5;
+	z-index: 3;
 	position: relative;
 }
 
-header .ctu h1{
+header .ctu h13
+{
 	font-size: 15px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat';
 	text-align: left;
-	position:relative; 
-	top: -57px;
+	position: relative;
+	top: -43px;
 	left: 55px;
-	line-height: 16px;
-	margin-bottom: -51px;
-
+	line-height: -20px;
+	color: white;
+	margin-bottom: -3px;
 }
 
 .sticky-wrapper {
@@ -630,17 +641,13 @@ header .sticky {
 	transition: 0.2s ease-in-out;
 }
 header .navbar li a {
-	font-size: 13px;
-	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-family: 'Montserrat light';
+	font-weight: bold;
 	font-weight: 400;
 	padding: 10px 15px;
 	letter-spacing: 0px;
 	text-transform: uppercase;
-}
-
-header .navbar a
-{
-	font-family: 'Montserrat', sans-serif;
 }
 .navbar-collapse {
 	padding: 0px;
@@ -658,7 +665,7 @@ header .navbar li.active a:before {
 }
 .ownmenu .nav .dropdown-menu {
 	background: #fff;
-	
+	padding: 0px;
 }
 .ownmenu .nav .dropdown-menu li a {
 	color: #fff !important;
@@ -955,7 +962,7 @@ header .is-sticky .sticky .logo {
 .header-style-2 {
 	position: relative;
 	background: url(../images/hr-bar.jpg) repeat-x;
-	padding-top: 25px;
+	padding-top: -25px;
 }
 .head-info {
 	float: right;
@@ -972,7 +979,7 @@ header .is-sticky .sticky .logo {
 	border-radius: 50%;
 	display: table-cell;
 	vertical-align: top;
-	background: #009688;
+	background: #ff9933;
 	text-align: center;
 	line-height: 33px;
 	color: #fff;
@@ -986,7 +993,7 @@ header .is-sticky .sticky .logo {
 	font-size: 12px;
 	line-height: 16px;
 	display: table-cell;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat light';
 }
 .head-info li p span {
 	display: inline-block;
@@ -1007,13 +1014,13 @@ header .is-sticky .sticky .logo {
 }
 .header-style-2 .navbar {
 	width: 100%;
-	margin-top: 25px;
+	margin-top: -21px;
 }
 .header-style-2 .navbar li:nth-child(1) {
 	margin-left: 0px;
 }
 .header-style-2 .navbar {
-	background: #009688;
+	background: #ff9933;
 }
 .header-style-2 .ownmenu .nav .dropdown-menu {
 	margin-top: 0px !important;
@@ -1173,11 +1180,13 @@ header .is-sticky .sticky .logo {
 	padding-bottom: 10px;
 	border: 5px solid #f6f6f6;
 }
+/*
 .intro-main .intro-img {
 	border: 5px solid #f6f6f6;
 	border-radius: 5px;
 	box-shadow: 0 0 6px rgba(0,0,0,0.3);
 }
+*/
 .intro-main .text-sec {
 	padding-right: 50px;
 }
@@ -1216,7 +1225,7 @@ header .is-sticky .sticky .logo {
 	border-bottom: none;
 }
 /*=======================================================
-      YOUNG nurse TEAM
+      YOUNG NURSE TEAM
 ========================================================*/
 .young-doc-team {
 	background: #fbfbfb;
@@ -1645,7 +1654,7 @@ header .is-sticky .sticky .logo {
 			Department
 ========================================================*/
 .department {
-	background: #fcfcfc;
+	background: #cce6ff;
 	padding-bottom: 130px;
 }
 .department .nav-tabs {
@@ -1707,28 +1716,28 @@ header .is-sticky .sticky .logo {
 .department .dep-sec-txt {
 	text-align: left;
 }
-.department .programmer-img {
+.department .doctor-img {
 	position: relative;
 }
-.department .programmer-img img {
+.department .doctor-img img {
 	border: 5px solid #fff;
 	border-radius: 4px;
 	box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
-.department .programmer-img .name-doc {
+.department .doctor-img .name-doc {
 	padding: 20px;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
 }
-.department .programmer-img h6 {
+.department .doctor-img h6 {
 	text-transform: uppercase;
 	background: #fff;
 	padding: 15px;
 	margin: 0px;
 	line-height: 22px;
 }
-.department .programmer-img span {
+.department .doctor-img span {
 	font-size: 13px;
 	text-transform: none;
 	font-weight: normal;
@@ -3173,7 +3182,7 @@ img.mfp-img {
 	border: none;
 }
 /*=======================================================
-			nurse
+			Doctors
 ========================================================*/
 .our-team .team-hover {
 	background: rgba(0,0,0,0.8);
@@ -3284,7 +3293,7 @@ img.mfp-img {
 			FOOTER
 ========================================================*/
 footer {
-	background: #2b96cc;
+	background:#ff9933;
 	position: relative;
 	z-index: 99;
 }
@@ -3303,7 +3312,8 @@ footer .latest-tweet span {
 	font-size: 12px;
 }
 footer p {
-	color: #ffffff;
+	color: #f7f7f7;;
+}
 }
 footer p a {
 	color: #f7f7f7;
@@ -3423,7 +3433,7 @@ footer .logo-foot {
 	margin-bottom: 50px;
 }
 footer p {
-	color: #ffffff;
+	color: black;
 	line-height: 26px;
 }
 footer .contact-info {
@@ -3533,7 +3543,7 @@ footer .social p a {
 	padding-bottom: 50px;
 }
 .footer-2 h6 {
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin: 0px;
@@ -3666,7 +3676,7 @@ footer .social p a {
 	color: #fff;
 }
 .need-help-footer p {
-	color: #b3b7da;
+	color: #1c1f3a;
 	font-weight: 500;
 	margin-bottom: 20px;
 }
@@ -3845,12 +3855,12 @@ footer .social p a {
 	opacity: 0.5;
 }
 .cd-top.cd-fade-out {
-	opacity: .5;
+	opacity: 1;
 }
 .no-touch .cd-top:hover {
-	background-color: #000;
-	opacity: 1;
-	color: #fff;
+	background-color: #333333;
+	opacity: 10;
+	color: #ff9933;
 }
 /*=======================================================
 			HOME VERSION 2

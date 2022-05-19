@@ -71,52 +71,7 @@ if(isset($_GET[editid]))
 		  ?></td>
         </tr>
         
-  <?php
-		if(isset($_SESSION[nurseid]))
-		{
-		?>
-        <tr>
-          <td>Nurse</td>
-          <td>
-    		<?php
-				$sqlnurse= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active' AND nurse.nurseid='$_SESSION[nurseid]'";
-				$qsqlnurse = mysqli_query($con,$sqlnurse);
-				while($rsnurse = mysqli_fetch_array($qsqlnurse))
-				{
-					echo "$rsnurse[nursename] ( $rsnurse[departmentname] )";
-				}
-				?>
-                <input type="hidden" name="select2" value="<?php echo $_SESSION[nurseid]; ?>"  />
-          </td>
-        <?php
-		}
-		else
-		{
-		?>        
-        <tr>
-          <td width="34%">Nurse</td>
-          <td width="66%"><select class="form-control show-tick" name="select2" id="select2">
-          <option value="">Select</option>
-            <?php
-          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
-			$qsqlv = mysqli_query($con,$sqlnurse);
-			while($rsnurse = mysqli_fetch_array($qsqlnurse))
-			{
-				if($rsnurse[nurseid] == $rsedit[nurseid])
-				{
-				echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nurseid]-$rsnurse[nursename]</option>";
-				}
-				else
-				{
-				echo "<option value='$rsnurse[nurseid]'>$rsnurse[nurseid]-$rsnurse[nursename]</option>";				
-				}
-			}
-		  ?>
-          </select></td>
-        </tr>
-        <?php
-		}
-		?>
+
         <tr>
           <td>Prescription Date</td>
           <td><input class="form-control" type="date" name="date" id="date" value="<?php echo $rsedit[prescriptiondate]; ?>" /></td>

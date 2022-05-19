@@ -240,9 +240,9 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-eye-2 icon"></i> </div>
+                <div class="media-left"> <i class="flaticon-medical icon"></i> </div>
                 <div class="media-body">
-                  <h6><b>Eye Specialist</b></h6>
+                  <h6><b>Blood Pressure</b></h6>
                   <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
@@ -251,9 +251,9 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-operating-room icon"></i> </div>
+                <div class="media-left"> <i class="icon-speedometer icon"></i> </div>
                 <div class="media-body">
-                  <h6><b>Operation Theater</b></h6>
+                  <h6><b>Weight</b></h6>
                   <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
@@ -262,9 +262,9 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-icu-monitor icon"></i> </div>
+                <div class="media-left"> <i class="icon-user-follow icon"></i> </div>
                 <div class="media-body">
-                  <h6><b>ICU Department</b></h6>
+                  <h6><b>Height</b></h6>
                   <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
@@ -284,9 +284,9 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-heartbeat icon"></i> </div>
+                <div class="media-left"> <i class="icon-energy icon"></i> </div>
                 <div class="media-body">
-                  <h6><b>Heart Problems</b></h6>
+                  <h6><b>Medicines</b></h6>
                   <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
@@ -295,9 +295,9 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-stomach-2 icon"></i> </div>
+                <div class="media-left"> <i class="icon-pin icon"></i> </div>
                 <div class="media-body">
-                  <h6><b>Stomach Problems</b></h6>
+                  <h6><b>Appointment</b></h6>
                   <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>

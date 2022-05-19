@@ -111,7 +111,7 @@ if(isset($_GET[editid]))
             </div>
 
 
-            <div class="form-group"><label>PIN Code</label>
+            <div class="form-group"><label>Zip Code</label>
                 <div class="form-line">
                     <input class="form-control" type="text" name="pincode" id="pincode"
                         value="<?php echo $rsedit[pincode]; ?>" />

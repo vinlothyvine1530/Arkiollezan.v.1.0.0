@@ -135,7 +135,7 @@
 }
 .blog-page .right-box .categories ul li a:before {
     content: "\f2ee";
-    font-family: 'Material-Design-Iconic-Font';
+    font-family: 'Montserrat', sans-serif;
     color: #C8C8C8;
     font-size: 14px;
     position: absolute;

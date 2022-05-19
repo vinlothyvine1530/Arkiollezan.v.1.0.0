@@ -1,6 +1,7 @@
 <?php
 include("adheader.php");
 include("dbconnection.php");
+ini_set('display_errors', FALSE);
 if(isset($_GET[delid]))
 {
 	 $sql ="DELETE FROM prescription_records WHERE prescription_record_id='$_GET[delid]'";
@@ -60,7 +61,6 @@ if(isset($_GET[editid]))
  <table class="table table-bordered table-striped">
       <tbody>
         <tr>
-          <td><strong>Nurse</strong></td>
           <td><strong>Patient</strong></td>
           <td><strong>Prescription Date</strong></td>
           <td><strong>Status</strong></td>
@@ -80,7 +80,6 @@ if(isset($_GET[editid]))
 			$rsnurse = mysqli_fetch_array($qsqlnurse);
 			
         echo "<tr>
-          <td>&nbsp;$rsnurse[nursename]</td>
           <td>&nbsp;$rspatient[patientname]</td>
 		   <td>&nbsp;$rs[prescriptiondate]</td>
 		<td>&nbsp;$rs[status]</td>
@@ -113,16 +112,18 @@ if(isset($_GET[editid]))
 		$qsqlmedicine = mysqli_query($con,$sqlmedicine);
 		while($rsmedicine = mysqli_fetch_array($qsqlmedicine))
 		{
-			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] ($rsmedicine[medicinecost] )</option>";
+			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] </option>";
 		}
 		?>
 		  </select>
 		  </td>
         </tr>
         <tr>
-          <td>Unit</td>
+          <td>Number of Medicine to give</td>
           <td><input class="form-control" type="number" min="1" name="unit" id="unit" value="<?php echo $rsedit[unit]; ?>" onkeyup="calctotalcost(cost.value,this.value)" onchange="" /></td>
         </tr>
+
+
         <tr>
           <td>Dosage</td>
           <td><select class="form-control show-tick" name="select2" id="select2">
@@ -161,25 +162,24 @@ if(isset($_GET[editid]))
         <tr>
           <td><strong>Medicine</strong></td>
           <td><strong>Dosage</strong></td>
-          <td><strong>Unit</strong></td>
-                    <?php
+          <td><strong>Medicine received</strong></td>
+			<?php
 			if(!isset($_SESSION[patientid]))
-			{
-		  ?>  
+			{ ?>  
           <td><strong>Action</strong></td>
           <?php
 			}
 			?>
+			
         </tr>
          <?php
-		 $gtotal=0;
 		$sql ="SELECT * FROM prescription_records LEFT JOIN medicine on prescription_records.medicine_name=medicine.medicineid WHERE prescription_id='$_GET[prescriptionid]'";
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
 		{
         echo "<tr>
           <td>&nbsp;$rs[medicinename]</td>
-		    <td>&nbsp;$rs[dosage]</td>
+		  <td>&nbsp;$rs[dosage]</td>
 		   <td>&nbsp;$rs[unit]</td>
 		   ";
 			if(!isset($_SESSION[patientid]))
@@ -266,6 +266,12 @@ function validateform()
 	{
 		alert("Unit should not be empty..");
 		document.frmpresrecord.unit.focus();
+		return false;
+	}
+	else if(document.frmpresrecord.textarea.value == "")
+	{
+		alert("note_patient should not be empty..");
+		document.frmpresrecord.textarea.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.select2.value == "")

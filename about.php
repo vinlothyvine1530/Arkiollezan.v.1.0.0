@@ -14,23 +14,23 @@
                     <div class="col-md-7">
                         <div class="text-sec padding-right-0">
                             <h5>Health Record and Inventory of Medicine System</h5>
-                            <p>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</p>
+                            <h17>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</h17>
                             <ul class="row">
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> RECORD MONITORING</h6>
-                                <p>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness. </p>
+                                <h17>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness. </h17>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED NURSE</h6>
-                                <p>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </p>
+                                <h17>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </h17>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</h6>
-                                <p>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above. </p>
+                                <h17>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above.</h17>
                               </li>
                               <li class="col-sm-6">
                                 <h6> <i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</h6>
-                                <p>CMIS qualified nurse offers free counseling to their patients. </p>
+                                <h17>CMIS qualified nurse offers free counseling <br>to their patients. </h17>
                               </li>
                             </ul>
                         </div>
@@ -83,7 +83,7 @@
                     <div class="col-md-7">
                      <h5><span><b>BARCOMA, Brylle Vincent L.</b></span></h5> 
                      <hr>
-                      <p><b>Address:</b> Sitio Bonbon, Ocana, Carcar City Cebu 
+                      <h17><b>Address:</b> Sitio Bonbon, Ocana, Carcar City Cebu 
                       <br><b>Contact:</b> 0998-036-8786
                       <br><b>Email:</b> vinlothyvine@gmail.com
                       <br><b>Birthdate:</b> October 15,1999
@@ -92,7 +92,7 @@
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
-                       Educational Background</p>
+                       Educational Background</h17>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
@@ -122,7 +122,7 @@
                     <div class="col-md-7">
                      <h5><span><b>ARTIZUELA, Mienzan C.</b></span></h5> 
                      <hr>
-                      <p><b>Address:</b> West Poblacion, Naga City, Cebu
+                      <h17><b>Address:</b> West Poblacion, Naga City, Cebu
                       <br><b>Contact:</b> 0955-179-3271
                       <br><b>Email:</b> mienzanartizuela17@gmail.com
                       <br><b>Birthdate:</b> December 1,1999
@@ -131,12 +131,12 @@
                       <br><b>Nationality:</b> Filipina
 
                         <br><br>
-                       Educational Background</p>
-                      
+                       Educational Background
+                       </h17>
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Primary (Kalilangan Central Elementary School) </li>
-                        <li> Secondary (Naga National High School) </li>
+                        <li> Primary (Kalilangan CES) </li>
+                        <li> Secondary (Naga NHS) </li>
                         <li> Tertiary (CTU Naga) </li>
                       </ul>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="col-md-7">
                        <h5><span><b>BADIAN, Mark Loiue D.</b></span></h5> 
                         <hr>
-                      <p><b>Address:</b> Pitalo, San Fernando, Cebu
+                      <h17><b>Address:</b> Pitalo, San Fernando, Cebu
                       <br><b>Contact:</b> 0945-437-9315
                       <br><b>Email:</b> mazu.kenji@gmail.com
                       <br><b>Birthdate:</b> December 17,1998
@@ -170,7 +170,7 @@
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
-                       Educational Background</p>
+                       Educational Background<h17>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
@@ -200,7 +200,7 @@
                     <div class="col-md-7">
                     <h5><span><b>MENOR, Rio E.</b></span></h5> 
                         <hr>
-                      <p><b>Address:</b> Tina-an, Naga City, Cebu
+                      <h17><b>Address:</b> Tina-an, Naga City, Cebu
                       <br><b>Contact:</b> 0912-471-0024
                       <br><b>Email:</b> riomenor5@gmail.com
                       <br><b>Birthdate:</b> February 2,1998
@@ -209,7 +209,7 @@
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
-                       Educational Background</p>
+                       Educational Background</h17>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
@@ -237,9 +237,9 @@
                   <div class="row">
                     <div class="col-md-7">
                       <h5><span><b>Professor Glenn Adorable Trinidad</b></span></h5><hr>
-                      <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>
+                      <h17> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>
                         <br>
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s PageMaker including versions of Lorem Ipsum. </p>
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s PageMaker including versions of Lorem Ipsum. </h17>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">

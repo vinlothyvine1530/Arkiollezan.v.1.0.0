@@ -75,8 +75,8 @@ $tim = date("H:i:s");
   <header class="header-style-2">
     <div class="container">
       <div class="logo"> <a href="index.php"> <img src="images/ctunewlogo.png" alt="" style="height: 45px;"> </a>
-        <div class="ctu"> <h1>CEBU TECHNOLOGICAL UNIVERSITY <br>
-              Naga Extension Campus</h1></div>
+        <div class="ctu"> <h13>CEBU TECHNOLOGICAL UNIVERSITY <br>
+              Naga Extension Campus</h13></div>
         </div>
 
       <div class="head-info">

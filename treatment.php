@@ -5,7 +5,7 @@ if(isset($_POST[submit]))
 {
 	if(isset($_GET[editid]))
 	{
-		$sql ="UPDATE treatment SET treatmenttype='$_POST[treatmenttype]',treatment_cost='$_POST[treatmentcost]',note='$_POST[textarea]',status='$_POST[select]' WHERE treatmentid='$_GET[editid]'";
+		$sql ="UPDATE treatment SET treatmenttype='$_POST[treatmenttype]',note='$_POST[textarea]',status='$_POST[select]' WHERE treatmentid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('treatment record updated successfully...');</script>";
@@ -17,7 +17,7 @@ if(isset($_POST[submit]))
 	}
 	else
 	{
-		$sql ="INSERT INTO treatment(treatmenttype,treatment_cost,note,status) values('$_POST[treatmenttype]','$_POST[treatmentcost]', '$_POST[textarea]','$_POST[select]')";
+		$sql ="INSERT INTO treatment(treatmenttype,note,status) values('$_POST[treatmenttype]', '$_POST[textarea]','$_POST[select]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('treatment record inserted successfully...');</script>";

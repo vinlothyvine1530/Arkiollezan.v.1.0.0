@@ -21,7 +21,11 @@ if(isset($_GET[delid]))
 
 
     <?php
-          $sql ="SELECT * FROM prescription where patientid='$_SESSION[patientid]'";
+          $sql ="SELECT * FROM prescription WHERE (status !='')";
+          if(isset($_SESSION[patientid]))
+	      	{
+		        	$sql  = $sql . " AND patientid='$_SESSION[patientid]'";
+	      	}
           $qsql = mysqli_query($con,$sql);
           while($rs = mysqli_fetch_array($qsql))
           {
@@ -29,9 +33,9 @@ if(isset($_GET[delid]))
             $qsqlpatient = mysqli_query($con,$sqlpatient);
             $rspatient = mysqli_fetch_array($qsqlpatient);
 
-            $sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
-            $qsqlnurse = mysqli_query($con,$sqlnurse);
-            $rsnurse = mysqli_fetch_array($qsqlnurse);
+            $sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+            $qsqldoc = mysqli_query($con,$sqldoc);
+            $rsdoc = mysqli_fetch_array($qsqldoc);
             ?>
     <div class="card" style="padding: 10px">
 
@@ -40,7 +44,6 @@ if(isset($_GET[delid]))
 
         <thead>
            <tr>
-              <td><strong>Nurse</strong></td>
               <td><strong>Patient</strong></td>
               <td><strong>Prescription Date</strong></td>
               <td><strong>Status</strong></td>
@@ -51,7 +54,6 @@ if(isset($_GET[delid]))
 
             <?php
             echo "<tr>
-            <td>&nbsp;$rsnurse[nursename]</td>
             <td>&nbsp;$rspatient[patientname]</td>
             <td>&nbsp;$rs[prescriptiondate]</td>
             <td>&nbsp;$rs[status]</td>
@@ -67,7 +69,7 @@ if(isset($_GET[delid]))
           <thead>
              <tr>
               <td>Medicine</td>
-              <td>Unit</td>
+              <td>Medicine Received</td>
               <td>Dosage</td>
             </tr>
           </thead>

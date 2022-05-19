@@ -50,7 +50,7 @@ if(isset($_GET[editid]))
 
 <div class="card ">
  
-    <h2>Appointment record Approval Process</h2>
+    <h2>Appointment Record Approval Process</h2>
    <form method="post" action="" name="frmappnt" onSubmit="return validateform()">
   
     <table class="table table-striped">                
@@ -109,17 +109,17 @@ if(isset($_GET[editid]))
           <td><select name="select6" id="select6" class="form-control show-tick">
             <option value="">Select</option>
             <?php
-          	$sqldoctor= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active'";
-			$qsqldoctor = mysqli_query($con,$sqldoctor);
-			while($rsdoctor = mysqli_fetch_array($qsqldoctor))
+          	$sqlnurse= "SELECT * FROM nurse INNER JOIN department ON department.departmentid=nurse.departmentid WHERE nurse.status='Active'";
+			$qsqlnurse = mysqli_query($con,$sqlnurse);
+			while($rsnurse = mysqli_fetch_array($qsqlnurse))
 			{
-				if($rsdoctor[nurseid] == $rsedit[nurseid])
+				if($rsnurse[nurseid] == $rsedit[nurseid])
 				{
-					echo "<option value='$rsdoctor[nurseid]' selected>$rsdoctor[doctorname] ( $rsdoctor[departmentname] ) </option>";
+					echo "<option value='$rsnurse[nurseid]' selected>$rsnurse[nursename] ( $rsnurse[departmentname] ) </option>";
 				}
 				else
 				{
-					echo "<option value='$rsdoctor[nurseid]'>$rsdoctor[doctorname] ( $rsdoctor[departmentname] )</option>";				
+					echo "<option value='$rsnurse[nurseid]'>$rsnurse[nursename] ( $rsnurse[departmentname] )</option>";				
 				}
 			}
 		  ?>

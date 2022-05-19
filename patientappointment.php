@@ -15,7 +15,7 @@ if(isset($_POST[submit]))
 		$sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,city,mobileno,loginid,password,gender,dob,status) values('$_POST[patiente]','$dt','$tim','$_POST[textarea]','$_POST[city]','$_POST[mobileno]','$_POST[loginid]','$_POST[password]','$_POST[select6]','$_POST[dob]','Active')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			/* echo "<script>alert('patient record inserted successfully...');</script>"; */
+			/* echo "<script>alert('Patient record inserted successfully.');</script>"; */
 		}
 		else
 		{
@@ -35,7 +35,7 @@ if(isset($_POST[submit]))
 		$sql ="INSERT INTO appointment(appointmenttype,patientid,appointmentdate,appointmenttime,app_reason,status,departmentid,nurseid) values('ONLINE','$lastinsid','$_POST[appointmentdate]','$_POST[appointmenttime]','$_POST[app_reason]','Pending','$_POST[department]','$_POST[doct]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Appointment Record Inserted Successfully...');</script>";
+			echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
 		}
 		else
 		{
@@ -100,10 +100,10 @@ if(isset($_SESSION[patientid]))
                     <div class="col-md-7">
                         <div class="text-sec padding-right-0">
                             <div class="heading-block head-left margin-bottom-50">
-                                <h4>Appointment taken successfully</h4>
+                                <h4>Appointment taken successfully.</h4>
                             </div>
-                            <p>Appointment record is in pending process. Please wait for confirmation message.</p>
-                            <p> <a href="patientlogin.php">Click here to Login</a>. </p>
+                           <h17>Appointment record is in pending process. Please wait for confirmation message.</h17>
+                            <p> <a href="patientlogin.php">Click here to <b>Login</b></a>. </p>
                         </div>
                     </div>
                 </div>

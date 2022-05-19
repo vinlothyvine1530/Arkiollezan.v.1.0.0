@@ -1,17 +1,9 @@
 .authentication {
-    background-image: url('../images/bg-1.jpg');
+    background-image: url('../images/ctu2.jpg');
     background-size: cover;
     background-position: top center;
 }
-.authentication .theme-bg {
-    background: linear-gradient(45deg, #0dbaad, #7bd1c1);
-    height: 150px;
-    position: absolute;
-    width: 50%;
-    left: 0;
-    top: 144px;
-    z-index: -1;
-}
+
 /* Pen Title */
 .pen-title {
     padding: 50px 0;
@@ -104,7 +96,7 @@
 }
 /* Card */
 .card {
-    position: relative;
+    position:top center;
     background: #ffffff;
     border-radius: 5px;
     padding: 50px 0 40px 0;
@@ -152,6 +144,7 @@
     font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: 'Montserrat Light';
 }
 .card .title span {
     font-size: 13px;
@@ -171,10 +164,12 @@
     line-height: 18px;
     margin-top: 10px;
     text-transform: none;
+    
 }
 .card .input-container {
     position: relative;
     margin: 0 0px 30px;
+    font-family: 'Montserrat Light';
 }
 .form-line .search-btn {
     display: inline-block;
@@ -220,7 +215,7 @@
 .card.alt .toggle:before {
     content: '\f158';
     display: inline-block;
-    font-family: 'Material-Design-Iconic-Font';
+    font-family: 'Montserrat', sans-serif;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -250,7 +245,7 @@
 }
 .card.alt .title .close:before {
     content: '\f136';
-    font-family: 'Material-Design-Iconic-Font';
+    font-family: 'Montserrat', sans-serif;
     font-size: 35px;
 }
 .card.alt .input-container input { color: #ffffff; }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2022 at 09:16 AM
+-- Generation Time: May 17, 2022 at 01:02 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -103,7 +103,7 @@ INSERT INTO `department` (`departmentid`, `departmentname`, `description`, `stat
 CREATE TABLE `medicine` (
   `medicineid` int(10) NOT NULL,
   `medicinename` varchar(25) NOT NULL,
-  `medicinecost` int(10) NOT NULL,
+  `medicinequantity` int(10) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -112,10 +112,10 @@ CREATE TABLE `medicine` (
 -- Dumping data for table `medicine`
 --
 
-INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinecost`, `description`, `status`) VALUES
+INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinequantity`, `description`, `status`) VALUES
 (2, 'Rexidol', 0, 'For Headache', 'Active'),
 (3, 'Imodium', 0, 'For Stomach Ache', 'Active'),
-(4, 'tambal makbuang', 10, 'ambot lang', 'Active'),
+(4, 'tambal makbuang', 10., 'ambot lang', 'Active'),
 (5, 'lagundi', 10, 'para hubak', 'Active');
 
 -- --------------------------------------------------------
@@ -166,6 +166,30 @@ CREATE TABLE `nurse_timings` (
 INSERT INTO `nurse_timings` (`nurse_timings_id`, `nurseid`, `start_time`, `end_time`, `available_day`, `status`) VALUES
 (1, 1, '07:30:00', '17:00:00', '', 'Active'),
 (2, 2, '07:59:00', '17:04:00', '', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `orderid` int(10) NOT NULL,
+  `patientid` int(10) NOT NULL,
+  `nurseid` int(10) NOT NULL,
+  `prescriptionid` int(10) NOT NULL,
+  `orderdate` date NOT NULL,
+  `deliverydate` date NOT NULL,
+  `address` text NOT NULL,
+  `mobileno` varchar(15) NOT NULL,
+  `note` text NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `payment_type` varchar(20) NOT NULL,
+  `card_no` varchar(20) NOT NULL,
+  `cvv_no` varchar(5) NOT NULL,
+  `expdate` date NOT NULL,
+  `card_holder` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -241,7 +265,7 @@ CREATE TABLE `prescription_records` (
   `prescription_record_id` int(10) NOT NULL,
   `prescription_id` int(10) NOT NULL,
   `medicine_name` varchar(25) NOT NULL,
-  `cost` float(10,2) NOT NULL,
+  `cost` int(10) NOT NULL,
   `unit` int(10) NOT NULL,
   `dosage` varchar(25) NOT NULL,
   `status` varchar(10) NOT NULL
@@ -252,10 +276,61 @@ CREATE TABLE `prescription_records` (
 --
 
 INSERT INTO `prescription_records` (`prescription_record_id`, `prescription_id`, `medicine_name`, `cost`, `unit`, `dosage`, `status`) VALUES
-(1, 2, '2', 0.00, 5, '1-1-1', 'Active'),
-(2, 1, '3', 0.00, 1, '1-0-0', 'Active'),
-(3, 3, '3', 0.00, 3, '1-1-1', 'Active'),
-(7, 5, '4', 0.00, 2, '0-1-1', 'Active');
+(1, 2, '2', 0, 5, '1-1-1', 'Active'),
+(2, 1, '3', 0, 1, '1-0-0', 'Active'),
+(3, 3, '3', 0, 3, '1-1-1', 'Active'),
+(7, 5, '4', 0, 2, '0-1-1', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room`
+--
+
+CREATE TABLE `room` (
+  `roomid` int(10) NOT NULL,
+  `roomtype` varchar(25) NOT NULL,
+  `roomno` int(10) NOT NULL,
+  `noofbeds` int(10) NOT NULL,
+  `room_tariff` float(10,2) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`roomid`, `roomtype`, `roomno`, `noofbeds`, `room_tariff`, `status`) VALUES
+(15, 'GENERAL WARD', 1, 20, 500.00, 'Active'),
+(16, 'SPECIAL WARD', 2, 10, 100.00, 'Active'),
+(17, 'GENERAL WARD', 2, 10, 500.00, 'Active'),
+(18, 'GENERAL WARD', 121, 13, 150.00, 'Active'),
+(19, 'GENERAL WARD', 850, 11, 500.00, 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_type`
+--
+
+CREATE TABLE `service_type` (
+  `service_type_id` int(10) NOT NULL,
+  `service_type` varchar(100) NOT NULL,
+  `servicecharge` float(10,2) NOT NULL,
+  `description` text NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `service_type`
+--
+
+INSERT INTO `service_type` (`service_type_id`, `service_type`, `servicecharge`, `description`, `status`) VALUES
+(10, 'X-ray', 250.00, 'To take fractured photo copy', 'Active'),
+(11, 'Scanning', 450.00, 'To scan body from injury', 'Active'),
+(12, 'MRI', 300.00, 'Regarding body scan', 'Active'),
+(13, 'Blood Testing', 150.00, 'To detect the type of disease', 'Active'),
+(14, 'Diagnosis', 210.00, 'To analyse the diagnosis', 'Active');
 
 -- --------------------------------------------------------
 
@@ -266,7 +341,6 @@ INSERT INTO `prescription_records` (`prescription_record_id`, `prescription_id`,
 CREATE TABLE `treatment` (
   `treatmentid` int(10) NOT NULL,
   `treatmenttype` varchar(25) NOT NULL,
-  `treatment_cost` decimal(10,2) NOT NULL,
   `note` text NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -275,9 +349,9 @@ CREATE TABLE `treatment` (
 -- Dumping data for table `treatment`
 --
 
-INSERT INTO `treatment` (`treatmentid`, `treatmenttype`, `treatment_cost`, `note`, `status`) VALUES
-(21, 'weight', '0.00', 'occassional', 'Active'),
-(22, 'height', '0.00', 'occasional', 'Active');
+INSERT INTO `treatment` (`treatmentid`, `treatmenttype`, `note`, `status`) VALUES
+(21, 'weight', 'occassional', 'Active'),
+(22, 'height', 'occasional', 'Active');
 
 -- --------------------------------------------------------
 
@@ -372,6 +446,12 @@ ALTER TABLE `nurse_timings`
   ADD PRIMARY KEY (`nurse_timings_id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`orderid`);
+
+--
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
@@ -389,6 +469,18 @@ ALTER TABLE `prescription`
 --
 ALTER TABLE `prescription_records`
   ADD PRIMARY KEY (`prescription_record_id`);
+
+--
+-- Indexes for table `room`
+--
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`roomid`);
+
+--
+-- Indexes for table `service_type`
+--
+ALTER TABLE `service_type`
+  ADD PRIMARY KEY (`service_type_id`);
 
 --
 -- Indexes for table `treatment`
@@ -449,6 +541,12 @@ ALTER TABLE `nurse_timings`
   MODIFY `nurse_timings_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `orderid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
@@ -465,6 +563,18 @@ ALTER TABLE `prescription`
 --
 ALTER TABLE `prescription_records`
   MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `room`
+--
+ALTER TABLE `room`
+  MODIFY `roomid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `service_type`
+--
+ALTER TABLE `service_type`
+  MODIFY `service_type_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `treatment`

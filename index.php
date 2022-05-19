@@ -98,7 +98,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 2; font-size:50px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring
+                style="z-index: 2; font-size:45px; font-weight:500; color:#fff;  max-width: auto; max-height: auto; white-space: nowrap;">Clinical Monitoring
                  and Inventory System</div>
             
             <!-- LAYER NR. 3 -->
@@ -178,24 +178,24 @@
             <!-- Intro Detail -->
             <div class="col-md-8">
               <div class="text-sec">
-                <h5>Health Check Up At Clinic Management System</h5>
-                <p>Labaid Diagnostic Centre, in addition to providing world-class clinical lab services, it has a pool of specialists from various medical specialties who serve suffering patients as outpatients. They are all well-known and well-respected in their medical fields for excellent clinical management.</p>
+                <h5><b>Health Record and Inventory of Medicine System</b></h5>
+                <h15>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</h15>
                 <ul class="row">
                   <li class="col-sm-6">
-                    <h6> <i class="lnr  lnr-checkmark-circle"></i> EMERGENCY CASE</h6>
-                    <p>CMIS provide reliable communications and improve public safety areas. </p>
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> RECORD MONITORING</b></h6>
+                    <h17>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness.  </h17>
                   </li>
                   <li class="col-sm-6">
-                    <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED nurse</h6>
-                    <p>Hopital Management System has licensed and qualified nurse! </p>
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> QUALIFIED NURSE</b></h6>
+                    <h17>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </h17>
                   </li>
                   <li class="col-sm-6">
-                    <h6> <i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</h6>
-                    <p>Clinic Management System Supports Online Appointment. Check the appointment tab above. </p>
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</b></h6>
+                    <h17>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above.</h17>
                   </li>
                   <li class="col-sm-6">
-                    <h6> <i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</h6>
-                    <p>CMIS qualified nurse offers free counseling to their patients. </p>
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</b></h6>
+                    <h17>CMIS qualified nurse offers free counseling to their patients. </h17>
                   </li>
                 </ul>
               </div>
@@ -229,7 +229,7 @@
         
         <!-- Heading -->
         <div class="heading-block">
-          <h2>Our Services</h2>
+          <h2>OUR SERVICES</h2>
           <hr>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span> </div>
         
@@ -242,8 +242,8 @@
               <article>
                 <div class="media-left"> <i class="flaticon-eye-2 icon"></i> </div>
                 <div class="media-body">
-                  <h6>Eye Specialist</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>Eye Specialist</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>
@@ -253,8 +253,8 @@
               <article>
                 <div class="media-left"> <i class="flaticon-operating-room icon"></i> </div>
                 <div class="media-body">
-                  <h6>Operation Theater</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>Operation Theater</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>
@@ -264,8 +264,8 @@
               <article>
                 <div class="media-left"> <i class="flaticon-icu-monitor icon"></i> </div>
                 <div class="media-body">
-                  <h6>ICU Department</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>ICU Department</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>
@@ -273,10 +273,10 @@
             <!-- Services -->
             <div class="col-md-4">
               <article>
-                <div class="media-left"> <i class="flaticon-nurse icon"></i> </div>
+                <div class="media-left"> <i class="flaticon-doctor icon"></i> </div>
                 <div class="media-body">
-                  <h6>Qualified nurse</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>Qualified nurse</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>
@@ -286,8 +286,8 @@
               <article>
                 <div class="media-left"> <i class="flaticon-heartbeat icon"></i> </div>
                 <div class="media-body">
-                  <h6>Heart Problems</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>Heart Problems</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>
@@ -297,8 +297,8 @@
               <article>
                 <div class="media-left"> <i class="flaticon-stomach-2 icon"></i> </div>
                 <div class="media-body">
-                  <h6>Stomach Problems</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h6><b>Stomach Problems</b></h6>
+                  <h17>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h17>
                 </div>
               </article>
             </div>

@@ -3,38 +3,42 @@
 
 <!-- Content -->
 <div id="content">
-
     <!-- Intro -->
     <section class="p-t-b-150">
         <div class="container">
+      <!-- Tittle -->
+       <div class="heading-block">
+          <h4>ABOUT US</h4>
+          <hr>
+          <span>Arkiollezan is a mixed words of our names. We are helped by our Dearly Adviser when making this system.</span> </div>
             <div class="intro-main">
                 <div class="row">
 
                     <!-- Intro Detail -->
-                    <div class="col-md-7">
-                        <div class="text-sec padding-right-0">
-                            <h5>Health Record and Inventory of Medicine System</h5>
-                            <h17>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</h17>
-                            <ul class="row">
-                              <li class="col-sm-6">
-                                <h6> <i class="lnr  lnr-checkmark-circle"></i> RECORD MONITORING</h6>
-                                <h17>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness. </h17>
-                              </li>
-                              <li class="col-sm-6">
-                                <h6> <i class="lnr  lnr-checkmark-circle"></i> QUALIFIED NURSE</h6>
-                                <h17>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </h17>
-                              </li>
-                              <li class="col-sm-6">
-                                <h6> <i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</h6>
-                                <h17>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above.</h17>
-                              </li>
-                              <li class="col-sm-6">
-                                <h6> <i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</h6>
-                                <h17>CMIS qualified nurse offers free counseling <br>to their patients. </h17>
-                              </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="col-md-8">
+              <div class="text-sec">
+                <h5><b>Health Record and Inventory of Medicine System</b></h5>
+                <h15>The web-based Clinical Monitoring and Inventory System allows patients to simply schedule an appointment with the campus nurse no matter where they are. The school nurse could also verify and update the available medicine on his clinic's system rather than manually recording it on paper. A system that makes life easier.</h15>
+                <ul class="row">
+                  <li class="col-sm-6">
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> RECORD MONITORING</b></h6>
+                    <h17>CMIS provide excellent monitoring of the patients' record which makes it easier to give them prescriptions to specific unwellness.  </h17>
+                  </li>
+                  <li class="col-sm-6">
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> QUALIFIED NURSE</b></h6>
+                    <h17>CMIS is served by a professional nurse to provide excellent quality of giving prescriptions to the patients. </h17>
+                  </li>
+                  <li class="col-sm-6">
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> ONLINE APPOINTMENT</b></h6>
+                    <h17>Clinical Monitoring and Inventory System Supports Online Appointment which makes it more easier to access. Check the appointment tab above.</h17>
+                  </li>
+                  <li class="col-sm-6">
+                    <h6><b><i class="lnr  lnr-checkmark-circle"></i> FREE MEDICAL COUNSELING</b></h6>
+                    <h17>CMIS qualified nurse offers free counseling to their patients. </h17>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
                     <!-- Intro Timing -->
                     <div class="col-md-5"> <img class="img-responsive intro-img" src="images/intro-img.jpg" alt="">
@@ -236,19 +240,22 @@
                 <div class="dep-sec-txt">
                   <div class="row">
                     <div class="col-md-7">
-                      <h5><span><b>Professor Glenn Adorable Trinidad</b></span></h5><hr>
-                      <h17> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>
-                        <br>
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s PageMaker including versions of Lorem Ipsum. </h17>
+                    <h5><span><b>Professor Glenn Adorable Trinidad</b></span></h5> 
+                        <hr>
+                      <h17><b>Address:</b> Tandag, Surigao Del Sur
+                      <br><b>Contact:</b> XXXX-XXX-XXXX
+                      <br><b>Email:</b> glenn3nidadfull2014@gmail.com
+                      <br><b>Gender:</b> Male
+                      <br><b>Nationality:</b> Filipino
+
+                        <br><br>
+                        Background</h17>
                       
                       <!-- List Style Check -->
                       <ul class="list-style-check">
-                        <li> Gwapo </li>
-                        <li> Mabait </li>
-                        <li> Tahimik </li>
-                        <li> Matapat </li>
-                        <li> Matulungin </li>
-                        <li> Marangal </li>
+                        <li> </li>
+                        <li> Surigao Del Sur State University - Main Campus Tandag City</li>
+                        <li> Cebu Technological University</li>
                       </ul>
                     </div>
                     

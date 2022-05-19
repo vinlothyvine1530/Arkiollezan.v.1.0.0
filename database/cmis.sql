@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2022 at 01:02 AM
+-- Generation Time: May 19, 2022 at 03:32 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -67,11 +67,13 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`appointmentid`, `appointmenttype`, `patientid`, `roomid`, `departmentid`, `appointmentdate`, `appointmenttime`, `nurseid`, `status`, `app_reason`) VALUES
-(1, '', 1, 0, 2, '2022-05-16', '07:59:00', 0, 'Approved', 'wala lang'),
-(2, '', 2, 0, 2, '2022-05-17', '07:49:00', 2, 'Approved', 'wala lang'),
-(3, '', 4, 0, 2, '2022-05-17', '06:00:00', 4, 'Approved', 'wala lang sir'),
-(4, '', 3, 0, 2, '2022-05-17', '05:18:00', 4, 'Active', 'agagaga'),
-(5, '', 5, 0, 2, '2022-05-27', '06:17:00', 4, 'Approved', 'sfagagaga');
+(6, '', 6, 0, 2, '2022-05-19', '12:56:00', 0, 'Approved', 'sir pa timbang ko sir'),
+(7, '', 7, 0, 2, '2022-05-19', '13:02:00', 0, 'Approved', 'sir sir init kay ko sir'),
+(8, '', 8, 0, 2, '2022-05-20', '14:10:00', 0, 'Approved', 'sir murag ga lain man akong tiyan sir pwede koamngayo tambal '),
+(9, '', 9, 0, 2, '2022-05-19', '13:16:00', 0, 'Approved', 'sir murag mag pataimbang ko'),
+(11, '', 11, 0, 2, '2022-05-19', '13:25:00', 0, 'Approved', 'hello sir need nako tambal para labad ulo sir'),
+(12, '', 12, 0, 2, '2022-05-19', '13:36:00', 0, 'Approved', 'sir mag pa sukod kos akong height'),
+(13, '', 13, 0, 2, '2022-05-19', '17:37:00', 0, 'Approved', 'sir pwede ko pa bp?\r\n');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,9 @@ CREATE TABLE `department` (
 
 INSERT INTO `department` (`departmentid`, `departmentname`, `description`, `status`) VALUES
 (2, 'TechnologyDepartment', 'For Technology Student', 'Active'),
-(3, 'EducationDepartment', 'For Education Students', 'Active');
+(3, 'EducationDepartment', 'For Education Students', 'Active'),
+(4, 'FacultyandStaffDepartment', 'For faculty and staff only', 'Active'),
+(5, 'WalkInDepartment', 'For visitors only', 'Active');
 
 -- --------------------------------------------------------
 
@@ -113,10 +117,10 @@ CREATE TABLE `medicine` (
 --
 
 INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinequantity`, `description`, `status`) VALUES
-(2, 'Rexidol', 0, 'For Headache', 'Active'),
-(3, 'Imodium', 0, 'For Stomach Ache', 'Active'),
-(4, 'tambal makbuang', 10., 'ambot lang', 'Active'),
-(5, 'lagundi', 10, 'para hubak', 'Active');
+(2, 'Rexidol', 50, 'For Headache', 'Active'),
+(3, 'Imodium', 50, 'For Stomach Ache', 'Active'),
+(4, 'Citirizine', 50, 'For allergy', 'Active'),
+(5, 'Salbutamol', 50, 'For Cough and Asthma', 'Active');
 
 -- --------------------------------------------------------
 
@@ -141,8 +145,7 @@ CREATE TABLE `nurse` (
 --
 
 INSERT INTO `nurse` (`nurseid`, `nursename`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`) VALUES
-(4, 'Brylle Barcoma', '09980368786', 2, '1177140', 'barcoma1177140', 'Active', 'BSN', 5),
-(5, 'Mienzan Artizuela', '0998456789', 0, '1177135', '1177135mienzan', 'Active', 'BSN', 7);
+(0, 'Marc Pabico', '09980368786', 0, 'marc', '123456789', 'Active', 'MBBS', 5);
 
 -- --------------------------------------------------------
 
@@ -219,11 +222,13 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`patientid`, `patientname`, `admissiondate`, `admissiontime`, `address`, `mobileno`, `city`, `pincode`, `loginid`, `password`, `bloodgroup`, `gender`, `dob`, `status`) VALUES
-(1, 'badian', '2022-05-16', '18:00:07', 'pitalo', '1324564894', 'san fernando', '', '54321', 'badian123', '', 'Male', '1999-10-22', 'Active'),
-(2, 'badian', '2022-05-16', '19:50:35', 'pitalo', '1324564894', 'san fernando', '', '12345', 'badian123', '', 'Male', '1999-10-22', 'Active'),
-(3, 'brylle', '2022-05-16', '19:54:33', 'safs', '21641651', 'sfasf', '', '12345', '123456789', '', 'Male', '2008-08-17', 'Active'),
-(4, 'badian', '2022-05-16', '21:59:04', 'pitalo', '1324564894', 'san fernando', '', '12345', 'badian123', '', 'Male', '2022-05-17', 'Active'),
-(5, 'mienzan', '2022-05-16', '23:17:24', 'naga', '654195178', 'naga', '', '12345', '123456789', '', 'Female', '2005-12-17', 'Active');
+(6, 'Brylle Barcoma', '2022-05-19', '06:56:29', 'Bonbon', '09980368786', 'Carcar City', '', 'brylle', '123456789', '', 'Male', '1999-10-15', 'Active'),
+(7, 'Mienzan Artizuela', '2022-05-19', '07:02:48', 'West Poblacion', '09551793271', 'City of Naga', '', 'mienzan', '123456789', '', 'Female', '1999-12-01', 'Active'),
+(8, 'Rio Menor', '2022-05-19', '07:11:10', 'Central Poblacion', '09124710024', 'City of Naga', '', 'rio', '123456789', '', 'Male', '1998-02-02', 'Active'),
+(9, 'Mark Badian', '2022-05-19', '07:16:36', 'Pitalo', '09454379315', 'San Fernando', '', 'mark', '123456789', '', 'Male', '1998-12-17', 'Active'),
+(11, 'Jeff Panares', '2022-05-19', '07:25:37', 'west', '2056219122', 'naga', '', 'jeff', '123456789', '', 'Male', '1997-12-19', 'Active'),
+(12, 'Christian Rojas', '2022-05-19', '07:36:29', 'west', '6219559', 'naga', '', 'christian', '123456789', '', 'Male', '1999-10-19', 'Active'),
+(13, 'John Cabanes', '2022-05-19', '11:38:05', 'tabtoy', '121548415552', 'talisay City', '', 'john', '123456789', '', 'Male', '1999-12-15', 'Active');
 
 -- --------------------------------------------------------
 
@@ -253,7 +258,12 @@ INSERT INTO `prescription` (`prescriptionid`, `treatment_records_id`, `nurseid`,
 (3, 0, 2, 2, '', 0, '0000-00-00', 'Active', 2),
 (4, 0, 4, 4, '', 0, '0000-00-00', 'Active', 3),
 (5, 0, 4, 4, '', 0, '2022-05-17', 'Active', 3),
-(6, 0, 4, 5, '', 0, '2022-05-17', 'Active', 5);
+(6, 0, 4, 5, '', 0, '2022-05-17', 'Active', 5),
+(7, 0, 0, 6, '', 0, '2022-05-19', 'Active', 6),
+(8, 0, 0, 7, '', 0, '2022-05-19', 'Active', 7),
+(9, 0, 0, 11, '', 0, '2022-05-19', 'Active', 11),
+(10, 0, 0, 12, '', 0, '2022-05-19', 'Active', 12),
+(11, 0, 0, 9, '', 0, '2022-05-19', 'Active', 9);
 
 -- --------------------------------------------------------
 
@@ -279,7 +289,12 @@ INSERT INTO `prescription_records` (`prescription_record_id`, `prescription_id`,
 (1, 2, '2', 0, 5, '1-1-1', 'Active'),
 (2, 1, '3', 0, 1, '1-0-0', 'Active'),
 (3, 3, '3', 0, 3, '1-1-1', 'Active'),
-(7, 5, '4', 0, 2, '0-1-1', 'Active');
+(7, 5, '4', 0, 2, '0-1-1', 'Active'),
+(8, 7, '2', 0, 2, '0-1-1', 'Active'),
+(9, 8, '2', 0, 2, '0-1-1', 'Active'),
+(10, 9, '2', 0, 2, '0-1-1', 'Active'),
+(11, 10, '2', 0, 2, '0-1-1', 'Active'),
+(12, 11, '4', 0, 1, '0-0-1', 'Active');
 
 -- --------------------------------------------------------
 
@@ -350,8 +365,10 @@ CREATE TABLE `treatment` (
 --
 
 INSERT INTO `treatment` (`treatmentid`, `treatmenttype`, `note`, `status`) VALUES
-(21, 'weight', 'occassional', 'Active'),
-(22, 'height', 'occasional', 'Active');
+(21, 'Weight', 'Measurement is a must', 'Active'),
+(22, 'Height', 'Measurement is a must', 'Active'),
+(23, 'Temperature', 'Measures your temp. according to your condition', 'Active'),
+(24, 'Blood Pressure', 'We Measure your BP. according to your condition.', 'Active');
 
 -- --------------------------------------------------------
 
@@ -377,9 +394,13 @@ CREATE TABLE `treatment_records` (
 --
 
 INSERT INTO `treatment_records` (`treatment_records_id`, `treatmentid`, `appointmentid`, `patientid`, `nurseid`, `treatment_description`, `uploads`, `treatment_date`, `treatment_time`, `status`) VALUES
-(1, 21, 2, 2, 2, 'nag patimbang', '1782277088', '2022-05-16', '13:52:00', 'Active'),
-(2, 22, 2, 2, 2, 'dggagd', '1397369783artizuela-programmer.png', '2022-05-16', '03:19:00', 'Active'),
-(3, 22, 3, 4, 4, 'imong mama vital', '1595511986', '2022-05-16', '04:58:00', 'Active');
+(4, 21, 6, 0, 0, 'dong dong imong timbang dong kay 50kg ra', '2000503878', '2022-05-19', '12:57:00', 'Active'),
+(5, 21, 6, 0, 0, 'imong timbang dong kay 50kg ra', '1087801965', '2022-05-19', '12:57:00', 'Active'),
+(6, 21, 6, 6, 0, '56kg', '908479108', '2022-05-19', '13:00:00', 'Active'),
+(7, 21, 7, 7, 0, 'imong timbang dae kay 100kg', '516016675', '2022-05-19', '13:03:00', 'Active'),
+(8, 21, 11, 11, 0, 'jeff imong timbang kay 60kg', '1209648695', '2022-05-19', '13:27:00', 'Active'),
+(9, 22, 12, 12, 0, '5 feet 4 inches', '557304552', '2022-05-19', '13:38:00', 'Active'),
+(10, 24, 9, 9, 0, 'dong imong bp kay 100 over 120 high blood ka dong pangabang nag lungon', '1873732203', '2022-05-19', '13:49:00', 'Active');
 
 -- --------------------------------------------------------
 
@@ -514,13 +535,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `departmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `departmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `medicine`
@@ -532,7 +553,7 @@ ALTER TABLE `medicine`
 -- AUTO_INCREMENT for table `nurse`
 --
 ALTER TABLE `nurse`
-  MODIFY `nurseid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `nurseid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `nurse_timings`
@@ -550,19 +571,19 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `prescription`
 --
 ALTER TABLE `prescription`
-  MODIFY `prescriptionid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `prescriptionid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `prescription_records`
 --
 ALTER TABLE `prescription_records`
-  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `room`
@@ -580,13 +601,13 @@ ALTER TABLE `service_type`
 -- AUTO_INCREMENT for table `treatment`
 --
 ALTER TABLE `treatment`
-  MODIFY `treatmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `treatmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `treatment_records`
 --
 ALTER TABLE `treatment_records`
-  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`

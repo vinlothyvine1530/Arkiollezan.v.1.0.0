@@ -11,6 +11,7 @@ if(isset($_GET[delid]))
 	}
 }
 ?>
+
 <div class="container-fluid">
   <div class="block-header">
     <h2>View Patient records</h2>
@@ -46,13 +47,13 @@ if(isset($_GET[delid]))
         <td>$rs[address]<br>$rs[city] -  &nbsp;$rs[pincode]<br>
         Mob No. - $rs[mobileno]</td>
         <td><strong>Blood group</strong> - $rs[bloodgroup]<br>
-        <strong>Gender</strong> - &nbsp;$rs[gender]<br>
+        <strong>Sex</strong> - &nbsp;$rs[gender]<br>
         <strong>DOB</strong> - &nbsp;$rs[dob]</td>
         <td align='center'>Status - $rs[status] <br>";
-        if(isset($_SESSION[adminid]))
+        if(isset($_SESSION[nurseid]))
         {
           echo "<a href='patient.php?editid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a><a href='viewpatient.php?delid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> <hr>
-          <a href='patientreport.php?patientid=$rs[patientid]' class='btn btn-sm btn-raised'>View Report</a>";
+          <a href='patientreport.php?patientid=$rs[patientid]' class='btn btn-sm btn-raised'> View Report</a>";
         }
         echo "</td></tr>";
       }

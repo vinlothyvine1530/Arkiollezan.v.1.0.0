@@ -92,7 +92,7 @@
                       <br><b>Email:</b> vinlothyvine@gmail.com
                       <br><b>Birthdate:</b> October 15,1999
                       <br><b>Age:</b> 22
-                      <br><b>Gender:</b> Male
+                      <br><b>Sex:</b> Male
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
@@ -131,7 +131,7 @@
                       <br><b>Email:</b> mienzanartizuela17@gmail.com
                       <br><b>Birthdate:</b> December 1,1999
                       <br><b>Age:</b> 22
-                      <br><b>Gender:</b> Female
+                      <br><b>Sex:</b> Female
                       <br><b>Nationality:</b> Filipina
 
                         <br><br>
@@ -170,7 +170,7 @@
                       <br><b>Email:</b> mazu.kenji@gmail.com
                       <br><b>Birthdate:</b> December 17,1998
                       <br><b>Age:</b> 22
-                      <br><b>Gender:</b> Male
+                      <br><b>Sex:</b> Male
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
@@ -209,7 +209,7 @@
                       <br><b>Email:</b> riomenor5@gmail.com
                       <br><b>Birthdate:</b> February 2,1998
                       <br><b>Age:</b> 23
-                      <br><b>Gender:</b> Male
+                      <br><b>Sex:</b> Male
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>
@@ -245,7 +245,7 @@
                       <h17><b>Address:</b> Tandag, Surigao Del Sur
                       <br><b>Contact:</b> XXXX-XXX-XXXX
                       <br><b>Email:</b> glenn3nidadfull2014@gmail.com
-                      <br><b>Gender:</b> Male
+                      <br><b>Sex:</b> Male
                       <br><b>Nationality:</b> Filipino
 
                         <br><br>

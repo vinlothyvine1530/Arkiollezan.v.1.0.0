@@ -72,7 +72,7 @@ if(isset($_GET[editid]))
         </tr>
 
         <tr>
-          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Add" /></td>
         </tr>
       </tbody>
     </table>

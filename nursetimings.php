@@ -62,9 +62,9 @@ if(isset($_GET[editid]))
           <td width="66%"><select class="form-control"  name="select2" id="select2">
            <option value="">Select</option>
             <?php
-          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
-			$qsqlnurse = mysqli_query($con,$sqlnurse);
-			while($rsnurse = mysqli_fetch_array($qsqlnurse))
+          	$sqldoc= "SELECT * FROM nurse WHERE status='Active'";
+			$qsqldoc = mysqli_query($con,$sqldoc);
+			while($rsnurse = mysqli_fetch_array($qsqldoc))
 			{
 				if($rsnurse[nurseid] == $rsedit[nurseid])
 				{
@@ -111,7 +111,7 @@ if(isset($_GET[editid]))
            </select></td>
         </tr>
         <tr>
-          <td height="36" colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td height="36" colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Add" /></td>
         </tr>
       </tbody>
     </table>

@@ -74,9 +74,9 @@ if(isset($_GET[editid]))
 			$rspatient = mysqli_fetch_array($qsqlpatient);
 			
 			
-		$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
-			$qsqlnurse = mysqli_query($con,$sqlnurse);
-			$rsnurse = mysqli_fetch_array($qsqlnurse);
+		$sqldoc = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+			$qsqldoc = mysqli_query($con,$sqldoc);
+			$rsnurse = mysqli_fetch_array($qsqldoc);
 			
         echo "<tr>
           <td>&nbsp;$rsnurse[nursename]</td>

@@ -40,16 +40,16 @@ if(isset($_GET[delid]))
 		{
 			$sql = $sql . " AND patientid='$_SESSION[patientid]'"; 
 		}
-		if(isset($_SESSION[nurseid]))
+		else if(isset($_SESSION[nurseid]))
 		{
 			$sql = $sql . " AND nurseid='$_SESSION[nurseid]'";
 		}
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
 		{
-			$sqlpat = "SELECT * FROM patient WHERE patientid='$rs[patientid]'";
-			$qsqlpat = mysqli_query($con,$sqlpat);
-			$rspat = mysqli_fetch_array($qsqlpat);
+			$sqlpatient = "SELECT * FROM patient WHERE patientid='$rs[patientid]'";
+			$qsqlpatient = mysqli_query($con,$sqlpatient);
+			$rspatient = mysqli_fetch_array($qsqlpatient);
 			
 			$sqldoc= "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
 			$qsqldoc = mysqli_query($con,$sqldoc);
@@ -61,7 +61,7 @@ if(isset($_GET[delid]))
 			
         echo "<tr>
           <td>&nbsp;$rstreatment[treatmenttype]</td>
-		   <td>&nbsp;$rspat[patientname]</td>
+		   <td>&nbsp;$rs[patientname]</td>
 			<td>&nbsp;$rs[treatment_description]</td>
 			 <td>&nbsp;$rs[treatment_date]</td>
 			  <td>&nbsp;$rs[treatment_time]</td>";  

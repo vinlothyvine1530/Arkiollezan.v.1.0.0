@@ -36,9 +36,9 @@ if(isset($_GET[delid]))
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
 		{
-			$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
-			$qsqlnurse = mysqli_query($con,$sqlnurse);
-			$rsnurse = mysqli_fetch_array($qsqlnurse);
+			$sqldoc = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+			$qsqldoc = mysqli_query($con,$sqldoc);
+			$rsnurse = mysqli_fetch_array($qsqldoc);
 			
 			$sqldoct = "SELECT * FROM nurse_timings WHERE nurse_timings_id='$rs[nurse_timings_id]'";
 			$qsqldoct = mysqli_query($con,$sqldoct);
@@ -48,7 +48,7 @@ if(isset($_GET[delid]))
           <td>&nbsp;$rsnurse[nursename]</td>
           <td>&nbsp;$rsdoct[start_time] - $rsdoct[end_time]</td>
           <td>&nbsp;$rs[status]</td>
-          <td width='250'>&nbsp;<a href='nursetimings.php?editid=$rs[nurse_timings_id]' class='btn btn-raised btn-sm g-bg-cyan'>Edit</a>  <a href='viewnursetimings.php?delid=$rs[nurse_timings_id]' class='btn btn-raised btn-sm g-bg-blush2'>Delete</a> </td>
+          <td width='250'>&nbsp;<a href='nursetimings.php?editid=$rs[nurse_timings_id]' class='btn btn-raised btn-sm g-bg-cyan'>Update</a>  <a href='viewnursetimings.php?delid=$rs[nurse_timings_id]' class='btn btn-raised btn-sm g-bg-blush2'>Delete</a> </td>
         </tr>";
 		}
 		?>

@@ -122,13 +122,9 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-settings-square"></i><span>Service</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="department.php">Add Department</a></li>
-                            <li><a href="viewdepartment.php">View Department</a></li>
-                            <li><a href="treatment.php">Add Vital Record Type</a></li>
-                            <li><a href="viewtreatment.php">View Vital Record Types</a></li>
-                            <li><a href="medicine.php">Add Medicine</a></li>
-                            <li><a href="viewmedicine.php">View Medicine</a></li>
+                            <li><a href="viewtreatment.php">View Vital</a></li>
                         </ul>
+                        
                     </li>
 
                 </ul>
@@ -185,8 +181,13 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-settings-square"></i><span>Service</span> </a>
                         <ul class="ml-menu">
+                            <li><a href="department.php">Add Department</a></li>
+                            <li><a href="viewdepartment.php">View Department</a></li>
+                            <li><a href="treatment.php">Add Vital Record Type</a></li>
+                            <li><a href="viewtreatment.php">View Vital Record Types</a></li>
                             <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
-                            <li><a href="viewtreatment.php">View Vital</a></li>
+                            <li><a href="medicine.php">Add Medicine</a></li>
+                            <li><a href="viewmedicine.php">View Medicine</a></li>
                         </ul>
                     </li>
 

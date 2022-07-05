@@ -76,7 +76,7 @@ $billappointmentid = $_GET[appointmentid];
               <td><textarea name="discountreason" id="discountreason"></textarea></td>
             </tr>
             <tr>
-              <td colspan="2" align="center"><input class="form-control" type="submit" name="submitfullamount" id="submitfullamount" value="Submit" /></td>
+              <td colspan="2" align="center"><input class="form-control" type="submit" name="submitfullamount" id="submitfullamount" value="Add" /></td>
             </tr>
           </tbody>
         </table> 

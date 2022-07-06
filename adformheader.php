@@ -91,16 +91,8 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
 
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
-                        <ul class="ml-menu">
-                            <li><a href="appointment.php">New Appointment</a></li>
-                            <li><a href="viewappointmentpending.php">View Pending Appointments</a>
-                            </li>
-                            <li><a href="viewappointmentapproved.php">View Approved
-                                    Appointments</a></li>
-                        </ul>
-                    </li>
+                   
+
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
@@ -113,7 +105,7 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="patient.php">Add Patient</a></li>
+                            
                             <li><a href="viewpatient.php">View Patient Records</a></li>
                         </ul>
                     </li>
@@ -122,7 +114,9 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-settings-square"></i><span>Service</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="viewtreatment.php">View Vital</a></li>
+                             <li><a href="department.php">Add Department</a></li>
+                             <li><a href="viewdepartment.php">View Department</a></li>
+                             <li><a href="viewtreatment.php">View Vital</a></li>
                         </ul>
                         
                     </li>
@@ -156,6 +150,8 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
                         <ul class="ml-menu">
+                        <li><a href="appointment.php" style="width:250px;">New Appointment</a>
+                            </li>
                             <li><a href="viewappointmentpending.php" style="width:250px;">View Pending Appointments</a>
                             </li>
                             <li><a href="viewappointmentapproved.php" style="width:250px;">View Approved
@@ -173,6 +169,7 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
+                             <li><a href="patient.php">Add Patient</a></li>
                             <li><a href="viewpatient.php">View Patient</a>
                             </li>
                         </ul>
@@ -181,11 +178,9 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-settings-square"></i><span>Service</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="department.php">Add Department</a></li>
-                            <li><a href="viewdepartment.php">View Department</a></li>
+                        
                             <li><a href="treatment.php">Add Vital Record Type</a></li>
                             <li><a href="viewtreatment.php">View Vital Record Types</a></li>
-                            <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
                             <li><a href="medicine.php">Add Medicine</a></li>
                             <li><a href="viewmedicine.php">View Medicine</a></li>
                         </ul>

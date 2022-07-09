@@ -41,7 +41,7 @@ if(isset($_GET[delid]))
       <td>$rs[loginid]</td>
       <td>$rs[status]</td>
       <td>
-      <a href='admin.php?editid=$rs[adminid]' class='btn btn-raised g-bg-cyan'>Edit</a> <a href='viewadmin.php?delid=$rs[adminid]' class='btn btn-raised g-bg-blush2'>Delete</a> </td>
+      <a href='admin.php?editid=$rs[adminid]' class='btn btn-raised g-bg-cyan'>Update</a> <a href='viewadmin.php?delid=$rs[adminid]' class='btn btn-raised g-bg-blush2'>Delete</a> </td>
       </tr>";
     }
     ?>

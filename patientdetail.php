@@ -62,7 +62,7 @@ if(!isset($_GET[patientid]))
                             <div class="col-sm-3 col-xs-12">
                                 <div class="form-group drop-custum">
                                     <select class="form-control show-tick">
-                                        <option value="">-- Gender --</option>
+                                        <option value="">-- Sex --</option>
                                         <option value="10">Male</option>
                                         <option value="20">Female</option>
                                     </select>
@@ -87,7 +87,7 @@ if(!isset($_GET[patientid]))
                             </div>
                     
                             <div class="col-sm-12">
-                                <input type="submit" class="btn btn-raised" name="submitpat" id="submitpat" value="Submit" />
+                                <input type="submit" class="btn btn-raised" name="submitpat" id="submitpat" value="Add" />
                                 
                             </div>
                         </div>
@@ -108,7 +108,7 @@ if(!isset($_GET[patientid]))
               <tr>
                 <td><strong>Address</strong></td>
                 <td align="right"><textarea name="address" id="address" cols="45" rows="5"> </textarea></td>
-                <td><strong>Gender</strong></td>
+                <td><strong>Sex</strong></td>
                 <td><label for="select"></label>
                   <select name="select" id="select">
                     <option value="">Select</option>
@@ -123,7 +123,7 @@ if(!isset($_GET[patientid]))
                 <td><input type="date" name="dateofbirth" id="dateofbirth" /></td>
               </tr>
               <tr>
-                <td colspan="4" align="center"><input type="submit" name="submitpat" id="submitpat" value="Submit" /></td>
+                <td colspan="4" align="center"><input type="submit" name="submitpat" id="submitpat" value="Add" /></td>
               </tr>
         </tbody>
   </table>       
@@ -148,7 +148,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         <tr>
           <td><strong>Address</strong></td>
           <td>&nbsp;<?php echo $rspatient[address]; ?></td>
-          <td><strong>Gender</strong></td>
+          <td><strong>Sex</strong></td>
           <td> <?php echo $rspatient[gender];?></td>
         </tr>
         <tr>

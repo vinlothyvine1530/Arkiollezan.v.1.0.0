@@ -51,7 +51,7 @@ if(isset($_GET[delid]))
 					<td>&nbsp;$rs[experience] year(s)</td>
 					<td>$rs[status]</td>
 					<td>&nbsp;
-					<a href='nurse.php?editid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a> <a href='viewnurse.php?delid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>
+					<a href='nurse.php?editid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-cyan'>Update</a> <a href='viewnurse.php?delid=$rs[nurseid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>
 					</tr>";
 				}
 				?>      </tbody>

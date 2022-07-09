@@ -212,7 +212,7 @@ if(isset($_SESSION[patientid]))
                                    {
                                     ?>
                                                 <select name="select6" id="select6" class="selectpicker">
-                                                    <option value="" selected="" hidden="">Select Gender</option>
+                                                    <option value="" selected="" hidden="">Select Sex</option>
                                                     <?php
                                         $arr = array("Male","Female");
                                         foreach($arr as $val)

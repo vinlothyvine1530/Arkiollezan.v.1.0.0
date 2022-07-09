@@ -97,7 +97,7 @@ if(isset($_SESSION[nurseid]))
                         </div>
                      
 
-                            <input class="btn btn-raised" type="submit" name="submit" id="submit" value="Submit" />
+                            <input class="btn btn-raised" type="submit" name="submit" id="submit" value="Add" />
                         </div>
                     </div>
 

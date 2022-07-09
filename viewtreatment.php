@@ -29,7 +29,7 @@ if(isset($_GET[delid]))
           <td><strong>Note</strong></td>
           <td><strong>Status</strong></td>
           <?php
-          if(isset($_SESSION[adminid]))
+          if(isset($_SESSION[nurseid]))
           {
             ?>
             <td><strong>Action</strong></td>
@@ -46,10 +46,10 @@ if(isset($_GET[delid]))
           <td>&nbsp;$rs[treatmenttype]</td>
           <td>&nbsp;$rs[note]</td>
           <td>&nbsp;$rs[status]</td>";
-          if(isset($_SESSION[adminid]))
+          if(isset($_SESSION[nurseid]))
           {
             echo "<td>&nbsp;
-            <a href='treatment.php?editid=$rs[treatmentid]' class='btn btn-raised g-bg-cyan'>Edit</a> 
+            <a href='treatment.php?editid=$rs[treatmentid]' class='btn btn-raised g-bg-cyan'>Update</a> 
             <a href='viewtreatment.php?delid=$rs[treatmentid]' class='btn btn-raised g-bg-blush2'>Delete</a> </td>";
           }
           echo "</tr>";

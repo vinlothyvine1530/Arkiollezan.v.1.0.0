@@ -122,7 +122,7 @@ if(isset($_GET[editid]))
 						</div>                    
 
 						<div class="col-sm-12">
-							<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
+							<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Add" />
 
 						</div>
 					</div>

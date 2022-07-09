@@ -120,13 +120,9 @@ $tim = date("H:i:s");
 
                     <li> <a href="javascript:void(0);" class="menu-toggle toggled waves-effect waves-block"><i
                                 class="zmdi zmdi-copy"></i><span>Service</span> </a>
-                        <ul class="ml-menu" style="display: block;">
-                            <li><a href="department.php" class=" waves-effect waves-block">Add Department</a></li>
-                            <li><a href="viewdepartment.php" class=" waves-effect waves-block">View Department</a></li>
-                            <li><a href="treatment.php" class=" waves-effect waves-block">Add Vital Record</a></li>
-                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record</a></li>
-                            <li><a href="medicine.php" class=" waves-effect waves-block">Add Medicine</a></li>
-                            <li><a href="viewmedicine.php" class=" waves-effect waves-block">View Medicine</a></li>
+                        <ul class="ml-menu">
+                            
+                            <li><a href="viewtreatment.php">View Vital</a></li>
                         </ul>
                     </li>
 
@@ -187,9 +183,14 @@ $tim = date("H:i:s");
 
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-copy"></i><span>Service</span> </a>
-                        <ul class="ml-menu">
+                        <ul class="ml-menu" style="display: block;">
+                            <li><a href="department.php" class=" waves-effect waves-block">Add Department</a></li>
+                            <li><a href="viewdepartment.php" class=" waves-effect waves-block">View Department</a></li>
+                            <li><a href="treatment.php" class=" waves-effect waves-block">Add Vital Record</a></li>
+                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record Types</a></li>
                             <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
-                            <li><a href="viewtreatment.php">View Vital</a></li>
+                            <li><a href="medicine.php" class=" waves-effect waves-block">Add Medicine</a></li>
+                            <li><a href="viewmedicine.php" class=" waves-effect waves-block">View Medicine</a></li>
                         </ul>
                     </li>
 

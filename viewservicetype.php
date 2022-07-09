@@ -40,7 +40,7 @@ if(isset($_GET[delid]))
           <td>&nbsp;$rs[description]</td>
 			 <td>&nbsp;$rs[status]</td>
           <td>&nbsp; 
-		 <a href='servicetype.php?editid=$rs[service_type_id]'>Edit</a> | <a href='viewservicetype.php?delid=$rs[service_type_id]'>Delete</a> </td>
+		 <a href='servicetype.php?editid=$rs[service_type_id]'>Update</a> | <a href='viewservicetype.php?delid=$rs[service_type_id]'>Delete</a> </td>
         </tr>";
 		}
 		?>

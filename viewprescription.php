@@ -30,9 +30,9 @@ while($rs = mysqli_fetch_array($qsql))
 	$qsqlpatient = mysqli_query($con,$sqlpatient);
 	$rspatient = mysqli_fetch_array($qsqlpatient);
 	
-	$sqlnurse = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
-	$qsqlnurse = mysqli_query($con,$sqlnurse);
-	$rsnurse = mysqli_fetch_array($qsqlnurse);
+	$sqldoc = "SELECT * FROM nurse WHERE nurseid='$rs[nurseid]'";
+	$qsqldoc = mysqli_query($con,$sqldoc);
+	$rsnurse = mysqli_fetch_array($qsqldoc);
 ?>			
     <table width="200" border="3">
           <tbody>

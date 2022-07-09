@@ -18,7 +18,7 @@ include("header.php");
           <td width="66%"><input type="text" name="loginid" id="loginid" /></td>
         </tr>
         <tr>
-          <td height="36" colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td height="36" colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Add" /></td>
         </tr>
       </tbody>
     </table>

@@ -144,7 +144,7 @@ if(isset($_SESSION[patientid]))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">Gender</label>
+                                    	<label for="">Sex</label>
                                     	<div class="form-line">
                                     	<select name="select3" id="select3" class="form-control show-tick">
                                     		<option value="" selected="" hidden="">Select</option>
@@ -183,7 +183,7 @@ if(isset($_SESSION[patientid]))
 
                             
                             <div class="col-sm-12">                                
-                                <input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
+                                <input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Add" />
                             </div>
                         </div>
                     </div>

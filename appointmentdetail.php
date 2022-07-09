@@ -48,9 +48,9 @@ else
 	$qsqldepartment = mysqli_query($con,$sqldepartment);
 	$rsdepartment =mysqli_fetch_array($qsqldepartment);
 	
-	$sqlnurse = "SELECT * FROM nurse where nurseid='$rsappointment[nurseid]'";
-	$qsqlnurse = mysqli_query($con,$sqlnurse);
-	$rsnurse =mysqli_fetch_array($qsqlnurse);
+	$sqldoc = "SELECT * FROM nurse where nurseid='$rsappointment[nurseid]'";
+	$qsqldoc = mysqli_query($con,$sqldoc);
+	$rsnurse =mysqli_fetch_array($qsqldoc);
 ?>
 <table class="table table-bordered table-striped">
   

@@ -42,7 +42,7 @@ if(isset($_GET[delid]))
 		   <td>&nbsp;$rs[unit]</td>
 		    <td>&nbsp;$rs[dosage]</td>
 			 <td>&nbsp;$rs[status]</td>
-			  <td>&nbsp;<a href='prescriptionrecord.php?editid=$rs[prescription_record_id]'>Edit</a>  | <a href='viewprescriptionrecord.php?delid=$rs[prescription_record_id]'>Delete</a> </td>
+			  <td>&nbsp;<a href='prescriptionrecord.php?editid=$rs[prescription_record_id]'>Update</a>  | <a href='viewprescriptionrecord.php?delid=$rs[prescription_record_id]'>Delete</a> </td>
         </tr>";
 		}
 		?>

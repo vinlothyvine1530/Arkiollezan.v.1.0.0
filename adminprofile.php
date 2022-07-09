@@ -100,7 +100,7 @@ if(isset($_SESSION[adminid]))
                         </div>
                         <div class="col-sm-12">
                             <input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit"
-                                value="Submit" />
+                                value="Add" />
 
                         </div>
                     </div>

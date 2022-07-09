@@ -85,9 +85,9 @@ if(isset($_GET[orderid]))
           <td width="34%">Nurse</td>
           <td width="66%">
             <?php
-          	$sqlnurse= "SELECT * FROM nurse WHERE status='Active'";
-			$qsqlnurse = mysqli_query($con,$sqlnurse);
-			while($rsnurse = mysqli_fetch_array($qsqlnurse))
+          	$sqldoc= "SELECT * FROM nurse WHERE status='Active'";
+			$qsqldoc = mysqli_query($con,$sqldoc);
+			while($rsnurse = mysqli_fetch_array($qsqldoc))
 			{
 				if($rsnurse[nurseid] == $rsorder[nurseid])
 				{
@@ -109,7 +109,7 @@ if(isset($_GET[orderid]))
 		}
 		?>
         <tr>
-          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Add" /></td>
         </tr>
       </tbody>
     </table>

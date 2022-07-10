@@ -52,7 +52,7 @@ if(isset($_GET[delid]))
         <td align='center'>Status - $rs[status] <br>";
         if(isset($_SESSION[nurseid]))
         {
-          echo "<a href='patient.php?editid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a><a href='viewpatient.php?delid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> <hr>
+          echo "<a href='patient.php?editid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-cyan'>Update</a><a href='viewpatient.php?delid=$rs[patientid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> <hr>
           ";
         }
         echo "</td></tr>";

@@ -75,9 +75,13 @@ if(isset($_POST[submit]))
                         <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
                         <label for="rememberme">Remember Me</label>
                     </div>
+
                     <div class="text-center">
 					<input type="submit" name="submit" id="submit" value="Login" class="btn btn-raised waves-effect g-bg-cyan" /></div>
                     <div class="text-center"> <a href="forgot-password.html">Forgot Password?</a></div>
+					<div class="text-center">
+   					 Don't have an account yet? <a href="patientappointment.php">Sign up</a>
+  					</div>
                 </div>
             </form>
         </div>

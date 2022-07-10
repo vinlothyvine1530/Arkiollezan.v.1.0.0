@@ -302,8 +302,7 @@ if(isset($_SESSION[patientid]))
                                             </label>
                                         </li>
                                         <li class="col-sm-12">
-                                            <button type="submit" class="btn" name="submit" id="submit">make an
-                                                appointment</button>
+                                            <button type="submit" class="btn" name="submit" id="submit">Register</button>
                                         </li>
                                 </form>
                             </div>

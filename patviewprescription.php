@@ -70,7 +70,7 @@ if(isset($_GET[delid]))
              <tr>
               <td>Medicine</td>
               <td>Medicine Received</td>
-              <td>Dosage</td>
+              <td>Prescription</td>
             </tr>
           </thead>
           <tbody>

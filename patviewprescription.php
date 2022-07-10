@@ -88,18 +88,17 @@ if(isset($_GET[delid]))
               </tr>";
             }
             ?>
+    
+      <table>       
+              <tr>
+   <center><a href="print.php" target="_blank">Print Report</a></center>
+  </tr>
+      </table>
             
           </tbody>
-        </table>
-        <input type="submit" class="btn btn-lg" name="print" id="print" value="Imong mama" onclick="myFunction()"/>
+      
 
- <script>
-  function myFunction()
-  {
-   window.print();
- }
- 
-</script>
+
 </script>
       </div>    
       

@@ -90,16 +90,9 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
 
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
-                        <ul class="ml-menu">
-                            <li><a href="appointment.php">New Appointment</a></li>
-                            <li><a href="viewappointmentpending.php">View Pending Appointments</a>
-                            </li>
-                            <li><a href="viewappointmentapproved.php">View Approved
-                                    Appointments</a></li>
-                        </ul>
-                    </li>
+                    
+                 
+                
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
@@ -112,7 +105,6 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="patient.php">Add Patient</a></li>
                             <li><a href="viewpatient.php">View Patient Records</a></li>
                         </ul>
                     </li>
@@ -121,7 +113,8 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle toggled waves-effect waves-block"><i
                                 class="zmdi zmdi-copy"></i><span>Service</span> </a>
                         <ul class="ml-menu">
-                            
+                            <li><a href="department.php" class=" waves-effect waves-block">Add Department</a></li>
+                            <li><a href="viewdepartment.php" class=" waves-effect waves-block">View Department</a></li>
                             <li><a href="viewtreatment.php">View Vital</a></li>
                         </ul>
                     </li>
@@ -158,6 +151,8 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
                         <ul class="ml-menu">
+                        <li><a href="appointment.php" style="width:250px;">New Appointment</a>
+                            </li>
                             <li><a href="viewappointmentpending.php" style="width:250px;">View Pending Appointments</a>
                             </li>
                             <li><a href="viewappointmentapproved.php" style="width:250px;">View Approved
@@ -167,7 +162,7 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
                         <ul class="ml-menu">
-                            
+                    
                             <li><a href="nursetimings.php">Add Visiting Hour</a></li>
                             <li><a href="viewnursetimings.php">View Visiting Hour</a></li>
                         </ul>
@@ -175,7 +170,9 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
+                             <li><a href="patient.php">Add Patient</a></li>
                             <li><a href="viewpatient.php">View Patient</a></li>
+                        
                     
                         </ul>
                     </li>
@@ -184,11 +181,9 @@ $tim = date("H:i:s");
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-copy"></i><span>Service</span> </a>
                         <ul class="ml-menu" style="display: block;">
-                            <li><a href="department.php" class=" waves-effect waves-block">Add Department</a></li>
-                            <li><a href="viewdepartment.php" class=" waves-effect waves-block">View Department</a></li>
+                            
                             <li><a href="treatment.php" class=" waves-effect waves-block">Add Vital Record</a></li>
-                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record Types</a></li>
-                            <li><a href="viewtreatmentrecord.php">View Vital Records</a></li>
+                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record Types</a></li>                          
                             <li><a href="medicine.php" class=" waves-effect waves-block">Add Medicine</a></li>
                             <li><a href="viewmedicine.php" class=" waves-effect waves-block">View Medicine</a></li>
                         </ul>

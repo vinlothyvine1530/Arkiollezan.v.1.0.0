@@ -34,7 +34,7 @@ if(isset($_GET[delid]))
           <td><strong>Department Description</strong></td>          
           <td><strong>Status</strong></td>
           <?php
-          if(isset($_SESSION[nurseid]))
+          if(isset($_SESSION[adminid]))
           {
             ?>
             <td><strong>Action</strong></td>
@@ -52,10 +52,10 @@ if(isset($_GET[delid]))
           <td> $rs[description]</td>
           
           <td>&nbsp;$rs[status]</td>";
-          if(isset($_SESSION[nurseid]))
+          if(isset($_SESSION[adminid]))
           {
             echo "<td>&nbsp;
-            <a href='department.php?editid=$rs[departmentid]'>Update</a> | <a href='viewdepartment.php?delid=$rs[departmentid]'>Delete</a> </td>";
+            <a href='department.php?editid=$rs[departmentid]'>Update</a> | <a href='viewdepartment.php?delid=$rs[departmentid]'>Delete</a></td>";
           }
           echo "</tr>";
         }

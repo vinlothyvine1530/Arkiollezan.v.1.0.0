@@ -88,10 +88,18 @@ if(isset($_GET[delid]))
               </tr>";
             }
             ?>
+    
+      <table>       
+              <tr>
+   <center><a href="print.php" target="_blank">Print Report</a></center>
+  </tr>
+      </table>
             
           </tbody>
-        </table>
-        <input type="submit" class="btn btn-lg" name="print" id="print" value="Print" onclick="myFunction()"/>
+      
+
+
+</script>
       </div>    
       
       <?php
@@ -106,9 +114,3 @@ if(isset($_GET[delid]))
 <?php
 include("adfooter.php");
 ?>
-<script>
-  function myFunction()
-  {
-   window.print();
- }
-</script>

@@ -1,0 +1,58 @@
+ADMIN Log-in
+* Tang-tangon ang APPOINTMENT
+* Management ra sa students ang makita, dili ang INFORMATION
+* Sa NURSE nga toggle, ilisdan ang EDIT to Update (term)
+* Prior to appointment, dapat Registered daan sa database ang students
+* Re-assignment of the Nurse 
+* If ang student mu-graduate na, dapat automatic nga ma-archive ilang account
+* Kinahanglan nga naay Monthly Report
+ 	- ispecific ang date (naay summary of reports)
+	- List of patients ana nga month
+* Filtered by Program (BSIT, BIT, BSED .. etc)
+* Filtered by Date 
+* Asignatories kinsa'y person in charge during ana
+
+NURSE Log-in
+* Automatic ang time and Date
+* UPDATE instead of EDIT
+* Dapat naay isa ra ka form para fill-upan sa mga magpa appoint
+* Ibutang ug kung until when ang expiry sa medicine
+* Ang DOSAGE, i-textfield 
+* Ilisdan ang DOSAGE sa Prescription (automatic ang date)
+* Ibutang kapila muinom, unsa orasa imnon (nurse's)
+* Instead SUBMIT, use the word ADD instead
+* Inig print, ang makita kay PRESCIPTION ra sa Nurse
+* Physician ang Ibutang (sample: Prescribed by:)
+* Inventory (ang nurse ra ang pwede maka inventory)
+	- "Medical Equipment/Supplies (terminologies sa table)
+* Maka-view ra ang admin sa inventory
+* Siya ra ang makacheck if available ba ang medicine nga ihatag
+* Automated ang numbering sa available nga tambal (sample: naay 10 ka biogesic, during presciption sa nurse nihatag siya ug 7, so automatic nga 3 nalang ang nahabilin inig view sa inventory)
+* Ibutang sa inventory ang QUANTITY 
+* Ibutang sad ang UNIT TYPE (Unit of measurement (Sample: 10 box or 10 litres))
+
+STUDENT Log-in
+* Only the registered students can make an appointment
+* Only the nurse can add data sa mga walk-in
+* ID number nalang ang ibutang during appointment, automatic nga date nalang ang iinput
+* Ang makita inig log-in sa student kay ang Datepicker, then REASON nganong nagpa appoint
+	- Radio Button
+		* If old student, ID then Date and time
+		* If new student, adto sa form of registration. Patient name, address (i-usa)
+* MAKE AN APPOINTMENT
+	- If set siya as bonafide student, matik siya makasud, date nalang pilion
+* Tang-tangon ang Appointment
+* Replace Appointment to REGISTRATION  (only for new students)
+* Tangtangon ang APPOINTMENT sa menu
+* Ibutang ang Program (Section) sa tables nani
+* Log-in > if naay account ang student (old), log in diretso
+	  > If walay account, dapat naay registration sa ubos
+* Inig make ug appointment, date and time then reason nalang ang iinput
+* SUBMIT ang gamiton nga term
+* Sa nurse nga end, makita ang record nga gi input sa student/patient
+* Instead of GENDER, use SEX instead
+
+SUMMARY
+1. I-filtered ang SEX (male and female) - radio button ang pag filtered.
+2. Appointment - makita if nadayun ba or wala/ idayun or dili ang appointment (naay remarks)
+3. I-freeze ang time whatever taken na ang time pag appoint

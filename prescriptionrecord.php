@@ -65,7 +65,8 @@ if(isset($_GET[editid]))
           <td><strong>Prescription Date</strong></td>
           <td><strong>Status</strong></td>
         </tr>
-          <?php
+
+     <?php
 		$sql ="SELECT * FROM prescription WHERE prescriptionid='$_GET[prescriptionid]'";
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
@@ -171,7 +172,6 @@ if(isset($_GET[editid]))
 			}
 			?>
 			
-        </tr>
          <?php
 		$sql ="SELECT * FROM prescription_records LEFT JOIN medicine on prescription_records.medicine_name=medicine.medicineid WHERE prescription_id='$_GET[prescriptionid]'";
 		$qsql = mysqli_query($con,$sql);
@@ -191,24 +191,13 @@ if(isset($_GET[editid]))
 		
 		}
 		?>
-        <tr>
-          <td colspan="6"><div align="center">
-            <input Class="btn btn-default" type="submit" name="print" id="print" value="Print" onclick="myFunction()"/>
-          </div></td>
-          </tr>
-      </tbody>
-    </table>
-	
-	<table>
-	<tr><td>
-	 <center><a href='patientreport.php?patientid=<?php echo $_GET[patientid]; ?>&appointmentid=<?php echo $_GET[appid]; ?>'><strong>View Patient Report>></strong></a></center>
-	</td></tr>
+
+		<table>
+	<tr>
+	 <center><a href="print.php" target="_blank">Print Report</a></center>
+	</tr>
 	</table>
-<script>
-function myFunction() {
-    window.print();
-}
-</script>
+
 
 
     <p>&nbsp;</p>

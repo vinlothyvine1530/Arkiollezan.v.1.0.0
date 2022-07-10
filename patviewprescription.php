@@ -91,7 +91,16 @@ if(isset($_GET[delid]))
             
           </tbody>
         </table>
-        <input type="submit" class="btn btn-lg" name="print" id="print" value="Print" onclick="myFunction()"/>
+        <input type="submit" class="btn btn-lg" name="print" id="print" value="Imong mama" onclick="myFunction()"/>
+
+ <script>
+  function myFunction()
+  {
+   window.print();
+ }
+ 
+</script>
+</script>
       </div>    
       
       <?php
@@ -106,9 +115,3 @@ if(isset($_GET[delid]))
 <?php
 include("adfooter.php");
 ?>
-<script>
-  function myFunction()
-  {
-   window.print();
- }
-</script>

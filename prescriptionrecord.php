@@ -126,24 +126,10 @@ if(isset($_GET[editid]))
 
 
         <tr>
-          <td>Dosage</td>
-          <td><select class="form-control show-tick" name="select2" id="select2">
-           <option value="">Select</option>
-          <?php
-		  $arr = array("0-0-1","0-1-1","1-0-1","1-1-1","1-1-0","0-1-0","1-0-0");
-		  foreach($arr as $val)
-		  {
-			 if($val == $rsedit[dosage])
-			  {
-			  echo "<option value='$val' selected>$val</option>";
-			  }
-			  else
-			  {
-				  echo "<option value='$val'>$val</option>";			  
-			  }
-		  }
-		  ?>
-          </select></td>
+          <td>Prescription</td>
+          <td><input class="form-control" name="select2" id="select2">
+           
+          </input></td>
         </tr>
         <tr>
           <td colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Add" /> </td>
@@ -162,7 +148,7 @@ if(isset($_GET[editid]))
       <tbody>
         <tr>
           <td><strong>Medicine</strong></td>
-          <td><strong>Dosage</strong></td>
+          <td><strong>Prescription</strong></td>
           <td><strong>Medicine received</strong></td>
 			<?php
 			if(!isset($_SESSION[patientid]))

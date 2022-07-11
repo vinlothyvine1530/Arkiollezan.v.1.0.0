@@ -88,10 +88,10 @@ if(isset($_GET[delid]))
               </tr>";
             }
             ?>
-    
+
       <table>       
               <tr>
-   <center><a href="print.php" target="_blank">Print Report</a></center>
+   <center><a href="print.php" target="_blank">PRINT</a></center>
   </tr>
       </table>
             

@@ -91,7 +91,7 @@ if(isset($_GET[delid]))
 
       <table>       
               <tr>
-   <center><a href="print.php" target="_blank">PRINT</a></center>
+   <center><a href="print_all.php" target="_blank">PRINT  <i class="fa fa-print"></i></a></center>
   </tr>
       </table>
             

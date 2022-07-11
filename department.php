@@ -107,12 +107,6 @@ function validateform()
 		document.frmdept.departmentname.focus();
 		return false;
 	}
-	else if(!document.frmdept.departmentname.value.match(alphaExp))
-	{
-		alert("Department name not valid..");
-		document.frmdept.departmentname.focus();
-		return false;
-	}
 	else if(document.frmdept.select.value == "" )
 	{
 		alert("Kindly select the status..");

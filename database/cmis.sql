@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2022 at 03:32 PM
+-- Generation Time: Jul 11, 2022 at 04:41 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -73,7 +73,12 @@ INSERT INTO `appointment` (`appointmentid`, `appointmenttype`, `patientid`, `roo
 (9, '', 9, 0, 2, '2022-05-19', '13:16:00', 0, 'Approved', 'sir murag mag pataimbang ko'),
 (11, '', 11, 0, 2, '2022-05-19', '13:25:00', 0, 'Approved', 'hello sir need nako tambal para labad ulo sir'),
 (12, '', 12, 0, 2, '2022-05-19', '13:36:00', 0, 'Approved', 'sir mag pa sukod kos akong height'),
-(13, '', 13, 0, 2, '2022-05-19', '17:37:00', 0, 'Approved', 'sir pwede ko pa bp?\r\n');
+(13, '', 13, 0, 2, '2022-05-19', '17:37:00', 0, 'Approved', 'sir pwede ko pa bp?\r\n'),
+(14, '', 6, 0, 2, '2022-07-06', '14:28:00', 0, 'Approved', 'Imong mama'),
+(15, 'ONLINE', 14, 0, 0, '2022-07-10', '09:20:00', 0, 'Pending', 'Wlaa ko mahimutang sa akong nawng, panabangi.'),
+(16, 'ONLINE', 7, 0, 2, '2022-07-11', '06:40:00', 0, 'Pending', 'Galain akong nawng. Unsay angay buhaton?'),
+(17, '', 15, 0, 2, '2022-07-20', '13:13:00', 0, 'Approved', 'I have a headache. Galain akong utok naghuna-huna nga dili na ako iyang kalipay.'),
+(18, '', 16, 0, 2, '2022-08-03', '22:17:00', 0, 'Approved', 'Galain akong nawng.');
 
 -- --------------------------------------------------------
 
@@ -119,8 +124,8 @@ CREATE TABLE `medicine` (
 INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinequantity`, `description`, `status`) VALUES
 (2, 'Rexidol', 50, 'For Headache', 'Active'),
 (3, 'Imodium', 50, 'For Stomach Ache', 'Active'),
-(4, 'Citirizine', 50, 'For allergy', 'Active'),
-(5, 'Salbutamol', 50, 'For Cough and Asthma', 'Active');
+(5, 'Salbutamol', 50, 'For Cough and Asthma', 'Active'),
+(6, 'Cetirizine', 98, 'For allergies (skin)', 'Active');
 
 -- --------------------------------------------------------
 
@@ -228,7 +233,10 @@ INSERT INTO `patient` (`patientid`, `patientname`, `admissiondate`, `admissionti
 (9, 'Mark Badian', '2022-05-19', '07:16:36', 'Pitalo', '09454379315', 'San Fernando', '', 'mark', '123456789', '', 'Male', '1998-12-17', 'Active'),
 (11, 'Jeff Panares', '2022-05-19', '07:25:37', 'west', '2056219122', 'naga', '', 'jeff', '123456789', '', 'Male', '1997-12-19', 'Active'),
 (12, 'Christian Rojas', '2022-05-19', '07:36:29', 'west', '6219559', 'naga', '', 'christian', '123456789', '', 'Male', '1999-10-19', 'Active'),
-(13, 'John Cabanes', '2022-05-19', '11:38:05', 'tabtoy', '121548415552', 'talisay City', '', 'john', '123456789', '', 'Male', '1999-12-15', 'Active');
+(13, 'John Cabanes', '2022-05-19', '11:38:05', 'tabtoy', '121548415552', 'talisay City', '', 'john', '123456789', '', 'Male', '1999-12-15', 'Active'),
+(14, 'Mark', '2022-07-10', '09:23:49', 'North Poblacion', '09551783371', 'Naga', '6037', 'mark123', '123456789', 'B+', 'FEMALE', '2007-12-04', 'Active'),
+(15, 'Aljie Bacatio', '2022-07-11', '01:14:41', 'South Poblacion', '09551783472', 'Naga', '6037', 'aljie', '123456789', 'O+', 'FEMALE', '1999-09-20', 'Active'),
+(16, 'Aljie Bacatio', '2022-07-11', '04:12:06', 'Tangke', '111111111111111', 'naga city', '', 'bacatio', '123456789', '', 'Female', '2010-01-26', 'Active');
 
 -- --------------------------------------------------------
 
@@ -263,7 +271,15 @@ INSERT INTO `prescription` (`prescriptionid`, `treatment_records_id`, `nurseid`,
 (8, 0, 0, 7, '', 0, '2022-05-19', 'Active', 7),
 (9, 0, 0, 11, '', 0, '2022-05-19', 'Active', 11),
 (10, 0, 0, 12, '', 0, '2022-05-19', 'Active', 12),
-(11, 0, 0, 9, '', 0, '2022-05-19', 'Active', 9);
+(11, 0, 0, 9, '', 0, '2022-05-19', 'Active', 9),
+(12, 0, 0, 6, '', 0, '2022-07-06', 'Active', 6),
+(13, 0, 0, 8, '', 0, '2022-07-06', 'Active', 8),
+(14, 0, 0, 6, '', 0, '2022-07-08', 'Active', 6),
+(15, 0, 0, 6, '', 0, '2022-07-11', 'Active', 14),
+(16, 0, 0, 15, '', 0, '2022-07-11', 'Active', 17),
+(17, 0, 0, 15, '', 0, '2022-07-11', 'Active', 17),
+(18, 0, 0, 15, '', 0, '2022-07-11', 'Active', 17),
+(19, 0, 0, 11, '', 0, '2022-07-11', 'Active', 11);
 
 -- --------------------------------------------------------
 
@@ -294,7 +310,10 @@ INSERT INTO `prescription_records` (`prescription_record_id`, `prescription_id`,
 (9, 8, '2', 0, 2, '0-1-1', 'Active'),
 (10, 9, '2', 0, 2, '0-1-1', 'Active'),
 (11, 10, '2', 0, 2, '0-1-1', 'Active'),
-(12, 11, '4', 0, 1, '0-0-1', 'Active');
+(12, 11, '4', 0, 1, '0-0-1', 'Active'),
+(13, 15, '5', 0, 0, '', 'Active'),
+(14, 15, '3', 0, 0, '', 'Active'),
+(17, 17, '', 0, 7, 'Must be taken 2 times a d', 'Active');
 
 -- --------------------------------------------------------
 
@@ -368,7 +387,8 @@ INSERT INTO `treatment` (`treatmentid`, `treatmenttype`, `note`, `status`) VALUE
 (21, 'Weight', 'Measurement is a must', 'Active'),
 (22, 'Height', 'Measurement is a must', 'Active'),
 (23, 'Temperature', 'Measures your temp. according to your condition', 'Active'),
-(24, 'Blood Pressure', 'We Measure your BP. according to your condition.', 'Active');
+(24, 'Blood Pressure', 'We Measure your BP. according to your condition.', 'Active'),
+(25, 'Weight', 'Inom ug daghang tubig. Dagko naman ta nagkita, iya-iyahay ta.', 'Active');
 
 -- --------------------------------------------------------
 
@@ -400,7 +420,10 @@ INSERT INTO `treatment_records` (`treatment_records_id`, `treatmentid`, `appoint
 (7, 21, 7, 7, 0, 'imong timbang dae kay 100kg', '516016675', '2022-05-19', '13:03:00', 'Active'),
 (8, 21, 11, 11, 0, 'jeff imong timbang kay 60kg', '1209648695', '2022-05-19', '13:27:00', 'Active'),
 (9, 22, 12, 12, 0, '5 feet 4 inches', '557304552', '2022-05-19', '13:38:00', 'Active'),
-(10, 24, 9, 9, 0, 'dong imong bp kay 100 over 120 high blood ka dong pangabang nag lungon', '1873732203', '2022-05-19', '13:49:00', 'Active');
+(10, 24, 9, 9, 0, 'dong imong bp kay 100 over 120 high blood ka dong pangabang nag lungon', '1873732203', '2022-05-19', '13:49:00', 'Active'),
+(11, 21, 8, 8, 0, 'Ayaw intawn sig pabadlong dong. Dako na tawn kay ka.', '881326648', '2022-07-06', '13:47:00', 'Active'),
+(12, 23, 17, 15, 0, 'Kinahanglan nga dili ka magsige ug huna-huna niya. Ayaw sig inamaw.', '2121625700', '2022-07-11', '07:22:00', 'Active'),
+(13, 21, 18, 16, 0, 'This is a measurement of your weight.', '1349016844', '2022-07-11', '10:18:00', 'Active');
 
 -- --------------------------------------------------------
 
@@ -535,7 +558,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `department`
@@ -547,7 +570,7 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `medicine`
 --
 ALTER TABLE `medicine`
-  MODIFY `medicineid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `medicineid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `nurse`
@@ -571,19 +594,19 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `prescription`
 --
 ALTER TABLE `prescription`
-  MODIFY `prescriptionid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `prescriptionid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `prescription_records`
 --
 ALTER TABLE `prescription_records`
-  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `room`
@@ -601,13 +624,13 @@ ALTER TABLE `service_type`
 -- AUTO_INCREMENT for table `treatment`
 --
 ALTER TABLE `treatment`
-  MODIFY `treatmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `treatmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `treatment_records`
 --
 ALTER TABLE `treatment_records`
-  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -116,7 +116,7 @@ $tim = date("H:i:s");
                         <ul class="ml-menu">
                              <li><a href="department.php">Add Department</a></li>
                              <li><a href="viewdepartment.php">View Department</a></li>
-                             <li><a href="viewtreatment.php">View Vital</a></li>
+                             <li><a href="viewtreatment.php">View Vital Record Type</a></li>
                         </ul>
                         
                     </li>

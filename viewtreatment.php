@@ -15,7 +15,7 @@ if(isset($_GET[delid]))
 
 <div class="container-fluid">
   <div class="block-header">
-    <h2>View Vital record</h2>
+    <h2>View Vital record type</h2>
 
   </div>
 

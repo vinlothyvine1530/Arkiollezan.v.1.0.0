@@ -38,7 +38,7 @@ if(isset($_GET[approveid]))
 					<td><b>Nurse</b></td>
 					<td><b>Appointment Reason</b></td>
 					<td><b>Status</b></td>
-					<td><div align="center">Action</div></td>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -75,8 +75,9 @@ if(isset($_GET[approveid]))
 					<td>&nbsp;$rsdoc[nursename]</td>
 					<td>&nbsp;$rs[app_reason]</td>
 					<td>&nbsp;$rs[status]</td>
-					<td><div align='center'>";
-					
+					";
+				}
+					/*
 					if($rs[status] != "Approved")
 					{
 						if(!(isset($_SESSION[patientid])))
@@ -91,11 +92,14 @@ if(isset($_GET[approveid]))
 					}
 					echo "</center></td></tr>";
 				}
+				*/
 				?>
 			</tbody>
 		</table>
 		<table>
-	
+	<tr>
+	 <center><a href="viewappointmentapprovedprint.php" target="_blank">Print Report</a></center>
+	</tr>
 	</table>
 	</section>
 

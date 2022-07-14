@@ -68,9 +68,9 @@ if(isset($_GET[delid]))
         <table class="table table-hover table-bordered table-striped">
           <thead>
              <tr>
-              <td>Medicine</td>
-              <td>Medicine Received</td>
-              <td>Prescription</td>
+              <td><strong>Medicine</strong></td>
+              <td><strong>Medicine Received</strong></td>
+              <td><strong>Prescription</strong></td>
             </tr>
           </thead>
           <tbody>
@@ -89,17 +89,10 @@ if(isset($_GET[delid]))
             }
             ?>
 
-      <table>       
-              <tr>
-   <center><a href="print_all.php" target="_blank">PRINT  <i class="fa fa-print"></i></a></center>
-  </tr>
-      </table>
-            
-          </tbody>
-      
-
-
-</script>
+   
+</tbody>
+        </table>
+       
       </div>    
       
       <?php
@@ -114,3 +107,9 @@ if(isset($_GET[delid]))
 <?php
 include("adfooter.php");
 ?>
+<script>
+  function myFunction()
+  {
+   window.print();
+ }
+</script>

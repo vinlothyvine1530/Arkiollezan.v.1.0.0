@@ -34,9 +34,9 @@ if(!isset($_SESSION[nurseid]))
         <div class="info-box-4 hover-zoom-effect">
           <div class="icon"> <i class="zmdi zmdi-account col-blue"></i> </div>
           <div class="content">
-            <div class="text">New Appointment</div>
+            <div class="text">Approved Appointments</div>
             <div class="number"><?php
-            $sql = "SELECT * FROM appointment WHERE status='Active' AND `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'";
+            $sql = "SELECT * FROM appointment WHERE status='Approved'";
             $qsql = mysqli_query($con,$sql);
             echo mysqli_num_rows($qsql);
             ?></div>
@@ -56,14 +56,32 @@ if(!isset($_SESSION[nurseid]))
           </div>
         </div>
       </div>
+
+      
       <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="info-box-4 hover-zoom-effect">
           <div class="icon"> <i class="zmdi zmdi-bug col-blush"></i> </div>
           <div class="content">
-            <div class="text">Today's Appoinment</div>
+            <div class="text">Pending Appoinments</div>
             <div class="number">
               <?php
-              $sql = "SELECT * FROM appointment WHERE status='Active' AND `nurseid`=1 AND appointmentdate=' ".date("Y-m-d")."'" ;
+              $sql = "SELECT * FROM appointment WHERE status='Pending'";
+            $qsql = mysqli_query($con,$sql);
+            echo mysqli_num_rows($qsql);
+            ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="info-box-4 hover-zoom-effect">
+          <div class="icon"> <i class="zmdi zmdi-bug col-blush"></i> </div>
+          <div class="content">
+            <div class="text">Active Appoinments</div>
+            <div class="number">
+              <?php
+              $sql = "SELECT * FROM appointment WHERE status='Active'";
             $qsql = mysqli_query($con,$sql);
             echo mysqli_num_rows($qsql);
             ?>

@@ -35,7 +35,7 @@ if(isset($_POST[submit]))
 		$sql ="INSERT INTO appointment(appointmenttype,patientid,appointmentdate,appointmenttime,app_reason,status,departmentid,nurseid) values('ONLINE','$lastinsid','$_POST[appointmentdate]','$_POST[appointmenttime]','$_POST[app_reason]','Pending','$_POST[department]','$_POST[doct]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
+			echo "<script>alert('Registered Successfully.');</script>";
 		}
 		else
 		{
@@ -81,9 +81,9 @@ if(isset($_SESSION[patientid]))
                     <div class="col-md-7">
                         <div class="text-sec padding-right-0">
                             <div class="heading-block head-left margin-bottom-50">
-                                <h4>Appointment taken successfully</h4>
+                                <h4>Registration taken successfully</h4>
                             </div>
-                            <p>Appointment record is in pending process. Kinldy check the appointment status.</p>
+                            <p>Your Registration is in pending process. Kinldy check the appointment status.</p>
                             <p> <a href="viewappointment.php">View Appointment record</a>. </p>
                         </div>
                     </div>
@@ -100,9 +100,9 @@ if(isset($_SESSION[patientid]))
                     <div class="col-md-7">
                         <div class="text-sec padding-right-0">
                             <div class="heading-block head-left margin-bottom-50">
-                                <h4>Appointment taken successfully.</h4>
+                                <h4>Registration taken successfully.</h4>
                             </div>
-                           <h17>Appointment record is in pending process. Please wait for confirmation message.</h17>
+                           <h17>Your Registration is in pending process. Please wait for confirmation message.</h17>
                             <p> <a href="patientlogin.php">Click here to <b>Login</b></a>. </p>
                         </div>
                     </div>
@@ -131,7 +131,7 @@ if(isset($_SESSION[patientid]))
 
                                 <!-- Heading -->
                                 <div class="heading-block head-left margin-bottom-50">
-                                    <h4>Make an Appointment</h4>
+                                    <h4>Register to make an Appointment</h4>
                                     <hr>
                                 </div>
                                 <form method="post" action="" name="frmpatapp" onSubmit="return validateform()"
@@ -180,7 +180,7 @@ if(isset($_SESSION[patientid]))
                                 ?>
                                         <li class="col-sm-6">
                                             <label>
-                                                <input placeholder="Login ID" type="text" class="form-control"
+                                                <input placeholder="ID number" type="text" class="form-control"
                                                     name="loginid" id="loginid"
                                                     value="<?php echo $rspatient[loginid];  ?>"
                                                     <?php echo $readonly; ?>><i class="icon-login"></i>
@@ -237,9 +237,10 @@ if(isset($_SESSION[patientid]))
                                             </label>
 
                                         </li>
+                                        
                                         <li class="col-sm-6">
                                             <label>
-                                                <input placeholder="Appointment date" type="text" class="form-control"
+                                                <input placeholder="Registration date" type="text" class="form-control"
                                                     min="<?php echo date("Y-m-d"); ?>" name="appointmentdate"
                                                     onfocus="(this.type='date')" id="appointmentdate"><i
                                                     class="ion-calendar"></i>
@@ -248,11 +249,13 @@ if(isset($_SESSION[patientid]))
                                         </li>
                                         <li class="col-sm-6">
                                             <label>
-                                                <input placeholder="Appointment time" type="text"
+                                                <input placeholder="Registration time" type="text"
                                                     onfocus="(this.type='time')" class="form-control"
                                                     name="appointmenttime" id="appointmenttime"><i
                                                     class="ion-ios-clock"></i>
                                             </label>
+
+                            
 
                                         </li>
                                         <li class="col-sm-6">
@@ -294,6 +297,7 @@ if(isset($_SESSION[patientid]))
 
                                             </label>
 
+                                            <!--
                                         </li>
                                         <li class="col-sm-12">
                                             <label>
@@ -301,6 +305,8 @@ if(isset($_SESSION[patientid]))
                                                     placeholder="Appointment reason"></textarea>
                                             </label>
                                         </li>
+
+                                  -->
                                         <li class="col-sm-12">
                                             <button type="submit" class="btn" name="submit" id="submit">Register</button>
                                         </li>
@@ -366,7 +372,7 @@ function validateform() {
         alert("Login ID should not be empty..");
         document.frmpatapp.loginid.focus();
         return false;
-    } else if (!document.frmpatapp.loginid.value.match(alphanumericExp)) {
+    } else if (!document.frmpatapp.loginid.value.match(numericExpression)) {
         alert("Login ID not valid..");
         document.frmpatapp.loginid.focus();
         return false;

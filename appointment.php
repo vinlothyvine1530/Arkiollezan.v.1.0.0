@@ -129,6 +129,7 @@ if(isset($_GET[editid]))
                             </div>
 
                         </div>
+
                         <div class="row clearfix">
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group">
@@ -138,6 +139,7 @@ if(isset($_GET[editid]))
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group">
                                     <div class="form-line">

@@ -18,9 +18,9 @@ $tim = date("H:i:s");
     <link href="assets/plugins/morrisjs/morris.css" rel="stylesheet" />
     
     <!-- Custom Css -->
-    <link href="assets/css/main.css" rel="stylesheet">
+   
     <!-- Swift Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="assets/css/themes/all-themes.css" rel="stylesheet" />
+    
     <!-- Bootstrap Material Datetime Picker Css -->
 
 </head>
@@ -50,10 +50,14 @@ $tim = date("H:i:s");
     <!-- Morphing Search  -->
 
     <!-- Top Bar -->
+
+    <link rel="icon" href="images/ctunewlogo.png" type="image/x-icon"> 
+<link rel="shortcut icon" href="images/ctunewlogo.png" type="image/x-icon"> 
+
     <nav class="navbar clearHeader">
         <div class="col-12">
-            <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand"
-                    href="#">Clinical Monitoring and Inventory System | Phase 2</a> </div>
+            <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a><a class="navbar-brand"
+                    href="nurseaccount.php">  </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Notifications -->
                 <li>
@@ -64,6 +68,7 @@ $tim = date("H:i:s");
             </ul>
         </div>
     </nav>
+    
     <!-- #Top Bar -->
     <section>
         <!-- Left Sidebar -->
@@ -105,7 +110,7 @@ $tim = date("H:i:s");
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="adminviewpatient.php">View Patient Records</a></li>
+                            <li><a href="viewpatient.php">View Patient Records</a></li>
                         </ul>
                     </li>
 
@@ -128,77 +133,7 @@ $tim = date("H:i:s");
             <?php }?>
 
 
-            <!-- nurse Menu -->
-            <?php
-            if(isset($_SESSION[nurseid]))
-            {
-            ?>
-            <div class="menu">
-                
-                <ul class="list">
-                    <li class="header">NURSE MAIN NAVIGATION</li>
-                    <li class="active open"><a href="nurseaccount.php"><i
-                                class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-
-
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-calendar-check"></i><span>Profile</span> </a>
-                        <ul class="ml-menu">
-                            <li><a href="nurseprofile.php">Profile</a></li>
-                            <li><a href="nursechangepassword.php">Change Password</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
-                        <ul class="ml-menu">
-                        <li><a href="appointment.php" style="width:250px;">New Appointment</a>
-                            </li>
-                            <li><a href="viewappointmentpending.php" style="width:250px;">View Pending Appointments</a>
-                            </li>
-                            <li><a href="viewappointmentapproved.php" style="width:250px;">View Approved Appointments</a></li>
-                            <li><a href="viewappointmentstatus.php" style="width:250px;">View Appointment Status</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-add"></i><span>Nurse</span> </a>
-                        <ul class="ml-menu">
-                    
-                            <li><a href="nursetimings.php">Add Visiting Hour</a></li>
-                            <li><a href="viewnursetimings.php">View Visiting Hour</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
-                        <ul class="ml-menu">
-                             <li><a href="patient.php">Add Patient</a></li>
-                            <li><a href="viewpatient.php">View Patient</a></li>
-                            <li><a href="updatepatient.php">Update Patient</a></li>
-                        
-                    
-                        </ul>
-                    </li>
-
-
-                    <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-copy"></i><span>Service</span> </a>
-                        <ul class="ml-menu" style="display: block;">
-                            
-                            <li><a href="treatment.php" class=" waves-effect waves-block">Add Vital Record</a></li>
-                            <li><a href="viewtreatment.php" class=" waves-effect waves-block">View Vital Record Types</a></li>                          
-                            <li><a href="medicine.php" class=" waves-effect waves-block">Add Medicine</a></li>
-                            <li><a href="viewmedicine.php" class=" waves-effect waves-block">View Medicine</a></li>
-                        </ul>
-                    </li>
-
-                
-
-                </ul>
-            </div>
-
-            <?php }; ?>
-            <!-- nurse Menu -->
-
+           
 
 
 

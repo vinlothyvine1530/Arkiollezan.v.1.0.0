@@ -21,20 +21,22 @@ $pdf->Cell(10,8,'No.',1);
 $pdf->Cell(30,8,'patientname',1);
 $pdf->Cell(20,8,'Dispense',1);
 
+function headerTable()
+	$this->SetFont('Times','B',12);
+	$this->Cell(30,8,'Patient name',1,0,'C');
+	$this->Ln();
+
+
+function viewTable($db)
+$pdf->SetFont('Times','',12);
+	$stmt = $db->query('SELECT * FROM `patient` ORDER BY `patient`.`patientname` ASC');
+	while($data = $stmt->fetch(PDO::FETCH_OB))
+		$pdf->Cell(20,10,$data->patientname,1,0,'C');
+		$pdf->Ln();
+    
 
 
 
-$query="SELECT patientname AS dispense FROM patient GROUP BY patientname";
-$result = mysqli_query($mysqli, $query);
-$no=0;
-while($row = mysqli_fetch_array($result)){
-	$no=$no+1;
-	$pdf->Ln(4);
-	$pdf->SetFont('Arial','',12);
-	$pdf->Cell(10,8,$no,1);
-	$pdf->Cell(30,8,$row['patientname'],1);
-    $pdf->Cell(20,8,$row['dispense'],1);
-	
-}
+$pdf->headerTable();
+$pdf->viewTable($db);
 $pdf->Output();
-?>

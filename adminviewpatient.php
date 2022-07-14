@@ -64,11 +64,7 @@ if(isset($_GET[delid]))
       ?>
     </tbody>
   </table>
-  <table>
-	<tr>
-	 <center><a href="viewpatientprint.php" target="_blank">Print Report</a></center>
-	</tr>
-	</table>
+
 </section>
 
 </div>

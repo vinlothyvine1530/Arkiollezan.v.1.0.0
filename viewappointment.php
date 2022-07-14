@@ -39,7 +39,6 @@ if(isset($_GET[approveid]))
           <th>Nurse</th>
           <th>Reason</th>
           <th>Status</th>
-          <th><div align="center">Action</div></th>
         </tr>
         </thead>
         <tbody>
@@ -78,13 +77,10 @@ if(isset($_GET[approveid]))
 				  {
 						  echo "<a href='appointmentapproval.php?editid=$rs[appointmentid]'>Approve</a><hr>";
 				  }
-				 echo "  <a href='viewappointment.php?delid=$rs[appointmentid]'>Delete</a>";
+				
 		  }
-		  else
-		  {
-				echo "<a href='patientreport.php?patientid=$rs[patientid]&appointmentid=$rs[appointmentid]'>View Report</a>";
-		  }
-		 echo "</center></td></tr>";
+		  
+		
 		}
 		?>
       </tbody>

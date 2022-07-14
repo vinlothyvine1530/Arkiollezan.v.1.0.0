@@ -50,8 +50,7 @@ if(isset($_GET[delid]))
         <strong>Sex</strong> - &nbsp;$rs[gender]<br>
         <strong>DOB</strong> - &nbsp;$rs[dob]</td>
         <td align='center'>Status - $rs[status] <br>";
-       }
-       /*
+       
         
         if(isset($_SESSION[nurseid]))
         {
@@ -60,15 +59,10 @@ if(isset($_GET[delid]))
         }
         echo "</td></tr>";
       }
-      */
+      
       ?>
     </tbody>
   </table>
-  <table>
-	<tr>
-	 <center><a href="viewpatientprint.php" target="_blank">Print Report</a></center>
-	</tr>
-	</table>
 </section>
 
 </div>

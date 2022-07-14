@@ -4,7 +4,8 @@
 		  <th>Nurse</th>
           <th>Patient</th>
           <th>Prescription Date</th>
-          <th>View</th>              
+          <th>Add</th> 
+		  <th>Print</th>             
         </tr>
 <?php
 $sql ="SELECT * FROM prescription WHERE patientid='$_GET[patientid]' AND appointmentid='$_GET[appointmentid]'";
@@ -23,7 +24,8 @@ while($rs = mysqli_fetch_array($qsql))
 					<td>&nbsp;$rsnurse[nursename]</td>
               		<td>&nbsp;$rspatient[patientname]</td>
                		<td>&nbsp;$rs[prescriptiondate]</td>
-					<td><a href='prescriptionrecord.php?prescriptionid=$rs[0]&patientid=$rs[patientid]' >View</td>
+					<td><a href='prescriptionrecord.php?prescriptionid=$rs[0]&patientid=$rs[patientid]' >Add</td>
+					<td><a href='prescriptionrecordprint.php?prescriptionid=$rs[0]&patientid=$rs[patientid]' >Print</td>
             </tr>";
 }
 ?>    

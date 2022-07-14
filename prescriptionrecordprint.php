@@ -1,5 +1,5 @@
 <?php
-include("adheader.php");
+include("adheaderprint.php");
 include("dbconnection.php");
 ini_set('display_errors', FALSE);
 if(isset($_GET[delid]))
@@ -8,7 +8,7 @@ if(isset($_GET[delid]))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-			echo "<script>window.location='prescriptionrecord.php?prescriptionid=$_GET[prescriptionid]';</script>";
+			echo "<script>window.location='prescriptionrecordprint.php?prescriptionid=$_GET[prescriptionid]';</script>";
 		echo "<script>alert('prescription deleted successfully..');</script>";
 	}
 }
@@ -37,7 +37,7 @@ if(isset($_POST[submit]))
 			$prescriptionid= $_POST[prescriptionid];
 			include("insertbillingrecord.php");
 			echo "<script>alert('prescription record inserted successfully...');</script>";
-			echo "<script>window.location='prescriptionrecord.php?prescriptionid=$_GET[prescriptionid]&patientid=$_GET[patientid]&appid=$_GET[appid]';</script>";
+			echo "<script>window.location='prescriptionrecordprint.php?prescriptionid=$_GET[prescriptionid]&patientid=$_GET[patientid]&appid=$_GET[appid]';</script>";
 		}
 		else
 		{
@@ -55,15 +55,52 @@ if(isset($_GET[editid]))
 ?>
 
 
+
+
 <div class="container-fluid">
-	<div class="block-header"><h2>Add New Prescription Record</h2></div>
-  <div class="card" style="padding:10px">
- <table class="table table-bordered table-striped">
+
+
+    
+	<div class="block-header" align="center">
+
+
+    <div class="container">
+		<div class="logo"> <img src="images/ctunewlogo.png" alt="" style="height: 67px;margin-left: 14px;"> 
+		 <img src="images/IMPACTRANKINGS.jpg" alt="" style="height: 23px;margin-left: 16px;"> 
+		 <img src="images/WORLDUNIVERSITYRANKINGS.jpg" alt="" style="height: 68px;margin-left: 14px;"></div>
+        </div>
+
+
+    <h4>PRESCRIPTION OF PATIENT</h4>
+		<h5><b>Republic of the Philippines</b></h5>
+		<h5><b>CEBU TECHNOLOGICAL UNIVERSITY</b></h5>
+        <h5>NAGA CAMPUS</h5>
+        <h17>Central Poblacion, Naga City, Cebu, Philippines<br>
+Website: http://www.ctu.edu.ph <br> E-mail: thepresident@ctu.edu.ph</h17>
+		<br>
+        <br>
+		<h7><b>OFFICE OF THE CAMPUS NURSE</b></h7>	
+	</div>
+
+	<br>
+
+    <div class="block-header">
+		<br>
+		<h8>Clinical Management Inventory System</h8>
+		<br>
+		<h9>Presciption Record</h9>
+		<br>
+	</div>
+  
+
+<div class="container">
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
       <tbody>
         <tr>
-          <td><strong>Patient</strong></td>
-          <td><strong>Prescription Date</strong></td>
-          <td><strong>Status</strong></td>
+        <td><b>Patient</b></td>
+          <td><b>Prescription Date</b></td>
+          <td><b>Status</b></td>
         </tr>
 
      <?php
@@ -90,71 +127,23 @@ if(isset($_GET[editid]))
 		?>
       </tbody>
     </table>
+
 	</div>
 	
-	<div class="card" style="padding:10px">
-  
-           <?php
-			if(!isset($_SESSION[patientid]))
-			{
-		  ?>  
-<form method="post" action="" name="frmpresrecord" onSubmit="return validateform()"> 
-  <input type="hidden" name="prescriptionid" value="<?php echo $_GET[prescriptionid]; ?>"  />
-    <table class="table table-striped">
-      <tbody>
-      
-        <tr>
-          <td width="34%">Medicine</td>
-          <td width="66%">
-		  <select class="form-control show-tick" name="medicineid" id="medicineid" onchange="loadmedicine(this.value)">
-		  <option value="">Select Medicine</option>
-		  <?php
-		$sqlmedicine ="SELECT * FROM medicine WHERE status='Active'";
-		$qsqlmedicine = mysqli_query($con,$sqlmedicine);
-		while($rsmedicine = mysqli_fetch_array($qsqlmedicine))
-		{
-			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] </option>";
-		}
-		?>
-		  </select>
-		  </td>
-        </tr>
-        <tr>
-          <td>Number of Medicine to give</td>
-          <td><input class="form-control" type="number" min="1" name="unit" id="unit" value="<?php echo $rsedit[unit]; ?>" onkeyup="calctotalcost(cost.value,this.value)" onchange="" /></td>
-        </tr>
 
 
-        <tr>
-          <td>Prescription</td>
-          <td><input class="form-control" name="select2" id="select2">
-           
-          </input></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Add" /> </td>
-        </tr>
-		
-		<tr>
-          <td colspan="2" align="center"> <a href='patientreport.php?patientid=<?php echo $_GET[patientid]; ?>&appointmentid=<?php echo $_GET[appid]; ?>'><strong>View Patient Report>></strong></a></td>
-        </tr>
-
-      </tbody>
-    </table>
-    </form>
-    <?php
-			}
-		?>
-	</div>
-	<div class="block-header"><h2>View Prescription record</h2></div>
+        
+	
     
-  	<div class="card" style="padding:10px">
-    <table class="table table-hover table-striped">
+  
+    <div class="container">
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
       <tbody>
         <tr>
-          <td><strong>Medicine</strong></td>
-          <td><strong>Prescription</strong></td>
-          <td><strong>Medicine received</strong></td>
+        <td><b>Medicine</b></td>
+        <td><b>Presciption</b></td>
+        <td><b>Medicine Received</b></td>
 			<?php
 			if(!isset($_SESSION[patientid]))
 			{ ?>  
@@ -175,7 +164,7 @@ if(isset($_GET[editid]))
 		   ";
 			if(!isset($_SESSION[patientid]))
 			{
-			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 
+			 echo " <td>&nbsp; <a href='prescriptionrecordprint.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 
 			}
 		echo "
 		</tr>";
@@ -183,24 +172,58 @@ if(isset($_GET[editid]))
 		}
 		?>
 
-		<table>
-	<tr>
-	 
-	</tr>
-	</table>
+        <table>
+        <section>
+        <input type="submit" class="btn btn-lg" name="print" id="print" value="" onclick="myFunction()"/>
 
+        <div class="block-header">
+		<br>
+		<h8>Prescribed By:</h8>                  <h8 style="margin-left: 197px;">Prepared By:</h8>
+		<br>
+        <br>
+		<h9 style="margin-left: 50px;">John Doe John Doe, John</h9> <h9 style="margin-left: 121px;">Marc Anthony A. Pabico, RN</h9>
+		<br>
+        <h9 style="margin-left: 115px;">Physician</h9> <h9 style="margin-left: 240px;">Nurse</h9>
+	
+		
 
-
-    <p>&nbsp;</p>
+	</div>
+	</section>
+    </table>
+	
+	<?php
+    
+    ?>        <p>&nbsp;</p>
   </div>
 </div>
 </div>
- <div class="clear"></div>
-  </div>
+<div class="clear"></div>
 </div>
+</div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+	
+    
 <?php
 include("adfooter.php");
 ?>
+<script>
+  function myFunction()
+  {
+   window.print();
+ }
+</script>
+
+
+<!--
 <script type="application/javascript">
 function loadmedicine(medicineid)
 {
@@ -273,3 +296,4 @@ function validateform()
 	
 }
 </script>
+-->

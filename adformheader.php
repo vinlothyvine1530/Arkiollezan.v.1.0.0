@@ -51,6 +51,8 @@ $tim = date("H:i:s");
     <!-- Morphing Search  -->
 
     <!-- Top Bar -->
+
+    
     <nav class="navbar clearHeader">
         <div class="col-12">
             <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand"
@@ -106,7 +108,7 @@ $tim = date("H:i:s");
                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                         <ul class="ml-menu">
                             
-                            <li><a href="viewpatient.php">View Patient Records</a></li>
+                            <li><a href="adminviewpatient.php">View Patient Records</a></li>
                         </ul>
                     </li>
 
@@ -134,7 +136,7 @@ $tim = date("H:i:s");
             ?>
             <div class="menu">
                 <ul class="list">
-                    <li class="header">NURSE MAIN NAVIGATION</li>
+                <li class="header">NURSE MAIN NAVIGATION</li>
                     <li class="active open"><a href="nurseaccount.php"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
 
@@ -154,8 +156,9 @@ $tim = date("H:i:s");
                             </li>
                             <li><a href="viewappointmentpending.php" style="width:250px;">View Pending Appointments</a>
                             </li>
-                            <li><a href="viewappointmentapproved.php" style="width:250px;">View Approved
-                                    Appointments</a></li>
+                            <li><a href="viewappointmentapproved.php" style="width:250px;">View Approved Appointments</a></li>
+                            <li><a href="viewappointmentstatus.php" style="width:250px;">View Appointment Status</a></li>
+                                    
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
@@ -171,6 +174,7 @@ $tim = date("H:i:s");
                         <ul class="ml-menu">
                              <li><a href="patient.php">Add Patient</a></li>
                             <li><a href="viewpatient.php">View Patient</a>
+                            <li><a href="updatepatient.php">Update Patient</a></li>
                             </li>
                         </ul>
                     </li>
@@ -186,8 +190,12 @@ $tim = date("H:i:s");
                         </ul>
                     </li>
 
+               
+
                 </ul>
             </div>
+
+    
 
             <?php }; ?>
             <!-- nurse Menu -->

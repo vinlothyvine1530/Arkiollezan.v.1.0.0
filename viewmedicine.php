@@ -27,6 +27,7 @@ if(isset($_GET[delid]))
             <tr>
               <th>Medicine Name</th>
               <th>Quantity Left</th>
+              <th>Expiry</th>
               <th>Description</th>
               <th>Status</th>
               <th>Action</th>
@@ -42,6 +43,7 @@ if(isset($_GET[delid]))
               echo "<tr>
               <td>&nbsp;$rs[medicinename]</td>
               <td>&nbsp;$rs[medicinequantity]</td>
+              <td>&nbsp;$rs[medicineexpiry]</td>
               <td>&nbsp;$rs[description]</td>
               <td>&nbsp;$rs[status]</td>
               <td>&nbsp;
@@ -52,6 +54,11 @@ if(isset($_GET[delid]))
             ?>
           </tbody>
         </table>
+        <table>
+	<tr>
+	 <center><a href="viewmedicineprint.php" target="_blank">Print Report</a></center>
+	</tr>
+	</table>
       </section>
      
     </div>

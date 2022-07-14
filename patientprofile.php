@@ -108,7 +108,7 @@ if(isset($_SESSION[patientid]))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">loginid</label>
+                                    	<label for="">ID number</label>
                                     	<div class="form-line">
                                         <input class="form-control" type="text" name="loginid" id="loginid"  value="<?php echo $rsedit[loginid]; ?>"/>
                                     </div>
@@ -207,8 +207,9 @@ var alphaExp = /^[a-zA-Z]+$/; //Variable to validate only alphabets
 var alphaspaceExp = /^[a-zA-Z\s]+$/; //Variable to validate only alphabets and space
 var numericExpression = /^[0-9]+$/; //Variable to validate only numbers
 var alphanumericExp = /^[0-9a-zA-Z]+$/; //Variable to validate numbers and alphabets
-var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable to validate Email ID 
+var emailExp = /^[0-9]+$/; //Variable to validate Email ID 
 
+// /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
 
 function validateform()
 {
